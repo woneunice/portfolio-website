@@ -1,18 +1,32 @@
 ---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
 title: "Résumé"
 ---
+
+
 
 ```{r knit-resume, echo=FALSE, message=FALSE}
 rmarkdown::render(
   "resume/Resume.Rmd",
   output_format = "pdf_document",
-  output_file   = "Resume.pdf",
+  output_file   = "Eunice_Won_Resume_.pdf",
   output_dir    = "resume",
   quiet         = TRUE
 )
 ```
 
-You can view a PDF version of my résumé [here](resume/Resume.pdf).
+You can view a PDF version of my \[here\] (resume/Eunice_Won_Resume\_.pdf).
 
 # Professional Summary
 
@@ -20,36 +34,76 @@ Results-oriented marketing and analytics professional with a strong foundation i
 
 # Technical Skills
 
-- **Programming Languages:** R, Python, SQL, etc.  
-- **Web Technologies:** HTML, CSS/SCSS, JavaScript, Quarto, CMS Platforms, Analytics Tools
+-   **Programming Languages:** R, SQL
+-   **Web Technologies:** HTML, Quarto, CMS Platforms,
 
 # Education
 
-| Degree                             | Year                          | College / Department                 | Institution         |
-| ---------------------------------- | ----------------------------- | ------------------------------------ | ------------------- |
-| [Your Degree]                     | [Start – Graduation Year]     | [Your College or Department]        | [Your University]   |
-| [Previous Degree or Certification] | [Start – End Year]            | [Your College or Department]        | [Your University]   |
+| Degree | Year | College / Department | Institution |
+|-------------------|-----------------|--------------------|-----------------|
+| Master of Science in Digital Marketing | Aug. 2024 – Aug. 2026 | College of Business Administration | Cal Poly Pomona |
+| B.A. Psychological Science, B.A. Education Sciences | 2017 – 2021 | School of Social Ecology, School of Education | University of California, Irvine |
 
 # Work Experience
 
-### [Job Title], [Company or Organization]  
-*[Start Date – End Date]*
+### Intake Specialist & Marketing / Legal Assistant, Cha Cha Cha Law
 
-- [Responsibility or accomplishment #1]  
-- [Responsibility or accomplishment #2]  
-- [Responsibility or accomplishment #3]  
-- [Technical tools, collaboration, or outcomes]  
-- [Any metrics, impacts, or stakeholder involvement]
+*Oct. 2025 – current*
 
----
+-   Serve as a primary point of contact for prospective and existing clients regarding lemon law and personal injury matters.
 
-### [Job Title], [Company or Organization]  
-*[Start Date – End Date]*
+-   Conduct client intake, gather case information, and organize supporting documents including repair orders and purchase agreements.
 
-- [Responsibility or accomplishment #1]  
-- [Responsibility or accomplishment #2]  
-- [Team leadership, training, or development]  
-- [Projects involving marketing, data, or web technologies]  
-- [Toolset used or strategies implemented]
+-   Assist with legal and administrative operations by preparing client communications, coordinating case updates, and scheduling attorney calls.
 
----
+-   Support marketing initiatives through client outreach, digital content coordination, and brand communication across online platforms.
+
+------------------------------------------------------------------------
+
+### Brand Community Engagement Specialist, Center for Customer Insights & Digital Marketing (CCIDM)
+
+*Mar. 2025 – Oct. 2025*
+
+-   Supported the Center Director in developing and executing engagement initiatives that increased student awareness and participation in events and workshops.
+
+-   Created and scheduled social media and email marketing campaigns to improve audience reach and program visibility.
+
+-   Collaborated with faculty, students, and campus organizations to coordinate logistics and promote digital marketing programs.
+
+-   Assisted with community outreach projects involving branding, student engagement, and digital communication strategies.
+
+-   Utilized tools including Canva, Google Workspace, HubSpot, and social media platforms for campaign coordination and content management.
+
+------------------------------------------------------------------------
+
+### Barista, 6xs Coffee DTLA
+
+*Jul. 2024 – Oct. 2025*
+
+-   Maintained professional and efficient customer service in a fast-paced café environment with high daily order volume.
+
+-   Managed multiple beverage and food orders while ensuring accuracy, quality, and customer satisfaction.
+
+-   Collaborated with team members to maintain workflow efficiency during peak business hours.
+
+-   Assisted with customer communication, delivery coordination, and daily operational support.
+
+-   Developed strong multitasking, communication, and problem-solving skills in a customer-facing environment.
+
+------------------------------------------------------------------------
+
+### English Teacher, Dosol Elementary School
+
+*Mar. 2022 – Feb. 2024*
+
+-   Taught English to over 700 elementary students weekly, improving classroom participation and communication skills.
+
+-   Designed interactive lesson plans and educational materials in collaboration with Korean co-teachers.
+
+-   Organized English Camps and group activities that encouraged teamwork, confidence, and cultural exchange.
+
+-   Incorporated digital learning materials and multimedia tools to improve student engagement and learning outcomes.
+
+-   Strengthened leadership, public speaking, and cross-cultural communication skills through classroom instruction and program coordination.
+
+------------------------------------------------------------------------

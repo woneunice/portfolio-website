@@ -1,27 +1,27 @@
 ---
-title: "Hi, I'm [Your Name Here]"
+title: "Hi, I'm Eunice Won"
 ---
 
-
-::: {.columns}
+::::: columns
 ::: {.column width="30%"}
-![](https://placehold.co/530x530?text=images/headshot.jpg){width=100% style="border-radius: 50%;"}
+![](images/IMG_3858 5.jpg){fig-align="center" style="border-radius: 50%;" width="559"}
 :::
+
 ::: {.column width="70%" style="padding-left: 3rem;"}
-I'm a [your profession or area of focus]. I specialize in transforming complex information into clear, engaging, and actionable insights.
+I'm an Intake Specialist & Marketing / Legal Assistant specializing in Personal Injury and Lemon Law matters, client intake, legal document coordination, and client communication in both English and Korean.
+
+I also support the firm's marketing efforts through client outreach, lead management, social media content, and brand communication.
 :::
-:::
+:::::
 
 ## About Me
 
-I hold a <span class="highlight">[Your Degree or Current Program]</span> from [Your Institution].
-
-
+I hold a Master of Science in Digital Marketing from Cal Poly Pomona.
 
 ## Let's Connect
 
-You can [email me](mailto:you@example.com) or connect on [LinkedIn](https://www.linkedin.com/in/your-profile).
+You can [email me](euniceewon@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/eunice-won-65835632b?utm_source=share_via&utm_content=profile&utm_medium=member_ios).
 
----
+------------------------------------------------------------------------
 
 *Welcome to my portfolio.*

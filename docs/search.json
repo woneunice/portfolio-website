@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "marketing-analytics.html",
+    "href": "marketing-analytics.html",
+    "title": "Marketing Analytics",
+    "section": "",
+    "text": "My work in marketing analytics focuses on understanding how data can support better marketing decisions, improve audience engagement, and uncover meaningful business insights. Through graduate coursework and hands-on projects, I’ve worked with campaign data, web analytics, SEO research, and visualization tools to translate complex datasets into clear and actionable findings.\nI’m especially interested in the connection between analytics and strategy — not just collecting data, but understanding what it means, why it matters, and how it can improve marketing performance. Many of my projects combine technical analysis with storytelling, helping turn numbers into recommendations that are easier for teams and stakeholders to understand."
+  },
+  {
+    "objectID": "marketing-analytics.html#what-youll-find",
+    "href": "marketing-analytics.html#what-youll-find",
+    "title": "Marketing Analytics",
+    "section": "What You’ll Find",
+    "text": "What You’ll Find\n\nCampaign Performance Analysis: Analyzing engagement, traffic, and conversion metrics to evaluate marketing effectiveness.\nData Visualization & Dashboards: Building reports and dashboards using R, Quarto, Tableau, and interactive visualization tools.\nSEO & Web Analytics: Exploring user behavior, website performance, and local search visibility through analytics platforms and search data.\nMarketing Research & Insights: Applying statistical analysis and consumer research methods to support strategic decision making.\nAttribution & Channel Analysis: Evaluating how different marketing channels contribute to customer actions and business outcomes.\n\n\nThroughout these projects, I’ve worked with tools such as R, BigQuery, GA4, Quarto, Tableau, and SQL to analyze data, create visual reports, and communicate insights in a way that is both practical and easy to understand."
+  },
+  {
+    "objectID": "contact-us/thank-you.html",
+    "href": "contact-us/thank-you.html",
+    "title": "Thank you",
+    "section": "",
+    "text": "Form submitted."
+  },
+  {
+    "objectID": "strategic-marketing.html",
+    "href": "strategic-marketing.html",
+    "title": "Strategic Marketing",
+    "section": "",
+    "text": "Below are selected projects that reflect my experience in digital marketing strategy, campaign analysis, SEO research, and data-driven decision making. These projects combine creative marketing ideas with analytics tools to better understand customer behavior, improve engagement, and support business goals."
+  },
+  {
+    "objectID": "strategic-marketing.html#odi-grips-ai-caption-strategy-project",
+    "href": "strategic-marketing.html#odi-grips-ai-caption-strategy-project",
+    "title": "Strategic Marketing",
+    "section": "ODI Grips AI Caption Strategy Project",
+    "text": "ODI Grips AI Caption Strategy Project\nFor this graduate research project, I analyzed how AI-generated social media captions performed under different prompting strategies. Using historical Instagram data from ODI Grips, I evaluated how structured prompts influenced caption quality, engagement potential, and brand alignment.\nThe project combined marketing strategy with analytics by comparing caption performance patterns, testing audience engagement metrics, and presenting findings through visual reports and statistical analysis.\nSkills Demonstrated:\n\nContent Strategy: Evaluated caption structure, tone, and audience engagement.\nMarketing Analytics: Analyzed Instagram performance metrics using R.\nConsumer Engagement Research: Studied how prompt structure influenced perceived quality.\nData Visualization: Built visual reports and presentation-ready findings in Quarto."
+  },
+  {
+    "objectID": "strategic-marketing.html#odoo-website-analytics-attribution-analysis",
+    "href": "strategic-marketing.html#odoo-website-analytics-attribution-analysis",
+    "title": "Strategic Marketing",
+    "section": "Odoo Website Analytics & Attribution Analysis",
+    "text": "Odoo Website Analytics & Attribution Analysis\nAs part of a team analytics project, I worked on analyzing website traffic behavior and attribution performance using GA4, BigQuery, and R. The goal was to better understand how users interacted with the website and which channels contributed most to conversions.\nI helped develop dashboards, attribution comparisons, and executive-style presentations that translated technical findings into actionable marketing recommendations.\nSkills Demonstrated:\n\nWeb Analytics: Analyzed traffic, sessions, and conversion behavior.\nAttribution Modeling: Compared last-touch and channel contribution patterns.\nDashboard Development: Created interactive visualizations and reports.\nStrategic Insights: Connected analytics findings to marketing recommendations."
+  },
+  {
+    "objectID": "strategic-marketing.html#seo-local-search-optimization-research",
+    "href": "strategic-marketing.html#seo-local-search-optimization-research",
+    "title": "Strategic Marketing",
+    "section": "SEO & Local Search Optimization Research",
+    "text": "SEO & Local Search Optimization Research\nThis project focused on improving local visibility and search performance for a law firm brand through SEO strategy and Google Business Profile optimization. I researched keyword positioning, local search visibility, and brand consistency across digital platforms.\nThe project also explored how branding decisions, localized content, and search optimization strategies influence discoverability and audience trust.\nSkills Demonstrated:\n\nSEO Strategy: Evaluated keyword usage and local search performance.\nBrand Positioning: Improved consistency across digital touchpoints.\nCompetitive Analysis: Compared visibility against competing firms.\nContent Planning: Developed SEO-focused marketing recommendations.\n\nBelow is an embedded demonstration of the interactive report:"
+  },
+  {
+    "objectID": "strategic-marketing.html#marketing-dashboard-reporting-projects",
+    "href": "strategic-marketing.html#marketing-dashboard-reporting-projects",
+    "title": "Strategic Marketing",
+    "section": "Marketing Dashboard & Reporting Projects",
+    "text": "Marketing Dashboard & Reporting Projects\nThroughout my graduate coursework, I created multiple dashboards and marketing reports designed for executive audiences. These projects focused on translating complex datasets into clear business insights using R, Quarto, Tableau, and visualization tools.\nI emphasized clean reporting design, storytelling through data, and actionable recommendations rather than simply presenting numbers.\nSkills Demonstrated:\n\nMarketing Reporting: Developed stakeholder-focused reports and presentations.\nData Storytelling: Simplified technical findings into business insights.\nVisualization Design: Built clean and interactive dashboards.\nStrategic Communication: Presented findings in an executive-friendly format."
+  },
+  {
+    "objectID": "listings/01-campaign-insights-dashboard.html",
+    "href": "listings/01-campaign-insights-dashboard.html",
+    "title": "Campaign Insights Dashboard",
+    "section": "",
+    "text": "Overview\nThis project involved building a dashboard to track and visualize marketing campaign performance. Metrics like click-through rate, conversion rate, and ROI were tracked across channels using R and Tableau.\n\n\n\n\nLearning Outcomes\n\nVisualize and monitor key marketing metrics.\n\nAnalyze performance trends across multiple campaigns.\n\nIdentify high- and low-performing segments.\n\nCommunicate insights through interactive visuals.\n\nDevelop data-informed recommendations.\n\n\n\n\nKey Skills Gained\n\nDashboard development\n\nCampaign analytics\n\nData wrangling in R\n\nTableau or R Shiny visualization\n\nPerformance measurement"
+  },
+  {
+    "objectID": "listings/04-funnel-attribution-model.html",
+    "href": "listings/04-funnel-attribution-model.html",
+    "title": "Marketing Funnel Attribution Model",
+    "section": "",
+    "text": "Overview\nThis project developed a marketing attribution model to assign credit to touchpoints throughout the conversion journey. The insights supported channel optimization and budget reallocation.\n\n\n\n\nLearning Outcomes\n\nTrack multi-touch customer journeys.\n\nModel attribution using first-touch, last-touch, and linear approaches.\n\nVisualize funnel performance.\n\nQuantify channel impact on conversion.\n\nGuide future campaign investment decisions.\n\n\n\n\nKey Skills Gained\n\nAttribution modeling\n\nFunnel analysis\n\nData visualization\n\nCampaign performance analysis\n\nR or Python analytics pipelines"
+  },
+  {
+    "objectID": "listings/02-seo-benchmarking-analysis.html",
+    "href": "listings/02-seo-benchmarking-analysis.html",
+    "title": "SEO Benchmarking Analysis",
+    "section": "",
+    "text": "Overview\nThis project compared SEO performance across competitors, highlighting keyword gaps, backlink profiles, and content effectiveness. Insights were used to guide an improved content and SEO strategy.\n\n\n\n\nLearning Outcomes\n\nIdentify keyword opportunities through competitive research.\n\nTrack and compare domain authority and page rankings.\n\nRecommend on-page SEO improvements.\n\nDesign a data-driven SEO content strategy.\n\nVisualize competitor positioning.\n\n\n\n\nKey Skills Gained\n\nKeyword research\n\nWeb scraping & data cleaning\n\nSEO analysis tools\n\nData storytelling\n\nStrategy development"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Résumé",
+    "section": "",
+    "text": "You can view a PDF version of my [here] (resume/Eunice_Won_Resume_.pdf).\n\nProfessional Summary\nResults-oriented marketing and analytics professional with a strong foundation in data analysis, digital strategy, and performance reporting. Skilled in leveraging analytics tools and programming languages to uncover insights and support decision-making across cross-functional teams.\n\n\nTechnical Skills\n\nProgramming Languages: R, SQL\nWeb Technologies: HTML, Quarto, CMS Platforms,\n\n\n\nEducation\n\n\n\n\n\n\n\n\n\nDegree\nYear\nCollege / Department\nInstitution\n\n\n\n\nMaster of Science in Digital Marketing\nAug. 2024 – Aug. 2026\nCollege of Business Administration\nCal Poly Pomona\n\n\nB.A. Psychological Science, B.A. Education Sciences\n2017 – 2021\nSchool of Social Ecology, School of Education\nUniversity of California, Irvine\n\n\n\n\n\nWork Experience\n\nIntake Specialist & Marketing / Legal Assistant, Cha Cha Cha Law\nOct. 2025 – current\n\nServe as a primary point of contact for prospective and existing clients regarding lemon law and personal injury matters.\nConduct client intake, gather case information, and organize supporting documents including repair orders and purchase agreements.\nAssist with legal and administrative operations by preparing client communications, coordinating case updates, and scheduling attorney calls.\nSupport marketing initiatives through client outreach, digital content coordination, and brand communication across online platforms.\n\n\n\n\nBrand Community Engagement Specialist, Center for Customer Insights & Digital Marketing (CCIDM)\nMar. 2025 – Oct. 2025\n\nSupported the Center Director in developing and executing engagement initiatives that increased student awareness and participation in events and workshops.\nCreated and scheduled social media and email marketing campaigns to improve audience reach and program visibility.\nCollaborated with faculty, students, and campus organizations to coordinate logistics and promote digital marketing programs.\nAssisted with community outreach projects involving branding, student engagement, and digital communication strategies.\nUtilized tools including Canva, Google Workspace, HubSpot, and social media platforms for campaign coordination and content management.\n\n\n\n\nBarista, 6xs Coffee DTLA\nJul. 2024 – Oct. 2025\n\nMaintained professional and efficient customer service in a fast-paced café environment with high daily order volume.\nManaged multiple beverage and food orders while ensuring accuracy, quality, and customer satisfaction.\nCollaborated with team members to maintain workflow efficiency during peak business hours.\nAssisted with customer communication, delivery coordination, and daily operational support.\nDeveloped strong multitasking, communication, and problem-solving skills in a customer-facing environment.\n\n\n\n\nEnglish Teacher, Dosol Elementary School\nMar. 2022 – Feb. 2024\n\nTaught English to over 700 elementary students weekly, improving classroom participation and communication skills.\nDesigned interactive lesson plans and educational materials in collaboration with Korean co-teachers.\nOrganized English Camps and group activities that encouraged teamwork, confidence, and cultural exchange.\nIncorporated digital learning materials and multimedia tools to improve student engagement and learning outcomes.\nStrengthened leadership, public speaking, and cross-cultural communication skills through classroom instruction and program coordination."
+  },
+  {
+    "objectID": "listings/03-customer-segmentation-clustering.html",
+    "href": "listings/03-customer-segmentation-clustering.html",
+    "title": "Customer Segmentation Using Clustering",
+    "section": "",
+    "text": "Overview\nIn this analysis, customer data was segmented using clustering algorithms to identify meaningful groups. These segments informed targeting strategies and personalization efforts.\n\n\n\n\nLearning Outcomes\n\nClean and prepare customer-level data.\n\nApply clustering techniques to group similar customers.\n\nInterpret clusters to define marketing personas.\n\nRecommend tailored messaging strategies.\n\nSupport targeted campaign development.\n\n\n\n\nKey Skills Gained\n\nK-means clustering\n\nData preprocessing\n\nCustomer profiling\n\nMarket segmentation strategy\n\nR or Python for machine learning"
+  },
+  {
+    "objectID": "listings/05-social-media-engagement.html",
+    "href": "listings/05-social-media-engagement.html",
+    "title": "Social Media Engagement Analysis",
+    "section": "",
+    "text": "Overview\nThis analysis examined engagement metrics across multiple social media platforms to identify content trends, audience preferences, and posting strategies that drive performance.\n\n\n\n\nLearning Outcomes\n\nAggregate and clean social media data.\n\nIdentify high-performing content formats.\n\nUnderstand audience behavior and peak times.\n\nSupport social strategy with data-backed recommendations.\n\nVisualize results in an executive summary.\n\n\n\n\nKey Skills Gained\n\nSocial analytics\n\nPlatform metric APIs\n\nContent performance tracking\n\nAudience insights\n\nStrategic planning"
+  },
+  {
+    "objectID": "resume/Resume.html",
+    "href": "resume/Resume.html",
+    "title": "Professional Summary",
+    "section": "",
+    "text": "Professional Summary\nMotivated and detail-oriented marketing and analytics professional with a strong background in data interpretation, campaign strategy, and digital tools. Skilled in turning insights into action and communicating value across business teams.\n\n\nTechnical Skills\n\nProgramming Languages: R, Python, SQL, etc.\n\nWeb Technologies: HTML, CSS/SCSS, Quarto, CMS, Google Analytics, etc.\n\n\n\nEducation\n\n\n# A tibble: 2 × 5\n  what                     when                            with      where why  \n  &lt;chr&gt;                    &lt;chr&gt;                           &lt;chr&gt;     &lt;chr&gt; &lt;lis&gt;\n1 Master of [Your Field]   20XX – Expected Graduation 20XX [Your Sc… [You… &lt;chr&gt;\n2 Bachelor of [Your Field] 20XX – 20XX                     [Your Sc… [You… &lt;chr&gt;\n\n\n\n\nWork Experience\n\n\n# A tibble: 2 × 5\n  what      when                    with                         where why   \n  &lt;chr&gt;     &lt;chr&gt;                   &lt;chr&gt;                        &lt;chr&gt; &lt;list&gt;\n1 Job Title Month YYYY – Month YYYY Company or Organization Name &lt;NA&gt;  &lt;list&gt;\n2 Job Title Month YYYY – Month YYYY Another Company or Team      &lt;NA&gt;  &lt;list&gt;"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Hi, I’m Eunice Won",
+    "section": "About Me",
+    "text": "About Me\nI hold a Master of Science in Digital Marketing from Cal Poly Pomona."
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Hi, I’m Eunice Won",
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\nYou can email me or connect on LinkedIn.\n\nWelcome to my portfolio."
+  },
+  {
+    "objectID": "contact-us/contact-us.html",
+    "href": "contact-us/contact-us.html",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Template"
+  }
+]

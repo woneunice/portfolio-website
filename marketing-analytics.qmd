@@ -8,15 +8,18 @@ listing:
     - "index desc"
 ---
 
-Below are selected projects that highlight my experience applying marketing analytics to real-world challenges. These projects reflect my ability to combine statistical tools, campaign data, and strategic thinking to inform decisions and drive results.
+My work in marketing analytics focuses on understanding how data can support better marketing decisions, improve audience engagement, and uncover meaningful business insights. Through graduate coursework and hands-on projects, I’ve worked with campaign data, web analytics, SEO research, and visualization tools to translate complex datasets into clear and actionable findings.
 
-Whether developing dashboards, analyzing campaign performance, or uncovering insights through SEO and web analytics, each project is rooted in turning complex marketing data into clear, actionable strategies.
+I’m especially interested in the connection between analytics and strategy — not just collecting data, but understanding what it means, why it matters, and how it can improve marketing performance. Many of my projects combine technical analysis with storytelling, helping turn numbers into recommendations that are easier for teams and stakeholders to understand.
 
 ## What You’ll Find
 
-- **Campaign Performance Analysis:** Evaluating the effectiveness of digital marketing efforts using data.
-- **Data Visualization:** Turning raw datasets into intuitive dashboards and reports.
-- **Marketing Mix & Attribution:** Exploring how different channels contribute to success.
-- **Customer & Market Insights:** Using analytics to better understand user behavior and optimize experiences.
+- **Campaign Performance Analysis:** Analyzing engagement, traffic, and conversion metrics to evaluate marketing effectiveness.
+- **Data Visualization & Dashboards:** Building reports and dashboards using R, Quarto, Tableau, and interactive visualization tools.
+- **SEO & Web Analytics:** Exploring user behavior, website performance, and local search visibility through analytics platforms and search data.
+- **Marketing Research & Insights:** Applying statistical analysis and consumer research methods to support strategic decision making.
+- **Attribution & Channel Analysis:** Evaluating how different marketing channels contribute to customer actions and business outcomes.
 
 ---
+
+Throughout these projects, I’ve worked with tools such as R, BigQuery, GA4, Quarto, Tableau, and SQL to analyze data, create visual reports, and communicate insights in a way that is both practical and easy to understand.

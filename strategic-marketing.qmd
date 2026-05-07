@@ -2,59 +2,66 @@
 title: "Strategic Marketing"
 ---
 
-Below are selected projects that showcase my work in strategic marketing, campaign development, and brand management. These examples highlight how I apply leadership, data-informed decision making, and creative direction to drive marketing success.
+Below are selected projects that reflect my experience in digital marketing strategy, campaign analysis, SEO research, and data-driven decision making. These projects combine creative marketing ideas with analytics tools to better understand customer behavior, improve engagement, and support business goals.
 
-## [Project Title 1: Strategic Campaign Planning]
+## ODI Grips AI Caption Strategy Project
 
-In this project, I led the development of a comprehensive marketing campaign for **[product, service, or initiative]**. From audience segmentation to messaging strategy, I managed the full lifecycle of the campaign, aligning it with business objectives and measurable KPIs.
+For this graduate research project, I analyzed how AI-generated social media captions performed under different prompting strategies. Using historical Instagram data from ODI Grips, I evaluated how structured prompts influenced caption quality, engagement potential, and brand alignment.
+
+The project combined marketing strategy with analytics by comparing caption performance patterns, testing audience engagement metrics, and presenting findings through visual reports and statistical analysis.
 
 **Skills Demonstrated:**
 
-- **Marketing Strategy:** Defined objectives and tactics for maximum impact.
-- **Team Coordination:** Oversaw collaboration across creative, data, and channel teams.
-- **Performance Tracking:** Implemented real-time metrics and post-campaign analysis.
-- **Brand Positioning:** Ensured consistency across all touchpoints.
+- **Content Strategy:** Evaluated caption structure, tone, and audience engagement.
+- **Marketing Analytics:** Analyzed Instagram performance metrics using R.
+- **Consumer Engagement Research:** Studied how prompt structure influenced perceived quality.
+- **Data Visualization:** Built visual reports and presentation-ready findings in Quarto.
 
 ---
 
-## [Project Title 2: Brand Audit & Positioning]
+## Odoo Website Analytics & Attribution Analysis
 
-This initiative involved conducting a full brand audit for **[organization or brand]**, evaluating its current market perception, competitive landscape, and customer engagement. I synthesized insights into a refreshed brand strategy and visual identity recommendations.
+As part of a team analytics project, I worked on analyzing website traffic behavior and attribution performance using GA4, BigQuery, and R. The goal was to better understand how users interacted with the website and which channels contributed most to conversions.
+
+I helped develop dashboards, attribution comparisons, and executive-style presentations that translated technical findings into actionable marketing recommendations.
 
 **Skills Demonstrated:**
 
-- **Brand Analysis:** Audited messaging, tone, and visual identity.
-- **Competitive Benchmarking:** Evaluated brand positioning within the market.
-- **Strategic Communication:** Developed new value propositions and storytelling elements.
-- **Stakeholder Presentation:** Delivered recommendations to senior leadership.
+- **Web Analytics:** Analyzed traffic, sessions, and conversion behavior.
+- **Attribution Modeling:** Compared last-touch and channel contribution patterns.
+- **Dashboard Development:** Created interactive visualizations and reports.
+- **Strategic Insights:** Connected analytics findings to marketing recommendations.
 
 ---
 
-## [Project Title 3: Product Launch Go-to-Market Plan]
+## SEO & Local Search Optimization Research
 
-For the release of **[new product/service]**, I created a go-to-market (GTM) strategy from scratch. This included customer journey mapping, channel mix planning, and launch timeline coordination.
+This project focused on improving local visibility and search performance for a law firm brand through SEO strategy and Google Business Profile optimization. I researched keyword positioning, local search visibility, and brand consistency across digital platforms.
+
+The project also explored how branding decisions, localized content, and search optimization strategies influence discoverability and audience trust.
 
 **Skills Demonstrated:**
 
-- **Go-to-Market Strategy:** Developed a clear launch roadmap aligned with buyer needs.
-- **Integrated Marketing:** Orchestrated email, paid ads, social, and on-site promotions.
-- **Budget Management:** Allocated resources efficiently across tactics.
-- **Launch Optimization:** Tracked performance and refined tactics in real time.
+- **SEO Strategy:** Evaluated keyword usage and local search performance.
+- **Brand Positioning:** Improved consistency across digital touchpoints.
+- **Competitive Analysis:** Compared visibility against competing firms.
+- **Content Planning:** Developed SEO-focused marketing recommendations.
 
 Below is an embedded demonstration of the interactive report:
-
 
 <iframe src="data/TRI SEO Comparison.html" width="100%" height="600px" style="border: none;"></iframe>
 
 ---
 
-## [Project Title 4: Client Consulting & Campaign Optimization]
+## Marketing Dashboard & Reporting Projects
 
-I collaborated with a client to assess and optimize their existing marketing efforts. Through audits, persona development, and campaign refinement, I helped improve ROI and audience engagement.
+Throughout my graduate coursework, I created multiple dashboards and marketing reports designed for executive audiences. These projects focused on translating complex datasets into clear business insights using R, Quarto, Tableau, and visualization tools.
+
+I emphasized clean reporting design, storytelling through data, and actionable recommendations rather than simply presenting numbers.
 
 **Skills Demonstrated:**
 
-- **Client Consulting:** Provided clear insights and strategic guidance.
-- **Persona Development:** Built target personas to guide messaging.
-- **Campaign Optimization:** Identified and addressed areas of underperformance.
-- **Data-Driven Adjustments:** Leveraged analytics to refine tactics.
+- **Marketing Reporting:** Developed stakeholder-focused reports and presentations.
+- **Data Storytelling:** Simplified technical findings into business insights.
+- **Visualization Design:** Built clean and interactive dashboards.
+- **Strategic Communication:** Presented findings in an executive-friendly format.

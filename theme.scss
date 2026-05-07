@@ -6,15 +6,15 @@
 /*-- scss:defaults --*/
 
 // ── Brand Palette ────────────────────────────────
-$color-primary:   #123456;  // ← Replace with brand primary
-$color-secondary: #ABCDEF;  // ← Replace with brand secondary
+$color-primary:   #3B2F36;  // deep plum charcoal
+$color-secondary: #EFE7EA;  // soft pale blush
 
 // Optional accent & neutral tones
-$accent-1:  #FF7F00;  // e.g., highlight / link
-$accent-2:  #A6CE6E;  // e.g., success
-$neutral-0: #FFFFFF;  // light / backgrounds
-$neutral-1: #F5F5F5;  // eggshell / subtle sections
-$neutral-9: #121212;  // near-black text
+$accent-1:  #B76E79;  // rose gold pink / links
+$accent-2:  #8FA99B;  // muted sage green / success
+$neutral-0: #FFFFFF;  // white background
+$neutral-1: #FAF7F8;  // soft blush background
+$neutral-9: #1F1A1D;  // near-black text
 
 // ── Typography ──────────────────────────────────
 $font-primary:    Arial, sans-serif;
@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { color: $color-primary;   }
 h2 { color: $color-secondary-dark; }
-h3 { color: $accent-1;        }
+h3 { color: $color-primary;        }
 
 /* Paragraphs */
 p {

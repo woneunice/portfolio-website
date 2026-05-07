@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "YOUR NAME"
+  title: "Eunice Won"
   navbar:
     left:
       - text: "Home"
