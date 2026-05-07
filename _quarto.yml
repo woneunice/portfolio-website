@@ -4,10 +4,11 @@ project:
 
 website:
   title: "Eunice Won"
+  google-analytics: "G-62TKQS1DFZ"
   navbar:
     left:
-      - text: "Home"
-        href: index.qmd
+      - href: index.qmd
+        text: "Home"    
       - text: "Marketing Analytics"
         href: marketing-analytics.qmd
       - text: "Strategic Marketing"
