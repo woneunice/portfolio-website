@@ -1,12 +1,12 @@
 ---
-name: First
-surname: Last
-position: "Your Role or Career Focus"
-phone: +1 (XXX) XXX-XXXX
-www: yourwebsite.com
-email: "you@example.com"
-github: your-github
-linkedin: your-linkedin
+name: Eunice
+surname: Won
+position: "Intake Specialist & Marketing / Legal Assistant"
+phone: +1 (213) 706-9999
+www: ""
+email: "euniceewon@gmail.com"
+github: ""
+linkedin: ""
 date: "`r format(Sys.time(), '%B %Y')`"
 output: 
   vitae::latexcv:
@@ -37,20 +37,19 @@ library(tibble)
 
 # Professional Summary
 
-Motivated and detail-oriented marketing and analytics professional with a strong background in data interpretation, campaign strategy, and digital tools. Skilled in turning insights into action and communicating value across business teams.
+Graduate student pursuing an M.S. in Digital Marketing with experience in legal intake, client communication, marketing coordination, and community engagement. Strong background in fast-paced client-facing environments with bilingual communication skills in English and Korean.
 
 # Technical Skills
 
-- **Programming Languages:** R, Python, SQL, etc.  
-- **Web Technologies:** HTML, CSS/SCSS, Quarto, CMS, Google Analytics, etc.
+-   **Programming Languages:** R, SQL, etc.
 
 # Education
 
 ```{r}
 tribble(
   ~ Degree, ~ Year, ~ College, ~ Institution,
-  "Master of [Your Field]", "20XX – Expected Graduation 20XX", "[Your School or Department]", "[Your University]",
-  "Bachelor of [Your Field]", "20XX – 20XX", "[Your School or Department]", "[Your University]"
+  "M.S. Digital Marketing", "Expected 2026", "College of Business Administration", "California State Polytechnic University, Pomona",
+  "B.A. Psychological Science; B.A. Education Sciences", "Completed", "Cum Laude", "University of California, Irvine"
 ) %>%
   detailed_entries(Degree, Year, College, Institution)
 ```
@@ -61,24 +60,38 @@ tribble(
 tribble(
   ~ Years, ~ Company, ~ Duties, ~ Title,
 
-  "Month YYYY – Month YYYY", "Company or Organization Name",
+  "Oct. 2025 – Current", "Cha Cha Cha Law — Los Angeles, CA",
   list(
-    "Summarize responsibility or achievement \\#1.",
-    "Highlight tools, technologies, or methods used.",
-    "Mention metrics, goals, or impact if possible.",
-    "Add communication or leadership responsibilities here."
+    "Handle client intake and communication for lemon law and personal injury matters.",
+    "Coordinate case documents including repair orders, purchase agreements, and supporting records.",
+    "Prepare client communications, schedule attorney calls, and assist with case updates.",
+    "Support marketing initiatives and client outreach across digital platforms.",
+    "Communicate professionally with clients, dealerships, and manufacturers in English and Korean."
   ),
-  "Job Title",
+  "Intake Specialist & Marketing / Legal Assistant",
 
-  "Month YYYY – Month YYYY", "Another Company or Team",
+  "Mar. 2025 – Current", "Center for Customer Insights & Digital Marketing (CCIDM) — Pomona, CA",
   list(
-    "Led a project or team focused on [insert focus].",
-    "Collaborated cross-functionally with [departments/roles].",
-    "Managed content, campaigns, or dashboards.",
-    "Contributed to strategic planning or reporting."
+    "Supported engagement initiatives that increased student awareness and participation.",
+    "Created social media and email campaigns for workshops and events.",
+    "Collaborated with faculty and students to coordinate logistics and outreach."
   ),
-  "Job Title"
+  "Brand Community Engagement Specialist",
 
+  "Jul. 2024 – Current", "6xs Coffee DTLA — Los Angeles, CA",
+  list(
+    "Maintained efficient customer service in a fast-paced café environment.",
+    "Managed high-volume orders while ensuring accuracy and customer satisfaction."
+  ),
+  "Barista",
+
+  "Mar. 2022 – Feb. 2024", "Dosol Elementary School — Daejeon, South Korea",
+  list(
+    "Taught English to over 700 students weekly.",
+    "Designed interactive lessons and organized English Camp activities.",
+    "Worked closely with Korean co-teachers on curriculum development."
+  ),
+  "English Teacher"
 ) %>%
   detailed_entries(
     what = Title,
@@ -87,3 +100,7 @@ tribble(
     why = Duties
   )
 ```
+
+# Certification & Skills
+
+Google Analytics • Google Ads Search • Data Wrangling & Visualization • HubSpot • Canva • R Programming • Microsoft Office • Google Workspace • English (Fluent) • Korean (Fluent)

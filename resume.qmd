@@ -2,7 +2,7 @@
 name: Eunice
 surname: Won
 position: Intake Specialist & Marketing / Legal Assistnat
-email: euniceewon@gmail.com
+email: euniceewon@gmail
 output:
   vitae::classiccv:
     latex_engine: xelatex
@@ -26,7 +26,7 @@ rmarkdown::render(
 )
 ```
 
-You can view a PDF version of my \[here\] (resume/Eunice_Won_Resume\_.pdf).
+You can view a PDF version of my [here](resume/Eunice_Won_Resume_.pdf).
 
 # Professional Summary
 
