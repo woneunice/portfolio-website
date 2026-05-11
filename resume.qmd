@@ -26,7 +26,6 @@ rmarkdown::render(
 )
 ```
 
-You can view a PDF version of my [here](resume/Eunice_Won_Resume.pdf).
 
 # Professional Summary
 
