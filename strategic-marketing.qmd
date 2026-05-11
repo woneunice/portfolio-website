@@ -12,12 +12,12 @@ The project combined marketing strategy with analytics by comparing caption perf
 
 **Skills Demonstrated:**
 
-- **Content Strategy:** Evaluated caption structure, tone, and audience engagement.
-- **Marketing Analytics:** Analyzed Instagram performance metrics using R.
-- **Consumer Engagement Research:** Studied how prompt structure influenced perceived quality.
-- **Data Visualization:** Built visual reports and presentation-ready findings in Quarto.
+-   **Content Strategy:** Evaluated caption structure, tone, and audience engagement.
+-   **Marketing Analytics:** Analyzed Instagram performance metrics using R.
+-   **Consumer Engagement Research:** Studied how prompt structure influenced perceived quality.
+-   **Data Visualization:** Built visual reports and presentation-ready findings in Quarto.
 
----
+------------------------------------------------------------------------
 
 ## Odoo Website Analytics & Attribution Analysis
 
@@ -27,31 +27,18 @@ I helped develop dashboards, attribution comparisons, and executive-style presen
 
 **Skills Demonstrated:**
 
-- **Web Analytics:** Analyzed traffic, sessions, and conversion behavior.
-- **Attribution Modeling:** Compared last-touch and channel contribution patterns.
-- **Dashboard Development:** Created interactive visualizations and reports.
-- **Strategic Insights:** Connected analytics findings to marketing recommendations.
+-   **Web Analytics:** Analyzed traffic, sessions, and conversion behavior.
+-   **Attribution Modeling:** Compared last-touch and channel contribution patterns.
+-   **Dashboard Development:** Created interactive visualizations and reports.
+-   **Strategic Insights:** Connected analytics findings to marketing recommendations.
 
 Below is an embedded demonstration of the interactive report:
 
-<iframe src="data/IBM6530_Final_Report_Group4_MSDM_Odoo.html" width="100%" height="600px" style="border: none;"></iframe>
+<iframe src="data/IBM6530_Final_Report_Group4_MSDM_Odoo.html" width="100%" height="600px" style="border: none;">
 
+</iframe>
 
----
-
-## SEO & Local Search Optimization Research
-
-This project focused on improving local visibility and search performance for a law firm brand through SEO strategy and Google Business Profile optimization. I researched keyword positioning, local search visibility, and brand consistency across digital platforms.
-
-The project also explored how branding decisions, localized content, and search optimization strategies influence discoverability and audience trust.
-
-**Skills Demonstrated:**
-
-- **SEO Strategy:** Evaluated keyword usage and local search performance.
-- **Brand Positioning:** Improved consistency across digital touchpoints.
-- **Competitive Analysis:** Compared visibility against competing firms.
-- **Content Planning:** Developed SEO-focused marketing recommendations.
----
+------------------------------------------------------------------------
 
 ## Marketing Dashboard & Reporting Projects
 
@@ -61,7 +48,7 @@ I emphasized clean reporting design, storytelling through data, and actionable r
 
 **Skills Demonstrated:**
 
-- **Marketing Reporting:** Developed stakeholder-focused reports and presentations.
-- **Data Storytelling:** Simplified technical findings into business insights.
-- **Visualization Design:** Built clean and interactive dashboards.
-- **Strategic Communication:** Presented findings in an executive-friendly format.
+-   **Marketing Reporting:** Developed stakeholder-focused reports and presentations.
+-   **Data Storytelling:** Simplified technical findings into business insights.
+-   **Visualization Design:** Built clean and interactive dashboards.
+-   **Strategic Communication:** Presented findings in an executive-friendly format.
