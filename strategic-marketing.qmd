@@ -32,6 +32,11 @@ I helped develop dashboards, attribution comparisons, and executive-style presen
 - **Dashboard Development:** Created interactive visualizations and reports.
 - **Strategic Insights:** Connected analytics findings to marketing recommendations.
 
+Below is an embedded demonstration of the interactive report:
+
+<iframe src="data/IBM6530_Final_Report_Group4_MSDM_Odoo.html" width="100%" height="600px" style="border: none;"></iframe>
+
+
 ---
 
 ## SEO & Local Search Optimization Research
@@ -46,11 +51,6 @@ The project also explored how branding decisions, localized content, and search 
 - **Brand Positioning:** Improved consistency across digital touchpoints.
 - **Competitive Analysis:** Compared visibility against competing firms.
 - **Content Planning:** Developed SEO-focused marketing recommendations.
-
-Below is an embedded demonstration of the interactive report:
-
-<iframe src="data/TRI SEO Comparison.html" width="100%" height="600px" style="border: none;"></iframe>
-
 ---
 
 ## Marketing Dashboard & Reporting Projects
