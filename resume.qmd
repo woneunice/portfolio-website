@@ -20,13 +20,13 @@ title: "Résumé"
 rmarkdown::render(
   "resume/Resume.Rmd",
   output_format = "pdf_document",
-  output_file   = "Eunice_Won_Resume_.pdf",
+  output_file   = "Eunice_Won_Resume.pdf",
   output_dir    = "resume",
   quiet         = TRUE
 )
 ```
 
-You can view a PDF version of my [here](resume/Eunice_Won_Resume_.pdf).
+You can view a PDF version of my [here](resume/Eunice_Won_Resume.pdf).
 
 # Professional Summary
 
