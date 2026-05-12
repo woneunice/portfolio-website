@@ -11,8 +11,8 @@ website:
         text: "Home"    
       - text: "Marketing Analytics"
         href: marketing-analytics.qmd
-      - text: "Strategic Marketing"
-        href: strategic-marketing.qmd
+      - text: "Digital Marketing"
+        href: digital-marketing.qmd
       - text: "Résumé"
         href: resume.qmd
 
