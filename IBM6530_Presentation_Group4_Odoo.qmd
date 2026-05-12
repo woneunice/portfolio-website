@@ -8,19 +8,43 @@ author:
   - "Eunice Won"
   - "Ceren Unal"
 date: today
+
 format:
   revealjs:
     theme: moon
     transition: slide
     slide-number: true
+    controls: true
+    navigation-mode: linear
+    auto-stretch: true
+    preview-links: auto
     chalkboard: false
-    logo: ""
-    footer: "IBM 6530 | Group 4 | MSDM Odoo Analytics"
+    menu: false
     code-fold: true
     self-contained: true
     scrollable: true
     fig-width: 8
     fig-height: 4.5
+    logo: ""
+    footer: "IBM 6530 | Group 4 | MSDM Odoo Analytics"
+    include-in-header:
+      text: |
+        <div id="top-hover-zone"></div>
+        <div id="top-nav">
+          <a href="../index.html">Home</a>
+          <a href="../marketing-analytics.html">Marketing Analytics</a>
+          <a href="../digital-marketing.html">Digital Marketing</a>
+          <a href="../resume.html">Résumé</a>
+
+          <div class="dropdown">
+            <span>Website Traffic Analytics ▾</span>
+            <div class="dropdown-content">
+              <a href="../website-traffic-analytics.html">Website Traffic Project Report</a>
+              <a href="../odoo-presentation.html">Revealjs Presentation</a>
+            </div>
+          </div>
+        </div>
+
 execute:
   warning: false
   message: false
