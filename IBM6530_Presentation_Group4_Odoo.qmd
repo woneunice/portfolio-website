@@ -293,24 +293,6 @@ These metrics indicate that users are interacting multiple times during visits, 
 
 ------------------------------------------------------------------------
 
-## Dashboard Overview {background-color="#2c3e50"}
-
-![](images/clipboard-3968234009.png)
-
-![](images/clipboard-4122758627.png)
-
-![](images/clipboard-2088909921.png)
-
-![](images/clipboard-1665642907.png)
-
-------------------------------------------------------------------------
-
-## Dashboard Engagement {background-color="#2c3e50"}
-
-![](images/clipboard-3877735749.png)
-
-------------------------------------------------------------------------
-
 ## Where Is Traffic Coming From? {background-color="#1a252f"}
 
 ```{r plot-traffic}

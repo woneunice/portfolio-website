@@ -227,3 +227,24 @@ pre code {
 #top-nav .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* Force navbar colors over Revealjs theme */
+
+.reveal #top-nav a,
+.reveal #top-nav span {
+  color: #4B3442 !important;
+  text-decoration: none !important;
+}
+
+.reveal #top-nav a:hover,
+.reveal #top-nav span:hover {
+  color: #C08497 !important;
+}
+
+.reveal .dropdown-content {
+  background: #ffffff !important;
+}
+
+.reveal .dropdown-content a {
+  color: #4B3442 !important;
+}
