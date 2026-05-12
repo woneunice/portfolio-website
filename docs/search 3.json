@@ -1,0 +1,422 @@
+[
+  {
+    "objectID": "digital-marketing.html",
+    "href": "digital-marketing.html",
+    "title": "Digital Marketing",
+    "section": "",
+    "text": "Below are selected projects that reflect my experience in digital marketing strategy, campaign analysis, SEO research, and data-driven decision making. These projects combine creative marketing ideas with analytics tools to better understand customer behavior, improve engagement, and support business goals."
+  },
+  {
+    "objectID": "digital-marketing.html#odi-grips-ai-caption-strategy-project",
+    "href": "digital-marketing.html#odi-grips-ai-caption-strategy-project",
+    "title": "Digital Marketing",
+    "section": "ODI Grips AI Caption Strategy Project",
+    "text": "ODI Grips AI Caption Strategy Project\nFor this graduate research project, I analyzed how AI-generated social media captions performed under different prompting strategies. Using historical Instagram data from ODI Grips, I evaluated how structured prompts influenced caption quality, engagement potential, and brand alignment.\nThe project combined marketing strategy with analytics by comparing caption performance patterns, testing audience engagement metrics, and presenting findings through visual reports and statistical analysis.\nSkills Demonstrated:\n\nContent Strategy: Evaluated caption structure, tone, and audience engagement.\nMarketing Analytics: Analyzed Instagram performance metrics using R.\nConsumer Engagement Research: Studied how prompt structure influenced perceived quality.\nData Visualization: Built visual reports and presentation-ready findings in Quarto."
+  },
+  {
+    "objectID": "digital-marketing.html#odoo-website-analytics-attribution-analysis",
+    "href": "digital-marketing.html#odoo-website-analytics-attribution-analysis",
+    "title": "Digital Marketing",
+    "section": "Odoo Website Analytics & Attribution Analysis",
+    "text": "Odoo Website Analytics & Attribution Analysis\nAs part of a team analytics project, I worked on analyzing website traffic behavior and attribution performance using GA4, BigQuery, and R. The goal was to better understand how users interacted with the website and which channels contributed most to conversions.\nI helped develop dashboards, attribution comparisons, and executive-style presentations that translated technical findings into actionable marketing recommendations.\nSkills Demonstrated:\n\nWeb Analytics: Analyzed traffic, sessions, and conversion behavior.\nAttribution Modeling: Compared last-touch and channel contribution patterns.\nDashboard Development: Created interactive visualizations and reports.\nStrategic Insights: Connected analytics findings to marketing recommendations.\n\nBelow is an embedded demonstration of the interactive report:"
+  },
+  {
+    "objectID": "digital-marketing.html#marketing-dashboard-reporting-projects",
+    "href": "digital-marketing.html#marketing-dashboard-reporting-projects",
+    "title": "Digital Marketing",
+    "section": "Marketing Dashboard & Reporting Projects",
+    "text": "Marketing Dashboard & Reporting Projects\nThroughout my graduate coursework, I created multiple dashboards and marketing reports designed for executive audiences. These projects focused on translating complex datasets into clear business insights using R, Quarto, Tableau, and visualization tools.\nI emphasized clean reporting design, storytelling through data, and actionable recommendations rather than simply presenting numbers.\nSkills Demonstrated:\n\nMarketing Reporting: Developed stakeholder-focused reports and presentations.\nData Storytelling: Simplified technical findings into business insights.\nVisualization Design: Built clean and interactive dashboards.\nStrategic Communication: Presented findings in an executive-friendly format."
+  },
+  {
+    "objectID": "contact-us/contact-us.html",
+    "href": "contact-us/contact-us.html",
+    "title": "Contact Us",
+    "section": "",
+    "text": "Template"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#client-context",
+    "href": "website-traffic-analytics.html#client-context",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "2.1 Client Context",
+    "text": "2.1 Client Context\nThe client is the MSDM (Master of Science in Data Management) program, which operates an informational and lead-generation website built on Odoo. The website serves prospective students, current applicants, and program stakeholders.\nThe program’s marketing team needs to understand:\n\nWhere is traffic coming from? — Which channels and geographies are driving visits?\nWho is visiting? — Device usage, behavior, and engagement depth.\nWhich channels actually drive conversions? — Beyond surface-level traffic, which channels contribute most along the full user journey?\nWhere should marketing budget be focused? — Given limited resources, which channels have the highest return?"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#why-standard-reporting-is-not-enough",
+    "href": "website-traffic-analytics.html#why-standard-reporting-is-not-enough",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "2.2 Why Standard Reporting Is Not Enough",
+    "text": "2.2 Why Standard Reporting Is Not Enough\nThe default view in Google Analytics uses last-touch attribution: the final channel a user visited before converting receives 100% of the credit. This model is simple but systematically misleading for programs like MSDM where:\n\nUsers typically discover the program through social media or organic search, then return via direct or email links to convert.\nUpper-funnel channels (Paid Social, Organic) never receive credit under last-touch even if they were the original discovery source.\nBudget decisions made on last-touch data tend to over-invest in closing channels and under-invest in awareness channels.\n\nThis report addresses that gap by combining descriptive reporting (from the GA4 snapshot) with a Markov chain attribution model that distributes credit across all touchpoints in the user journey."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#source-and-pipeline",
+    "href": "website-traffic-analytics.html#source-and-pipeline",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "3.1 Source and Pipeline",
+    "text": "3.1 Source and Pipeline\n\n\nShow code\nlibrary(arrow)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(scales)\nlibrary(lubridate)\nlibrary(stringr)\nlibrary(tidyr)\nlibrary(forcats)\nlibrary(fs)\nlibrary(here)\nlibrary(readr)\nlibrary(gt)\nlibrary(knitr)\nlibrary(ggrepel)\n\nknitr::opts_chunk$set(fig.width = 9, fig.height = 5)\n\n# ── Paths ──────────────────────────────────────────────────────────────────────\nDATA_DIR     &lt;- here::here(\"data\")\nPARQUET_DIR  &lt;- fs::path(DATA_DIR, \"msdm_snapshot\", \"events_flat\")\nPARQUET_FILE &lt;- fs::path(PARQUET_DIR, \"events_snapshot.parquet\")\nCSV_PATH     &lt;- fs::path(DATA_DIR, \"events_snapshot.csv\")\n\n# ── Build parquet if needed ────────────────────────────────────────────────────\nif (!fs::file_exists(PARQUET_FILE)) {\n  fs::dir_create(PARQUET_DIR)\n  arrow::write_parquet(\n    readr::read_csv(CSV_PATH, show_col_types = FALSE),\n    PARQUET_FILE\n  )\n}\n\n# ── Load dataset ───────────────────────────────────────────────────────────────\nds &lt;- arrow::open_dataset(PARQUET_DIR) |&gt; dplyr::collect()\n\n\nBigQuery source: odoo-487003 / analytics_523126945\nPipeline:\nBigQuery (GA4 raw tables)\n   ↓  SQL extract (flat event schema)\nevents_snapshot.csv\n   ↓  Apache Arrow / write_parquet()\nevents_snapshot.parquet\n   ↓  R (arrow, dplyr, ggplot2)\nAnalysis + Dashboard + Report\nAll analysis in this report runs from a local Parquet snapshot. No live BigQuery connection is required after the initial export. This ensures the pipeline is stable and reproducible."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#coverage-and-key-fields",
+    "href": "website-traffic-analytics.html#coverage-and-key-fields",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "3.2 Coverage and Key Fields",
+    "text": "3.2 Coverage and Key Fields\n\n\nShow code\ntibble::tibble(\n  Item    = c(\"Date range\", \"Snapshot days\", \"BigQuery project\",\n              \"BigQuery dataset\", \"Primary key\", \"Key fields\"),\n  Details = c(\n    \"February 9 – April 3, 2026\",\n    \"8 days across ~7 weeks\",\n    \"odoo-487003\",\n    \"analytics_523126945\",\n    \"user_pseudo_id (anonymous)\",\n    \"event_name, traffic_medium, device_category, geo_country, event_date\"\n  )\n) |&gt;\n  knitr::kable(col.names = c(\"Item\", \"Details\"))\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nDate range\nFebruary 9 – April 3, 2026\n\n\nSnapshot days\n8 days across ~7 weeks\n\n\nBigQuery project\nodoo-487003\n\n\nBigQuery dataset\nanalytics_523126945\n\n\nPrimary key\nuser_pseudo_id (anonymous)\n\n\nKey fields\nevent_name, traffic_medium, device_category, geo_country, event_date"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#key-definitions",
+    "href": "website-traffic-analytics.html#key-definitions",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "3.3 Key Definitions",
+    "text": "3.3 Key Definitions\n\n\n\n\n\n\n\nTerm\nDefinition\n\n\n\n\nUnique Users\nCounted by user_pseudo_id (anonymous; resets across devices/browsers)\n\n\nTraffic Medium\nFirst-touch medium from traffic_medium; (none) recoded as direct\n\n\nPage Views\nEvents where event_name == \"page_view\"\n\n\nConversion\nNot available in this snapshot; page-view sequences used as proxy for attribution\n\n\nSession\nNot reconstructed; no timestamp-based sessionization applied"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#pre-computed-summaries",
+    "href": "website-traffic-analytics.html#pre-computed-summaries",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.1 Pre-Computed Summaries",
+    "text": "4.1 Pre-Computed Summaries\n\n\nShow code\n# Traffic medium\ntraffic_summary &lt;- ds |&gt;\n  filter(event_name == \"page_view\") |&gt;\n  mutate(\n    medium_clean = case_when(\n      is.na(traffic_medium)      ~ \"(not set)\",\n      traffic_medium == \"(none)\" ~ \"direct\",\n      TRUE                       ~ traffic_medium\n    )\n  ) |&gt;\n  count(medium_clean, name = \"page_views\") |&gt;\n  arrange(desc(page_views))\n\n# Device\ndevice_summary &lt;- ds |&gt;\n  filter(!is.na(device_category)) |&gt;\n  group_by(device_category) |&gt;\n  summarise(\n    n_events       = n(),\n    n_unique_users = n_distinct(user_pseudo_id)\n  ) |&gt;\n  arrange(desc(n_events)) |&gt;\n  mutate(pct_events = n_events / sum(n_events) * 100)\n\n# Events by date\nevents_by_date &lt;- ds |&gt;\n  count(event_date, name = \"n_events\") |&gt;\n  arrange(event_date)\n\n# Top event types\nevent_types &lt;- ds |&gt;\n  count(event_name, name = \"count\") |&gt;\n  arrange(desc(count)) |&gt;\n  slice_head(n = 8)\n\n# Geo\ngeo_summary &lt;- ds |&gt;\n  filter(!is.na(geo_country), event_name == \"page_view\") |&gt;\n  count(geo_country, name = \"page_views\") |&gt;\n  arrange(desc(page_views)) |&gt;\n  slice_head(n = 10)\n\n# KPIs\ntotal_events    &lt;- nrow(ds)\ntotal_users     &lt;- n_distinct(ds$user_pseudo_id)\ntotal_pv        &lt;- ds |&gt; filter(event_name == \"page_view\") |&gt; nrow()\nevents_per_user &lt;- total_events / total_users\npv_per_user     &lt;- total_pv / total_users\ntop_medium      &lt;- traffic_summary$medium_clean[1]\ntop_device      &lt;- device_summary$device_category[1]"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#kpi-summary",
+    "href": "website-traffic-analytics.html#kpi-summary",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.2 KPI Summary",
+    "text": "4.2 KPI Summary\n\n\nShow code\ntibble::tibble(\n  Metric  = c(\"Total Events\", \"Unique Users\", \"Page Views\",\n              \"Events per User\", \"Page Views per User\",\n              \"Top Channel\", \"Top Device\"),\n  Value   = c(\n    scales::comma(total_events),\n    scales::comma(total_users),\n    scales::comma(total_pv),\n    round(events_per_user, 1),\n    round(pv_per_user, 1),\n    str_to_title(top_medium),\n    str_to_title(top_device)\n  )\n) |&gt;\n  knitr::kable(col.names = c(\"Metric\", \"Value\"),\n               caption = \"Top-line KPIs from GA4 snapshot\")\n\n\n\nTop-line KPIs from GA4 snapshot\n\n\nMetric\nValue\n\n\n\n\nTotal Events\n193\n\n\nUnique Users\n8\n\n\nPage Views\n59\n\n\nEvents per User\n24.1\n\n\nPage Views per User\n7.4\n\n\nTop Channel\nDirect\n\n\nTop Device\nDesktop\n\n\n\n\n\nThe average of 24.1 events per user and 7.4 page views per user suggests that visitors are interacting with multiple pages per session, which is consistent with an exploratory, research-mode audience typical of graduate program websites."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#traffic-by-channel",
+    "href": "website-traffic-analytics.html#traffic-by-channel",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.3 Traffic by Channel",
+    "text": "4.3 Traffic by Channel\n\n\nShow code\ntraffic_summary |&gt;\n  mutate(medium_clean = fct_reorder(medium_clean, page_views)) |&gt;\n  ggplot(aes(x = medium_clean, y = page_views, fill = medium_clean)) +\n  geom_col(show.legend = FALSE, width = 0.7) +\n  geom_text(aes(label = comma(page_views)), hjust = -0.15, size = 3.5) +\n  coord_flip() +\n  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.2))) +\n  scale_fill_brewer(palette = \"Set2\") +\n  labs(x = NULL, y = \"Page Views\",\n       title = \"Page Views by Traffic Medium\",\n       caption = \"Filtered to page_view events; (none) recoded as direct\") +\n  theme_minimal(base_size = 13) +\n  theme(panel.grid.major.y = element_blank())\n\n\n\n\n\nPage views by traffic medium. Direct traffic dominates, which may reflect either strong brand recognition or incomplete UTM tagging on campaigns.\n\n\n\n\n\n\nShow code\ntraffic_summary |&gt;\n  mutate(pct = round(page_views / sum(page_views) * 100, 1)) |&gt;\n  gt() |&gt;\n  cols_label(medium_clean = \"Medium\", page_views = \"Page Views\", pct = \"% Share\") |&gt;\n  fmt_number(columns = page_views, decimals = 0) |&gt;\n  fmt_number(columns = pct, decimals = 1) |&gt;\n  data_color(columns = page_views, palette = \"Greens\") |&gt;\n  tab_options(table.width = pct(100))\n\n\n\n\n\n\n\n\nMedium\nPage Views\n% Share\n\n\n\n\ndirect\n43\n72.9\n\n\nreferral\n14\n23.7\n\n\n(not set)\n2\n3.4\n\n\n\n\n\nTraffic medium summary with percentage share.\n\n\nInterpretation: Direct traffic accounts for the largest share of page views. However, a high proportion of Direct traffic is a common indicator of incomplete UTM tagging across campaigns — users who click untagged email or social links will appear as “direct” in GA4. This is addressed directly in the attribution section below."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#device-usage",
+    "href": "website-traffic-analytics.html#device-usage",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.4 Device Usage",
+    "text": "4.4 Device Usage\n\n\nShow code\np1 &lt;- device_summary |&gt;\n  ggplot(aes(x = \"\", y = pct_events, fill = device_category)) +\n  geom_col(width = 1, color = \"white\") +\n  coord_polar(theta = \"y\") +\n  geom_text(\n    aes(label = paste0(device_category, \"\\n\", round(pct_events, 1), \"%\")),\n    position = position_stack(vjust = 0.5), size = 4, fontface = \"bold\"\n  ) +\n  scale_fill_brewer(palette = \"Set2\") +\n  labs(title = \"Event Share by Device\", fill = \"Device\") +\n  theme_void()\n\np2 &lt;- device_summary |&gt;\n  mutate(device_category = fct_reorder(device_category, n_unique_users)) |&gt;\n  ggplot(aes(x = device_category, y = n_unique_users, fill = device_category)) +\n  geom_col(show.legend = FALSE, width = 0.6) +\n  geom_text(aes(label = comma(n_unique_users)), hjust = -0.15, size = 3.5) +\n  coord_flip() +\n  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.2))) +\n  scale_fill_brewer(palette = \"Set2\") +\n  labs(x = NULL, y = \"Unique Users\", title = \"Unique Users by Device\") +\n  theme_minimal(base_size = 13) +\n  theme(panel.grid.major.y = element_blank())\n\ngridExtra::grid.arrange(p1, p2, ncol = 2)\n\n\n\n\n\nDevice share of events (left) and unique users (right). Desktop dominates, typical for graduate program research behavior.\n\n\n\n\nDesktop dominates both event share and unique users, consistent with graduate program research behavior (users comparing programs, reading requirements, completing applications). Mobile unique users are non-trivial, however, and represent an audience that merits continued UX investment."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#top-event-types",
+    "href": "website-traffic-analytics.html#top-event-types",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.5 Top Event Types",
+    "text": "4.5 Top Event Types\n\n\nShow code\nevent_types |&gt;\n  mutate(event_name = fct_reorder(event_name, count)) |&gt;\n  ggplot(aes(x = event_name, y = count, fill = event_name)) +\n  geom_col(show.legend = FALSE, width = 0.7) +\n  geom_text(aes(label = comma(count)), hjust = -0.15, size = 3.5) +\n  coord_flip() +\n  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.15))) +\n  scale_fill_brewer(palette = \"Set3\") +\n  labs(x = NULL, y = \"Count\", title = \"Top 8 Event Types\") +\n  theme_minimal(base_size = 13) +\n  theme(panel.grid.major.y = element_blank())\n\n\n\n\n\nTop 8 event types by count. Page views and user engagement dominate."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#events-over-time",
+    "href": "website-traffic-analytics.html#events-over-time",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.6 Events Over Time",
+    "text": "4.6 Events Over Time\n\n\nShow code\nevents_by_date |&gt;\n  ggplot(aes(x = event_date, y = n_events)) +\n  geom_col(fill = \"#4E79A7\", width = 0.6) +\n  geom_text(aes(label = comma(n_events)), vjust = -0.4, size = 3) +\n  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.15))) +\n  labs(x = \"Date\", y = \"Event Count\",\n       title = \"Events by Snapshot Date\",\n       caption = \"8 snapshot days; trends are directional, not conclusive\") +\n  theme_minimal(base_size = 12) +\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))\n\n\n\n\n\nEvent count by snapshot date. The 8-point series is directional only."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#geographic-distribution",
+    "href": "website-traffic-analytics.html#geographic-distribution",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "4.7 Geographic Distribution",
+    "text": "4.7 Geographic Distribution\n\n\nShow code\ngeo_summary |&gt;\n  gt() |&gt;\n  cols_label(geo_country = \"Country\", page_views = \"Page Views\") |&gt;\n  fmt_number(columns = page_views, decimals = 0) |&gt;\n  data_color(columns = page_views, palette = \"Blues\") |&gt;\n  tab_options(table.width = pct(100)) |&gt;\n  tab_header(title = \"Top 10 Countries by Page Views\")\n\n\n\n\n\n\n\n\nTop 10 Countries by Page Views\n\n\nCountry\nPage Views\n\n\n\n\nUnited States\n55\n\n\nGermany\n2"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#motivation",
+    "href": "website-traffic-analytics.html#motivation",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "5.1 Motivation",
+    "text": "5.1 Motivation\nLast-touch attribution — the default in most analytics platforms — assigns 100% of conversion credit to the final channel before a conversion event. This is convenient but misleading for multi-step user journeys. For the MSDM website, a typical journey might look like:\n[Paid Social ad] → [Organic search] → [Email link] → [Direct visit / convert]\nUnder last-touch, Direct receives all the credit. Paid Social and Organic receive none, even though they initiated and nurtured the journey."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#markov-chain-attribution-model",
+    "href": "website-traffic-analytics.html#markov-chain-attribution-model",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "5.2 Markov Chain Attribution Model",
+    "text": "5.2 Markov Chain Attribution Model\nA Markov chain attribution model treats the user journey as a sequence of channel states. It estimates each channel’s contribution by computing the removal effect: how much would conversion probability drop if that channel were removed entirely from all journeys? Channels that appear early and often in high-converting paths receive proportionally more credit.\n\n5.2.1 Attribution Results\n\n\nShow code\nlibrary(tidyr)\n\n# ── Load attribution dataset ───────────────────────────────────────────────────\nattr_raw &lt;- readr::read_csv(\n  here::here(\"data\", \"attribution_dataset.csv\"),\n  show_col_types = FALSE\n)\n\nchannel_cols &lt;- grep(\"^channel\", names(attr_raw), value = TRUE)\nchannels_list &lt;- c(\"Direct\", \"Email\", \"Organic\", \"Paid Search\", \"Paid Social\", \"Referral\")\n\n# ── Last-Touch Attribution ─────────────────────────────────────────────────────\nconverters &lt;- attr_raw |&gt; filter(user_purchase == 1)\n\nlast_touch_attr &lt;- converters |&gt;\n  rowwise() |&gt;\n  mutate(\n    last_ch = {\n      vals &lt;- c_across(all_of(channel_cols))\n      vals &lt;- vals[!is.na(vals)]\n      if (length(vals) &gt; 0) tail(vals, 1) else NA_character_\n    }\n  ) |&gt;\n  ungroup() |&gt;\n  filter(!is.na(last_ch)) |&gt;\n  count(last_ch, name = \"credit\") |&gt;\n  mutate(pct = round(credit / sum(credit) * 100, 2)) |&gt;\n  rename(Channel = last_ch, Last_Touch = pct) |&gt;\n  select(Channel, Last_Touch)\n\n# ── First-Touch Attribution ────────────────────────────────────────────────────\nfirst_touch_attr &lt;- converters |&gt;\n  rowwise() |&gt;\n  mutate(\n    first_ch = {\n      vals &lt;- c_across(all_of(channel_cols))\n      vals &lt;- vals[!is.na(vals)]\n      if (length(vals) &gt; 0) vals[1] else NA_character_\n    }\n  ) |&gt;\n  ungroup() |&gt;\n  filter(!is.na(first_ch)) |&gt;\n  count(first_ch, name = \"credit\") |&gt;\n  mutate(pct = round(credit / sum(credit) * 100, 2)) |&gt;\n  rename(Channel = first_ch, First_Touch = pct) |&gt;\n  select(Channel, First_Touch)\n\n# ── Linear Attribution ─────────────────────────────────────────────────────────\nlinear_credits &lt;- converters |&gt;\n  rowwise() |&gt;\n  mutate(\n    path = list({\n      vals &lt;- c_across(all_of(channel_cols))\n      vals[!is.na(vals)]\n    }),\n    n_ch = length(path)\n  ) |&gt;\n  ungroup() |&gt;\n  filter(n_ch &gt; 0) |&gt;\n  unnest(path) |&gt;\n  group_by(users_id, path, n_ch) |&gt;\n  summarise(.groups = \"drop\") |&gt;\n  mutate(credit = 1 / n_ch) |&gt;\n  group_by(path) |&gt;\n  summarise(total_credit = sum(credit), .groups = \"drop\") |&gt;\n  mutate(pct = round(total_credit / sum(total_credit) * 100, 2)) |&gt;\n  rename(Channel = path, Linear = pct) |&gt;\n  select(Channel, Linear)\n\n# ── Markov Chain Attribution (Absorbing Chain / Removal Effect) ────────────────\n# Build transition counts\nbuild_transitions &lt;- function(df, channel_cols) {\n  trans &lt;- list()\n  for (i in seq_len(nrow(df))) {\n    path &lt;- unlist(df[i, channel_cols])\n    path &lt;- path[!is.na(path)]\n    if (length(path) == 0) next\n    outcome &lt;- if (df$user_purchase[i] == 1) \"conversion\" else \"null\"\n    \n    # start -&gt; first\n    from &lt;- \"start\"; to &lt;- path[1]\n    trans[[from]][[to]] &lt;- (trans[[from]][[to]] %||% 0) + 1\n    \n    # channel -&gt; channel\n    if (length(path) &gt; 1) {\n      for (j in seq_len(length(path) - 1)) {\n        from &lt;- path[j]; to &lt;- path[j+1]\n        trans[[from]][[to]] &lt;- (trans[[from]][[to]] %||% 0) + 1\n      }\n    }\n    # last -&gt; outcome\n    from &lt;- tail(path, 1)\n    trans[[from]][[outcome]] &lt;- (trans[[from]][[outcome]] %||% 0) + 1\n  }\n  trans\n}\n\n`%||%` &lt;- function(a, b) if (!is.null(a)) a else b\n\ntrans_counts &lt;- build_transitions(attr_raw, channel_cols)\n\n# Convert to probabilities\ntrans_prob &lt;- lapply(trans_counts, function(x) {\n  total &lt;- sum(unlist(x))\n  lapply(x, function(v) v / total)\n})\n\n# Build Q and R matrices for absorbing chain\nall_transient &lt;- c(channels_list, \"start\")\nabsorbing     &lt;- c(\"conversion\", \"null\")\nn_t &lt;- length(all_transient)\nstate_idx &lt;- setNames(seq_along(all_transient), all_transient)\n\nQ &lt;- matrix(0, n_t, n_t, dimnames = list(all_transient, all_transient))\nR &lt;- matrix(0, n_t, 2,   dimnames = list(all_transient, absorbing))\n\nfor (s in all_transient) {\n  probs &lt;- trans_prob[[s]]\n  if (is.null(probs)) next\n  for (t in names(probs)) {\n    p &lt;- probs[[t]]\n    if (t %in% all_transient) {\n      Q[s, t] &lt;- p\n    } else if (t %in% absorbing) {\n      R[s, t] &lt;- p\n    }\n  }\n}\n\n# Fundamental matrix and absorption probabilities\nN_mat &lt;- solve(diag(n_t) - Q)\nB_mat &lt;- N_mat %*% R\n\nbaseline_conv &lt;- B_mat[\"start\", \"conversion\"]\n\n# Removal effect for each channel\nremoval_effects &lt;- sapply(channels_list, function(ch) {\n  Q2 &lt;- Q; R2 &lt;- R\n  # Redirect transitions TO ch → null\n  for (s in all_transient) {\n    if (Q2[s, ch] &gt; 0) {\n      R2[s, \"null\"] &lt;- R2[s, \"null\"] + Q2[s, ch]\n      Q2[s, ch] &lt;- 0\n    }\n  }\n  # ch itself: absorb to null\n  Q2[ch, ] &lt;- 0\n  R2[ch, ] &lt;- c(0, 1)\n  \n  tryCatch({\n    N2 &lt;- solve(diag(n_t) - Q2)\n    B2 &lt;- N2 %*% R2\n    max(0, baseline_conv - B2[\"start\", \"conversion\"])\n  }, error = function(e) 0)\n})\n\nmarkov_pct_vals &lt;- round(removal_effects / sum(removal_effects) * 100, 2)\n\nmarkov_attr &lt;- data.frame(\n  Channel = names(markov_pct_vals),\n  Markov  = as.numeric(markov_pct_vals)\n)\n\n# ── Combined comparison table ──────────────────────────────────────────────────\ncomparison &lt;- last_touch_attr |&gt;\n  full_join(first_touch_attr, by = \"Channel\") |&gt;\n  full_join(linear_credits,   by = \"Channel\") |&gt;\n  full_join(markov_attr,      by = \"Channel\") |&gt;\n  arrange(desc(Last_Touch))\n\n\n\nNote on attribution dataset: The attribution analysis uses a separate dataset (attribution_dataset.csv) containing 1,000 user journeys across 6 channels (Direct, Email, Organic, Paid Search, Paid Social, Referral), with user_purchase as the conversion indicator (10% conversion rate, n=100 converters). Four models are compared: Last-Touch, First-Touch, Linear, and Markov Chain (removal effect via absorbing Markov chain). The dataset contains journeys of 1–8 touchpoints (mean = 4.2).\n\n\n\nShow code\ncomparison_long &lt;- comparison |&gt;\n  tidyr::pivot_longer(\n    cols = c(Last_Touch, First_Touch, Linear, Markov),\n    names_to  = \"Model\",\n    values_to = \"Attribution\"\n  ) |&gt;\n  mutate(Model = factor(Model, levels = c(\"First_Touch\", \"Linear\", \"Last_Touch\", \"Markov\")))\n\nggplot(comparison_long, aes(x = Channel, y = Attribution, fill = Model)) +\n  geom_bar(stat = \"identity\", position = position_dodge(width = 0.85),\n           width = 0.8, na.rm = TRUE) +\n  geom_text(\n    aes(label = ifelse(is.na(Attribution), \"\", paste0(round(Attribution, 1), \"%\"))),\n    position = position_dodge(width = 0.85),\n    vjust = -0.4, size = 2.8, na.rm = TRUE\n  ) +\n  labs(\n    x = \"Channel\", y = \"Attribution (%)\", fill = \"Model\",\n    title = \"Multi-Touch Attribution: Four Models Compared\",\n    caption = \"Based on attribution_dataset.csv — 1,000 users, 100 converters\"\n  ) +\n  scale_fill_manual(values = c(\n    \"First_Touch\" = \"#59A14F\",\n    \"Linear\"      = \"#F28E2B\",\n    \"Last_Touch\"  = \"#4E79A7\",\n    \"Markov\"      = \"#E15759\"\n  )) +\n  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +\n  theme_minimal(base_size = 13) +\n  theme(axis.text.x = element_text(angle = 30, hjust = 1))\n\n\n\n\n\nFour attribution models compared by channel. Each model tells a different story about where conversion credit belongs.\n\n\n\n\n\n\nShow code\ncomparison |&gt;\n  filter(!is.na(Markov)) |&gt;\n  ggplot(aes(x = Last_Touch, y = Markov, label = Channel)) +\n  geom_abline(slope = 1, intercept = 0, linetype = \"dashed\", color = \"gray60\") +\n  geom_point(size = 4, color = \"#E15759\") +\n  ggrepel::geom_text_repel(size = 4, fontface = \"bold\") +\n  labs(\n    x = \"Last-Touch Attribution (%)\",\n    y = \"Markov Attribution (%)\",\n    title = \"Last-Touch vs. Markov: Which Channels Are Mis-Attributed?\",\n    caption = \"Channels above the dashed line are undervalued by Last-Touch; below = overvalued\"\n  ) +\n  theme_minimal(base_size = 13)\n\n\n\n\n\nLast-Touch vs Markov: the two most contrasting models. Channels above the diagonal are undervalued by Last-Touch.\n\n\n\n\n\n\n5.2.2 Model Comparison Table\n\n\nShow code\ncomparison |&gt;\n  mutate(\n    LT_vs_Markov = round(Markov - Last_Touch, 2),\n    Direction = case_when(\n      is.na(LT_vs_Markov) ~ \"—\",\n      LT_vs_Markov &gt; 1    ~ paste0(\"▲ +\", LT_vs_Markov, \"%\"),\n      LT_vs_Markov &lt; -1   ~ paste0(\"▼ \", LT_vs_Markov, \"%\"),\n      TRUE                ~ \"≈ Stable\"\n    )\n  ) |&gt;\n  select(Channel, Last_Touch, First_Touch, Linear, Markov, Direction) |&gt;\n  gt() |&gt;\n  cols_label(\n    Channel     = \"Channel\",\n    Last_Touch  = \"Last-Touch (%)\",\n    First_Touch = \"First-Touch (%)\",\n    Linear      = \"Linear (%)\",\n    Markov      = \"Markov (%)\",\n    Direction   = \"LT vs Markov\"\n  ) |&gt;\n  fmt_missing(columns = everything(), missing_text = \"—\") |&gt;\n  fmt_number(columns = c(Last_Touch, First_Touch, Linear, Markov), decimals = 1) |&gt;\n  data_color(columns = Markov, palette = \"Reds\") |&gt;\n  tab_header(title = \"Attribution Model Comparison (All Four Models)\") |&gt;\n  tab_options(table.width = pct(100))\n\n\n\n\n\n\n\n\nAttribution Model Comparison (All Four Models)\n\n\nChannel\nLast-Touch (%)\nFirst-Touch (%)\nLinear (%)\nMarkov (%)\nLT vs Markov\n\n\n\n\nEmail\n28.0\n24.0\n20.8\n16.3\n▼ -11.69%\n\n\nDirect\n21.0\n8.0\n15.8\n19.3\n▼ -1.71%\n\n\nOrganic\n19.0\n20.0\n18.7\n18.9\n≈ Stable\n\n\nPaid Search\n16.0\n20.0\n16.7\n17.4\n▲ +1.42%\n\n\nReferral\n10.0\n5.0\n11.9\n13.9\n▲ +3.92%\n\n\nPaid Social\n6.0\n23.0\n16.1\n14.2\n▲ +8.21%\n\n\n\n\n\n\n\n\n\n5.2.3 Key Insights from Attribution\nEmail is the most complex story. It ranks first in Last-Touch (28%) and First-Touch (24%), reflecting both high conversion closing power and strong journey initiation. However, the Markov model assigns it only 16.3% — the fourth highest — suggesting that Email’s Last-Touch dominance overstates its true incremental contribution. It is a high-value channel but not as uniquely critical as Last-Touch implies.\nDirect receives 21% under Last-Touch but only 19.3% under Markov. It is relatively stable across models, suggesting it plays a genuine role in journeys — not purely as a last-step artifact, though some inflation remains.\nPaid Social is the most dramatically undervalued channel under Last-Touch (6%) vs. Markov (14.2%). The First-Touch model assigns it 23%, its highest score, confirming it is a strong journey initiator. Paid Social consistently appears early in converting paths but receives almost no last-touch credit. This is the clearest case of systematic under-investment driven by Last-Touch reporting.\nOrganic and Paid Search are the most stable channels, varying by only ~2% across all four models. They contribute consistently at every stage of the funnel.\nReferral is undervalued by Last-Touch (10%) and First-Touch (5%) relative to its Markov share (13.9%), indicating it plays a meaningful mid-funnel role that position-based models undercount."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#increase-investment-in-paid-social",
+    "href": "website-traffic-analytics.html#increase-investment-in-paid-social",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "6.1 1. Increase Investment in Paid Social",
+    "text": "6.1 1. Increase Investment in Paid Social\nRecommendation: Increase Paid Social budget allocation, treating it explicitly as an upper-funnel awareness channel.\nEvidence: Paid Social receives only 6% under Last-Touch but 14.2% under Markov — a 2.4× increase. Its First-Touch share is 23%, the highest of any channel, confirming it is the primary journey initiator for converting users. It systematically loses credit to Email and Direct as those channels close the conversion.\nConfidence: Moderate. The attribution dataset shows a consistent pattern, but Paid Social impressions from walled-garden platforms (Meta, LinkedIn) are not fully captured in click data, so the true contribution may be even higher.\nAction: Increase Paid Social spend, add UTM parameters to all ad links, and track Paid Social as a top-of-funnel metric (reach, journey initiation) rather than a last-click conversion metric."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#maintain-email-as-a-conversion-channel",
+    "href": "website-traffic-analytics.html#maintain-email-as-a-conversion-channel",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "6.2 2. Maintain Email as a Conversion Channel",
+    "text": "6.2 2. Maintain Email as a Conversion Channel\nRecommendation: Keep Email campaigns strong for bottom-of-funnel re-engagement (application deadline reminders, event invites, follow-ups).\nEvidence: Email leads Last-Touch attribution (28%) and First-Touch (24%), and ranks 4th in Markov (16.3%). It is effective at both initiating and closing journeys — the most versatile channel in the mix.\nConfidence: High. Email’s strong performance is consistent across all four attribution models.\nAction: Segment email lists by funnel stage. Use upper-funnel emails for prospects who arrived via Paid Social or Organic; use conversion-focused emails for users already engaged with the program."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#re-evaluate-direct-as-a-standalone-channel",
+    "href": "website-traffic-analytics.html#re-evaluate-direct-as-a-standalone-channel",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "6.3 3. Re-evaluate Direct as a Standalone Channel",
+    "text": "6.3 3. Re-evaluate Direct as a Standalone Channel\nRecommendation: Do not treat Direct traffic as an independent channel to invest in — it is primarily the closing step of journeys begun elsewhere.\nEvidence: Direct receives 21% under Last-Touch but only 19.3% under Markov, and its First-Touch share is just 8% — the lowest of any channel. This confirms Direct rarely initiates journeys; it mainly captures users returning to convert after prior touchpoints.\nConfidence: High. The First-Touch / Markov discrepancy is diagnostic of a closing-step channel.\nAction: Focus investment on the channels (Paid Social, Organic, Email) that generate the journeys that Direct closes. Improve UTM tagging to reduce mis-attribution of untagged campaign traffic into Direct."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#invest-in-referral-as-a-mid-funnel-channel",
+    "href": "website-traffic-analytics.html#invest-in-referral-as-a-mid-funnel-channel",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "6.4 4. Invest in Referral as a Mid-Funnel Channel",
+    "text": "6.4 4. Invest in Referral as a Mid-Funnel Channel\nRecommendation: Treat Referral as a mid-funnel nurturing channel and explore partnerships that generate referral traffic.\nEvidence: Referral’s Markov share (13.9%) is notably higher than its Last-Touch share (10%) and its First-Touch share (5%), indicating it plays a meaningful role in the middle of converting journeys — keeping users in the funnel after initial discovery.\nConfidence: Moderate. Referral is a heterogeneous category (partner sites, listings, directories) and its sources are not broken out in this dataset.\nAction: Identify the top referral sources, prioritize partnerships with high-Markov-value referrers, and ensure all referral links are UTM-tagged for channel-level attribution."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#rebalance-upper-vs.-lower-funnel-spend",
+    "href": "website-traffic-analytics.html#rebalance-upper-vs.-lower-funnel-spend",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "6.5 5. Rebalance Upper vs. Lower Funnel Spend",
+    "text": "6.5 5. Rebalance Upper vs. Lower Funnel Spend\nRecommendation: Shift some budget from lower-funnel channels (Email, Direct-associated) toward upper-funnel channels (Paid Social, Organic content, Referral partnerships).\nEvidence: The Markov model consistently re-weights credit toward channels that appear early in journeys (Paid Social: +8.2pp vs Last-Touch; Referral: +3.9pp) and away from channels that appear late (Email: −11.7pp; Direct: −1.7pp).\nConfidence: Moderate. Requires cost data (not currently available) to calculate ROI-adjusted reallocation.\nAction: Add cost data to the pipeline and re-run attribution with weighted ROI metrics before committing to specific budget shifts."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#strengthen-utm-tagging",
+    "href": "website-traffic-analytics.html#strengthen-utm-tagging",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "6.6 5. Strengthen UTM Tagging",
+    "text": "6.6 5. Strengthen UTM Tagging\nRecommendation: Audit and enforce UTM tagging across all outbound links (email campaigns, social posts, paid ads).\nEvidence: A large proportion of Direct traffic is likely mis-attributed traffic from untagged campaigns. Improving tagging would immediately improve the accuracy of both last-touch and Markov models.\nConfidence: High. This is a data quality fix with no downside risk.\nAction: Implement a UTM naming convention standard and verify all active campaign links before next semester’s recruitment cycle."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#data-constraints",
+    "href": "website-traffic-analytics.html#data-constraints",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "7.1 Data Constraints",
+    "text": "7.1 Data Constraints\n\n\n\n\n\n\n\nConstraint\nImpact\n\n\n\n\n8 snapshot days only\nTrends are directional; no seasonality, no weekly patterns\n\n\nuser_id largely missing\nCross-device stitching not possible; one user on two devices = two pseudo-users\n\n\nNo conversion events\nAttribution is modeled from page-view sequences as proxy; not actual conversions\n\n\nNested GA4 fields excluded\nevent_params and ecommerce arrays were flattened out; no page-level or product-level detail\n\n\nNo session reconstruction\nWithout timestamp-based sessionization, session-level metrics (bounce rate, session duration) are unavailable"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#attribution-specific-constraints",
+    "href": "website-traffic-analytics.html#attribution-specific-constraints",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "7.2 Attribution-Specific Constraints",
+    "text": "7.2 Attribution-Specific Constraints\n\n\n\n\n\n\n\nConstraint\nImpact\n\n\n\n\nWalled-garden data gaps\nPaid Social impressions (Meta, LinkedIn) are not fully recorded in GA4 click data; Markov may undercount Paid Social\n\n\nSmall journey paths\nMarkov chains require sufficient multi-touchpoint sequences; small datasets increase variance in removal effect estimates\n\n\nNo cost or ROI data\nAttribution percentages cannot be converted to budget recommendations without spend data\n\n\nFirst-touch vs. last-touch vs. Markov\nNo single model is “correct”; Markov is the most theoretically sound for multi-step journeys but not immune to data quality issues"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#what-this-report-cannot-claim",
+    "href": "website-traffic-analytics.html#what-this-report-cannot-claim",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "7.3 What This Report Cannot Claim",
+    "text": "7.3 What This Report Cannot Claim\nThis report cannot claim:\n\nThat Paid Social caused conversions — only that it appears in more conversion paths than last-touch suggests.\nThat the trends observed over 8 days are representative of the full academic year.\nThat the Markov attribution percentages are stable — with more data, they would likely shift."
+  },
+  {
+    "objectID": "website-traffic-analytics.html#how-to-reproduce-this-report",
+    "href": "website-traffic-analytics.html#how-to-reproduce-this-report",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "8.1 How to Reproduce This Report",
+    "text": "8.1 How to Reproduce This Report\n\nClone the repository:\ngit clone https://github.com/hsujeffrey/ibm6530-group4-project\ncd ibm6530-group4-project\nEnsure data is available: Place events_snapshot.csv in data/. The Parquet file will be auto-built on first render.\nInstall R packages:\ninstall.packages(c(\n  \"arrow\", \"dplyr\", \"ggplot2\", \"scales\", \"lubridate\",\n  \"stringr\", \"tidyr\", \"forcats\", \"fs\", \"here\",\n  \"readr\", \"gt\", \"knitr\", \"gridExtra\", \"ggrepel\"\n))\nRender the report:\nquarto render IBM6530_Final_Group4_MSDM_Odoo.qmd"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#file-structure",
+    "href": "website-traffic-analytics.html#file-structure",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "8.2 File Structure",
+    "text": "8.2 File Structure\nibm6530-group4-project/\n├── data/\n│   ├── events_snapshot.csv               # GA4 flat export from BigQuery\n│   ├── attribution_dataset.csv           # 1,000-user journey dataset for attribution\n│   └── msdm_snapshot/events_flat/\n│       └── events_snapshot.parquet       # Auto-generated on first render\n├── IBM6530_Final_Group4_MSDM_Odoo.qmd    # This report\n├── dashboard.qmd                         # Deliverable 1 — Dashboard\n└── presentation.qmd                      # Deliverable 3 — Revealjs Presentation"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#github-repository",
+    "href": "website-traffic-analytics.html#github-repository",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "9.1 GitHub Repository",
+    "text": "9.1 GitHub Repository\nhttps://github.com/hsujeffrey/ibm6530-group4-project"
+  },
+  {
+    "objectID": "website-traffic-analytics.html#session-info",
+    "href": "website-traffic-analytics.html#session-info",
+    "title": "MSDM Odoo Website Analytics — Final Report",
+    "section": "9.2 Session Info",
+    "text": "9.2 Session Info\n\n\nShow code\nsessionInfo()\n\n\nR version 4.4.1 (2024-06-14)\nPlatform: x86_64-apple-darwin20\nRunning under: macOS 15.7.4\n\nMatrix products: default\nBLAS:   /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRblas.0.dylib \nLAPACK: /Library/Frameworks/R.framework/Versions/4.4-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0\n\nlocale:\n[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8\n\ntime zone: America/Los_Angeles\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices datasets  utils     methods   base     \n\nother attached packages:\n [1] ggrepel_0.9.8   knitr_1.51      gt_1.3.0        readr_2.2.0    \n [5] here_1.0.2      fs_2.1.0        forcats_1.0.1   tidyr_1.3.2    \n [9] stringr_1.6.0   lubridate_1.9.5 scales_1.4.0    ggplot2_4.0.3  \n[13] dplyr_1.2.1     arrow_24.0.0   \n\nloaded via a namespace (and not attached):\n [1] sass_0.4.10        generics_0.1.4     renv_1.1.7         xml2_1.5.2        \n [5] stringi_1.8.7      hms_1.1.4          digest_0.6.39      magrittr_2.0.5    \n [9] evaluate_1.0.5     grid_4.4.1         timechange_0.4.0   RColorBrewer_1.1-3\n[13] fastmap_1.2.0      rprojroot_2.1.1    jsonlite_2.0.0     gridExtra_2.3     \n[17] purrr_1.2.2        cli_3.6.6          crayon_1.5.3       rlang_1.2.0       \n[21] bit64_4.8.0        withr_3.0.2        yaml_2.3.12        parallel_4.4.1    \n[25] tools_4.4.1        tzdb_0.5.0         assertthat_0.2.1   vctrs_0.7.3       \n[29] R6_2.6.1           lifecycle_1.0.5    htmlwidgets_1.6.4  bit_4.6.0         \n[33] vroom_1.7.1        pkgconfig_2.0.3    pillar_1.11.1      gtable_0.3.6      \n[37] glue_1.8.1         Rcpp_1.1.1-1.1     xfun_0.57          tibble_3.3.1      \n[41] tidyselect_1.2.1   farver_2.1.2       htmltools_0.5.9    rmarkdown_2.31    \n[45] labeling_0.4.3     compiler_4.4.1     S7_0.2.2"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Hi, I’m Eunice Won",
+    "section": "About Me",
+    "text": "About Me\nI hold a Master of Science in Digital Marketing from Cal Poly Pomona."
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Hi, I’m Eunice Won",
+    "section": "Let’s Connect",
+    "text": "Let’s Connect\nYou can email me at euniceewon@gmail.com or connect on LinkedIn.\n\nWelcome to my portfolio."
+  },
+  {
+    "objectID": "listings/02-ODI-grips-analysis.html",
+    "href": "listings/02-ODI-grips-analysis.html",
+    "title": "ODI Grips Social Media Analysis",
+    "section": "",
+    "text": "Overview\nThis project analyzed ODI Grips social media engagement data to better understand how content structure, captions, hashtags, and calls-to-action may influence audience interaction and engagement performance. The analysis explored trends across Instagram content to identify patterns that could support stronger content strategy and digital engagement.\n\n\n\n\nLearning Outcomes\n\nAnalyze engagement trends across social media content.\n\nExamine how caption structure and hashtags relate to engagement performance.\n\nIdentify audience interaction patterns through engagement metrics.\n\nEvaluate differences across content and caption types.\n\nTranslate engagement findings into content strategy recommendations.\n\n\n\n\nKey Skills Gained\n\nSocial media analytics\n\nEngagement metric analysis\n\nData wrangling in R\n\nContent performance evaluation\n\nData visualization and reporting"
+  },
+  {
+    "objectID": "listings/05-dashboards-and-reporting.html",
+    "href": "listings/05-dashboards-and-reporting.html",
+    "title": "Dashboards & Reporting",
+    "section": "",
+    "text": "Overview\nThis work focused on building dashboards and visual reports to communicate marketing and website analytics findings more clearly and effectively. Using tools such as R, Quarto, Tableau, GA4, BigQuery, and Looker Studio, the dashboards were designed to simplify complex datasets and support data-informed decision-making.\n\n\n\n\nLearning Outcomes\n\nOrganize and visualize marketing and website analytics data.\n\nBuild dashboards to monitor performance metrics and trends.\n\nTranslate complex data into more accessible visual insights.\n\nSupport stakeholder communication through reporting.\n\nDevelop data-informed recommendations from dashboard findings.\n\n\n\n\nKey Skills Gained\n\nDashboard development\n\nData visualization\n\nReporting and storytelling\n\nData wrangling in R\n\nMarketing analytics tools"
+  },
+  {
+    "objectID": "listings/04-SEO-search-visibility.html",
+    "href": "listings/04-SEO-search-visibility.html",
+    "title": "SEO & Search Visibility Analysis",
+    "section": "",
+    "text": "Overview\nThis project evaluated keyword opportunities, competitor visibility, and website content performance to better understand areas for SEO improvement. The analysis explored search trends, content gaps, and visibility patterns to support stronger digital marketing and content strategy decisions.\n\n\n\n\nLearning Outcomes\n\nIdentify keyword opportunities through search and competitor research.\n\nAnalyze website visibility and search performance trends.\n\nEvaluate competitor content and digital presence.\n\nRecognize content gaps and SEO improvement opportunities.\n\nDevelop data-informed recommendations for digital strategy.\n\n\n\n\nKey Skills Gained\n\nSEO analysis\n\nKeyword research\n\nCompetitive benchmarking\n\nData interpretation and reporting\n\nDigital marketing strategy"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Résumé",
+    "section": "",
+    "text": "Professional Summary\nResults-oriented marketing and analytics professional with a strong foundation in data analysis, digital strategy, and performance reporting. Skilled in leveraging analytics tools and programming languages to uncover insights and support decision-making across cross-functional teams.\n\n\nTechnical Skills\n\nProgramming Languages: R, SQL\nWeb Technologies: HTML, Quarto, CMS Platforms,\n\n\n\nEducation\n\n\n\n\n\n\n\n\n\nDegree\nYear\nCollege / Department\nInstitution\n\n\n\n\nMaster of Science in Digital Marketing\nAug. 2024 – Aug. 2026\nCollege of Business Administration\nCal Poly Pomona\n\n\nB.A. Psychological Science, B.A. Education Sciences\n2017 – 2021\nSchool of Social Ecology, School of Education\nUniversity of California, Irvine\n\n\n\n\n\nWork Experience\n\nIntake Specialist & Marketing / Legal Assistant, Cha Cha Cha Law\nOct. 2025 – current\n\nServe as a primary point of contact for prospective and existing clients regarding lemon law and personal injury matters.\nConduct client intake, gather case information, and organize supporting documents including repair orders and purchase agreements.\nAssist with legal and administrative operations by preparing client communications, coordinating case updates, and scheduling attorney calls.\nSupport marketing initiatives through client outreach, digital content coordination, and brand communication across online platforms.\n\n\n\n\nBrand Community Engagement Specialist, Center for Customer Insights & Digital Marketing (CCIDM)\nMar. 2025 – Oct. 2025\n\nSupported the Center Director in developing and executing engagement initiatives that increased student awareness and participation in events and workshops.\nCreated and scheduled social media and email marketing campaigns to improve audience reach and program visibility.\nCollaborated with faculty, students, and campus organizations to coordinate logistics and promote digital marketing programs.\nAssisted with community outreach projects involving branding, student engagement, and digital communication strategies.\nUtilized tools including Canva, Google Workspace, HubSpot, and social media platforms for campaign coordination and content management.\n\n\n\n\nBarista, 6xs Coffee DTLA\nJul. 2024 – Oct. 2025\n\nMaintained professional and efficient customer service in a fast-paced café environment with high daily order volume.\nManaged multiple beverage and food orders while ensuring accuracy, quality, and customer satisfaction.\nCollaborated with team members to maintain workflow efficiency during peak business hours.\nAssisted with customer communication, delivery coordination, and daily operational support.\nDeveloped strong multitasking, communication, and problem-solving skills in a customer-facing environment.\n\n\n\n\nEnglish Teacher, Dosol Elementary School\nMar. 2022 – Feb. 2024\n\nTaught English to over 700 elementary students weekly, improving classroom participation and communication skills.\nDesigned interactive lesson plans and educational materials in collaboration with Korean co-teachers.\nOrganized English Camps and group activities that encouraged teamwork, confidence, and cultural exchange.\nIncorporated digital learning materials and multimedia tools to improve student engagement and learning outcomes.\nStrengthened leadership, public speaking, and cross-cultural communication skills through classroom instruction and program coordination."
+  },
+  {
+    "objectID": "listings/01-odoo-website-analytics.html",
+    "href": "listings/01-odoo-website-analytics.html",
+    "title": "Odoo Website Analytics",
+    "section": "",
+    "text": "Overview\nThis project analyzed website traffic and engagement data for the MSDM Odoo website using GA4, BigQuery, and dashboard reporting tools. The analysis focused on understanding user behavior, traffic acquisition sources, engagement patterns, and overall website performance to identify opportunities for improving user experience and digital visibility.\n\n\n\n\nLearning Outcomes\n\nAnalyze website traffic and user engagement metrics.\n\nIdentify trends in acquisition channels and user behavior.\n\nEvaluate engagement performance across website pages.\n\nCommunicate analytics findings through dashboards and reports.\n\nDevelop data-informed recommendations for website improvement.\n\n\n\n\nKey Skills Gained\n\nGA4 and BigQuery analysis\n\nWebsite analytics reporting\n\nDashboard development\n\nData wrangling in R\n\nData visualization and storytelling"
+  },
+  {
+    "objectID": "listings/03-caption-quality-research.html",
+    "href": "listings/03-caption-quality-research.html",
+    "title": "AI Caption Quality Research",
+    "section": "",
+    "text": "Overview\nThis research project examined how historically informed prompting influenced the quality of AI-generated social media captions for ODI Grips. Captions generated from basic prompts and historically informed prompts were evaluated across dimensions such as brand alignment, clarity, engagement potential, persuasiveness, and originality to better understand how structured prompting may improve AI-generated marketing content.\n\n\n\n\nLearning Outcomes\n\nCompare AI-generated captions across different prompting conditions.\n\nEvaluate content quality using structured human rating methods.\n\nAnalyze how historical engagement insights can inform prompt design.\n\nInterpret statistical findings related to content quality performance.\n\nTranslate research findings into practical content strategy recommendations.\n\n\n\n\nKey Skills Gained\n\nAI-generated content evaluation\n\nMarketing research methods\n\nStatistical analysis in R\n\nData visualization and reporting\n\nSocial media content analysis"
+  },
+  {
+    "objectID": "resume/Resume.html",
+    "href": "resume/Resume.html",
+    "title": "Professional Summary",
+    "section": "",
+    "text": "Professional Summary\nGraduate student pursuing an M.S. in Digital Marketing with experience in legal intake, client communication, marketing coordination, and community engagement. Strong background in fast-paced client-facing environments with bilingual communication skills in English and Korean.\n\n\nTechnical Skills\n\nProgramming Languages: R, SQL, etc.\n\n\n\nEducation\n\n\n# A tibble: 2 × 5\n  what                                                when     with  where why  \n  &lt;chr&gt;                                               &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;lis&gt;\n1 M.S. Digital Marketing                              Expecte… Coll… Cali… &lt;chr&gt;\n2 B.A. Psychological Science; B.A. Education Sciences Complet… Cum … Univ… &lt;chr&gt;\n\n\n\n\nWork Experience\n\n\n# A tibble: 4 × 5\n  what                                            when        with  where why   \n  &lt;chr&gt;                                           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;list&gt;\n1 Intake Specialist & Marketing / Legal Assistant Oct. 2025 … Cha … &lt;NA&gt;  &lt;list&gt;\n2 Brand Community Engagement Specialist           Mar. 2025 … Cent… &lt;NA&gt;  &lt;list&gt;\n3 Barista                                         Jul. 2024 … 6xs … &lt;NA&gt;  &lt;list&gt;\n4 English Teacher                                 Mar. 2022 … Doso… &lt;NA&gt;  &lt;list&gt;\n\n\n\n\nCertification & Skills\nGoogle Analytics • Google Ads Search • Data Wrangling & Visualization • HubSpot • Canva • R Programming • Microsoft Office • Google Workspace • English (Fluent) • Korean (Fluent)"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#business-problem",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#business-problem",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Business Problem",
+    "text": "Business Problem\n\n\nClient: MSDM Program — Odoo Website\nCore Questions:\n\nWhere is traffic coming from?\nWho is visiting & on what device?\nWhich channels drive conversions?\nWhere should budget be focused?\n\n\nWhy it matters:\nThe MSDM program needs to understand its digital presence to make smarter decisions about outreach and marketing investment.\nStandard last-touch reporting tells an incomplete story — this project adds multi-touch attribution."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#data-overview",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#data-overview",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Data Overview",
+    "text": "Data Overview\n\n\nSource\n\nGA4 event data from BigQuery\nProject: odoo-487003\nDataset: analytics_523126945\n\nCoverage\n\n8 snapshot days\nFeb 9 – Apr 3, 2026\n~7 week span\n\n\nPipeline\nBigQuery\n   ↓  SQL extract\nevents_snapshot.csv\n   ↓  Apache Arrow\nevents_snapshot.parquet\n   ↓  R / Quarto\nAnalysis + Dashboard\nKey fields: event name, traffic medium, device, geo, user pseudo ID"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#key-metrics-at-a-glance",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#key-metrics-at-a-glance",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Key Metrics at a Glance",
+    "text": "Key Metrics at a Glance\n\n\n\n\n\nMetric\nValue\n\n\n\n\nTotal Events\n193\n\n\nUnique Users\n8\n\n\nPage Views\n59\n\n\nTop Channel\nDirect\n\n\nTop Device\ndesktop"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#engagement-depth",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#engagement-depth",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Engagement Depth",
+    "text": "Engagement Depth\n\n~24 events per user\n\n~7.4 page views per user\n\nThese metrics indicate that users are interacting multiple times during visits, suggesting active engagement within the snapshot."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#dashboard-overview",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#dashboard-overview",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Dashboard Overview",
+    "text": "Dashboard Overview"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#dashboard-engagement",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#dashboard-engagement",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Dashboard Engagement",
+    "text": "Dashboard Engagement"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#where-is-traffic-coming-from",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#where-is-traffic-coming-from",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Where Is Traffic Coming From?",
+    "text": "Where Is Traffic Coming From?\n\n\n\nOrganic and Direct together dominate — the MSDM site relies heavily on brand awareness and search visibility."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#who-is-visiting",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#who-is-visiting",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Who Is Visiting?",
+    "text": "Who Is Visiting?\n\n\n\nDesktop dominates — typical for program research. But mobile unique users warrant continued UX investment."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#attribution-last-touch-vs-markov",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#attribution-last-touch-vs-markov",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Attribution: Last-Touch vs Markov",
+    "text": "Attribution: Last-Touch vs Markov"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#what-the-models-tell-us-12",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#what-the-models-tell-us-12",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "What the Models Tell Us (1/2)",
+    "text": "What the Models Tell Us (1/2)\n\n\n\nChannel\nLast-Touch\nFirst-Touch\nMarkov\n\n\n\n\nEmail\n28%\n24%\n16%\n\n\nDirect\n21%\n8%\n19%\n\n\nOrganic\n19%\n20%\n19%\n\n\nPaid Search\n16%\n20%\n17%\n\n\nPaid Social\n6%\n23%\n14%\n\n\nReferral\n10%\n5%\n14%"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#what-the-models-tell-us-22",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#what-the-models-tell-us-22",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "What the Models Tell Us (2/2)",
+    "text": "What the Models Tell Us (2/2)\n\n\n\nChannel\nInsight\n\n\n\n\nEmail\nStrong closer & initiator\n\n\nDirect\nClosing step, not a true driver\n\n\nOrganic\nStable across all models\n\n\nPaid Search\nConsistent contributor\n\n\nPaid Social\n⚠️ Undervalued by last-touch\n\n\nReferral\nMid-funnel role undervalued\n\n\n\n\n\nPaid Social: 6% last-touch → 23% first-touch → 14% Markov. It starts journeys but gets no closing credit."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#recommendations-12",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#recommendations-12",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Recommendations (1/2)",
+    "text": "Recommendations (1/2)\n\nInvest more in Paid Social — only 6% last-touch, but 23% first-touch and 14% Markov. It initiates journeys but gets almost no closing credit.\nKeep Email strong — top in both last-touch (28%) and first-touch (24%). Best for bottom-of-funnel re-engagement.\nDon’t over-budget Direct — 21% last-touch but only 8% first-touch. It’s the final step, not a true driver."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#recommendations-22",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#recommendations-22",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Recommendations (2/2)",
+    "text": "Recommendations (2/2)\n\nInvest in Referral partnerships — Markov (14%) &gt; Last-Touch (10%). Meaningful mid-funnel role that position-based models miss.\nRebalance upper vs lower funnel — shift some spend toward Paid Social and Referral while maintaining Email efficiency."
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#limitations",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#limitations",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Limitations",
+    "text": "Limitations\n\n\nData Constraints\n\nOnly 8 snapshot days — trends are directional, not conclusive\nuser_id largely missing — no cross-device stitching\nNested GA4 fields excluded (event_params, ecommerce)\nNo session-level metrics\n\n\nAttribution Constraints\n\nDirect traffic may mask untagged channels\nPaid Social impressions not fully captured (walled garden)\nSmall dataset — results may shift with more data\nNo cost or ROI data to validate recommendations"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#next-steps",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#next-steps",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Next Steps",
+    "text": "Next Steps\n\nStrengthen UTM tagging across all campaigns to reduce Direct traffic inflation\nExpand date coverage — 8 days is not enough for reliable trend analysis\nAdd cost data — combine attribution results with spend to calculate channel ROI\nTest Paid Social increase — run an experiment to validate the Markov model’s findings\nUnpack event_params — enables page-level analysis and deeper engagement metrics"
+  },
+  {
+    "objectID": "IBM6530_Presentation_Group4_Odoo.html#thank-you",
+    "href": "IBM6530_Presentation_Group4_Odoo.html#thank-you",
+    "title": "MSDM Odoo Website Analytics",
+    "section": "Thank You",
+    "text": "Thank You\n\n\nGroup 4\n\nMin Gong\nJeffrey Hsu\nEmily Kuo\nEunice Won\nCeren Unal\n\nIBM 6530 | May 2026\n\nLinks\n\n📊 Dashboard\n📄 Full Report\n💻 GitHub Repo"
+  },
+  {
+    "objectID": "contact-us/thank-you.html",
+    "href": "contact-us/thank-you.html",
+    "title": "Thank you",
+    "section": "",
+    "text": "Form submitted."
+  },
+  {
+    "objectID": "marketing-analytics.html",
+    "href": "marketing-analytics.html",
+    "title": "Marketing Analytics",
+    "section": "",
+    "text": "My work in marketing analytics connects data, digital strategy, and storytelling. Through my MS in Digital Marketing coursework and hands-on projects, I’ve worked with website analytics, campaign data, social media engagement, SEO research, attribution modeling, and dashboard reporting.\nA lot of my work focuses on making data easier to understand. I enjoy taking messy or complex datasets and turning them into clear insights that can help explain what is happening, why it matters, and what a team could do next."
+  },
+  {
+    "objectID": "marketing-analytics.html#what-youll-find",
+    "href": "marketing-analytics.html#what-youll-find",
+    "title": "Marketing Analytics",
+    "section": "What You’ll Find",
+    "text": "What You’ll Find\n\nOdoo Website Analytics: Analyzing GA4 and BigQuery data to understand website traffic, user behavior, engagement, and conversion patterns.\nODI Grips Social Media Analysis: Studying Instagram engagement, caption structure, hashtags, CTAs, and content types to identify patterns in content performance.\nAI Caption Quality Research: Comparing basic prompts with historically informed prompts to evaluate how AI-generated captions can improve in brand alignment, clarity, engagement potential, and persuasiveness.\nSEO & Search Visibility: Reviewing keyword opportunities, competitor visibility, and website content to support stronger digital marketing strategy.\nDashboards & Reporting: Building dashboards and Quarto reports using tools like R, GA4, BigQuery, Tableau, Looker Studio, and SQL.\n\n\nThese projects reflect my interest in using analytics not just to report numbers, but to support better marketing decisions. My goal is to communicate insights in a way that feels practical, visual, and easy for others to understand."
+  }
+]
