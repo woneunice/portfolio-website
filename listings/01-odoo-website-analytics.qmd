@@ -12,7 +12,6 @@ fontsize: 10pt
 ---
 ---
 title: "Odoo Website Analytics"
-image: "/images/odoo_website_image.png"
 categories: [
   Marketing Analytics,
   Website Analytics,

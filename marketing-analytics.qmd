@@ -16,6 +16,7 @@ listing:
   contents: listings
   type: grid
   categories: true
+  image: false
   sort: 
     - "index desc"
 ---
