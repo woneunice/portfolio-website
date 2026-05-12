@@ -12,6 +12,7 @@ fontsize: 10pt
 ---
 ---
 title: "ODI Grips Social Media Analysis"
+image: "https://placehold.co/600x400?text=ODI+Analysis"
 categories: [
   Social Media Analytics,
   Engagement Analysis,
