@@ -12,7 +12,7 @@ fontsize: 10pt
 ---
 ---
 title: "Odoo Website Analytics"
-image: "https://placehold.co/600x400?text=Odoo+Website+Analytics"
+image: "portfolio-website-template/images/odoo_website_image.png"
 categories: [
   Marketing Analytics,
   Website Analytics,
