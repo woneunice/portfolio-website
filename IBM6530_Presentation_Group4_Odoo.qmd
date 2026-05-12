@@ -1,0 +1,480 @@
+---
+title: "MSDM Odoo Website Analytics"
+subtitle: "IBM 6530 — Group 4 Final Presentation"
+author:
+  - "Min Gong"
+  - "Jeffrey Hsu"
+  - "Emily Kuo"
+  - "Eunice Won"
+  - "Ceren Unal"
+date: today
+format:
+  revealjs:
+    theme: moon
+    transition: slide
+    slide-number: true
+    chalkboard: false
+    logo: ""
+    footer: "IBM 6530 | Group 4 | MSDM Odoo Analytics"
+    code-fold: true
+    self-contained: true
+    scrollable: true
+    fig-width: 8
+    fig-height: 4.5
+execute:
+  warning: false
+  message: false
+  echo: false
+  cache: false
+---
+
+```{r setup}
+library(arrow)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(forcats)
+library(stringr)
+library(tidyr)
+library(fs)
+library(here)
+library(readr)
+library(ggrepel)
+
+# ── GA4 snapshot ───────────────────────────────────────────────────────────────
+DATA_DIR     <- here::here("data")
+PARQUET_DIR  <- fs::path(DATA_DIR, "msdm_snapshot", "events_flat")
+PARQUET_FILE <- fs::path(PARQUET_DIR, "events_snapshot.parquet")
+CSV_PATH     <- fs::path(DATA_DIR, "events_snapshot.csv")
+
+if (!fs::file_exists(PARQUET_FILE)) {
+  fs::dir_create(PARQUET_DIR)
+  arrow::write_parquet(
+    readr::read_csv(CSV_PATH, show_col_types = FALSE),
+    PARQUET_FILE
+  )
+}
+
+ds <- arrow::open_dataset(PARQUET_DIR) |> dplyr::collect()
+
+# Traffic medium
+traffic_summary <- ds |>
+  filter(event_name == "page_view") |>
+  mutate(
+    medium_clean = case_when(
+      is.na(traffic_medium)      ~ "(not set)",
+      traffic_medium == "(none)" ~ "direct",
+      TRUE                       ~ traffic_medium
+    )
+  ) |>
+  count(medium_clean, name = "page_views") |>
+  arrange(desc(page_views))
+
+# Device
+device_summary <- ds |>
+  filter(!is.na(device_category)) |>
+  group_by(device_category) |>
+  summarise(
+    n_events       = n(),
+    n_unique_users = n_distinct(user_pseudo_id)
+  ) |>
+  arrange(desc(n_events)) |>
+  mutate(pct_events = n_events / sum(n_events) * 100)
+
+# ── Attribution dataset ────────────────────────────────────────────────────────
+attr_raw      <- readr::read_csv(here::here("data", "attribution_dataset.csv"),
+                                 show_col_types = FALSE)
+channel_cols  <- grep("^channel", names(attr_raw), value = TRUE)
+channels_list <- c("Direct", "Email", "Organic", "Paid Search", "Paid Social", "Referral")
+
+`%||%` <- function(a, b) if (!is.null(a)) a else b
+
+# Last-Touch
+converters <- attr_raw |> dplyr::filter(user_purchase == 1)
+last_touch_attr <- converters |>
+  rowwise() |>
+  mutate(last_ch = {
+    v <- c_across(all_of(channel_cols)); v <- v[!is.na(v)]
+    if (length(v) > 0) tail(v, 1) else NA_character_
+  }) |>
+  ungroup() |> filter(!is.na(last_ch)) |>
+  count(last_ch, name = "credit") |>
+  mutate(Last_Touch = round(credit / sum(credit) * 100, 1)) |>
+  rename(Channel = last_ch) |> select(Channel, Last_Touch)
+
+# First-Touch
+first_touch_attr <- converters |>
+  rowwise() |>
+  mutate(first_ch = {
+    v <- c_across(all_of(channel_cols)); v <- v[!is.na(v)]
+    if (length(v) > 0) v[1] else NA_character_
+  }) |>
+  ungroup() |> filter(!is.na(first_ch)) |>
+  count(first_ch, name = "credit") |>
+  mutate(First_Touch = round(credit / sum(credit) * 100, 1)) |>
+  rename(Channel = first_ch) |> select(Channel, First_Touch)
+
+# Markov (absorbing chain)
+build_transitions <- function(df, channel_cols) {
+  trans <- list()
+  for (i in seq_len(nrow(df))) {
+    path <- unlist(df[i, channel_cols]); path <- path[!is.na(path)]
+    if (length(path) == 0) next
+    outcome <- if (df$user_purchase[i] == 1) "conversion" else "null"
+    from <- "start"; to <- path[1]
+    trans[[from]][[to]] <- (trans[[from]][[to]] %||% 0) + 1
+    if (length(path) > 1) {
+      for (j in seq_len(length(path) - 1)) {
+        from <- path[j]; to <- path[j + 1]
+        trans[[from]][[to]] <- (trans[[from]][[to]] %||% 0) + 1
+      }
+    }
+    from <- tail(path, 1)
+    trans[[from]][[outcome]] <- (trans[[from]][[outcome]] %||% 0) + 1
+  }
+  trans
+}
+
+trans_counts <- build_transitions(attr_raw, channel_cols)
+trans_prob   <- lapply(trans_counts, function(x) {
+  tot <- sum(unlist(x)); lapply(x, function(v) v / tot)
+})
+
+all_transient <- c(channels_list, "start")
+absorbing     <- c("conversion", "null")
+n_t           <- length(all_transient)
+
+Q <- matrix(0, n_t, n_t, dimnames = list(all_transient, all_transient))
+R <- matrix(0, n_t, 2,   dimnames = list(all_transient, absorbing))
+for (s in all_transient) {
+  probs <- trans_prob[[s]]; if (is.null(probs)) next
+  for (t in names(probs)) {
+    p <- probs[[t]]
+    if (t %in% all_transient) Q[s, t] <- p else if (t %in% absorbing) R[s, t] <- p
+  }
+}
+N_mat         <- solve(diag(n_t) - Q)
+B_mat         <- N_mat %*% R
+baseline_conv <- B_mat["start", "conversion"]
+
+removal_effects <- sapply(channels_list, function(ch) {
+  Q2 <- Q; R2 <- R
+  for (s in all_transient) {
+    if (Q2[s, ch] > 0) { R2[s, "null"] <- R2[s, "null"] + Q2[s, ch]; Q2[s, ch] <- 0 }
+  }
+  Q2[ch, ] <- 0; R2[ch, ] <- c(0, 1)
+  tryCatch({
+    N2 <- solve(diag(n_t) - Q2); B2 <- N2 %*% R2
+    max(0, baseline_conv - B2["start", "conversion"])
+  }, error = function(e) 0)
+})
+
+markov_attr <- data.frame(
+  Channel = names(removal_effects),
+  Markov  = round(removal_effects / sum(removal_effects) * 100, 1)
+)
+
+# Combined comparison
+comparison <- last_touch_attr |>
+  full_join(first_touch_attr, by = "Channel") |>
+  full_join(markov_attr,      by = "Channel") |>
+  arrange(desc(Last_Touch))
+```
+
+## Business Problem {background-color="#2c3e50"}
+
+::::: columns
+::: {.column width="55%"}
+**Client:** MSDM Program — Odoo Website
+
+**Core Questions:**
+
+-   Where is traffic coming from?
+-   Who is visiting & on what device?
+-   Which channels drive conversions?
+-   Where should budget be focused?
+:::
+
+::: {.column width="45%"}
+**Why it matters:**
+
+The MSDM program needs to understand its digital presence to make smarter decisions about outreach and marketing investment.
+
+Standard last-touch reporting tells an incomplete story — this project adds multi-touch attribution.
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Data Overview {background-color="#2c3e50"}
+
+::::: columns
+::: {.column width="50%"}
+**Source**
+
+-   GA4 event data from BigQuery
+-   Project: `odoo-487003`
+-   Dataset: `analytics_523126945`
+
+**Coverage**
+
+-   8 snapshot days
+-   Feb 9 – Apr 3, 2026
+-   \~7 week span
+:::
+
+::: {.column width="50%"}
+**Pipeline**
+
+```         
+BigQuery
+   ↓  SQL extract
+events_snapshot.csv
+   ↓  Apache Arrow
+events_snapshot.parquet
+   ↓  R / Quarto
+Analysis + Dashboard
+```
+
+**Key fields:** event name, traffic medium, device, geo, user pseudo ID
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Key Metrics at a Glance {background-color="#2c3e50"}
+
+```{r kpi-table}
+tibble::tibble(
+  Metric        = c("Total Events", "Unique Users", "Page Views", "Top Channel", "Top Device"),
+  Value         = c(
+    scales::comma(nrow(ds)),
+    scales::comma(n_distinct(ds$user_pseudo_id)),
+    scales::comma(sum(ds$event_name == "page_view")),
+    str_to_title(traffic_summary$medium_clean[1]),
+    device_summary$device_category[1]
+  )
+) |>
+  knitr::kable(align = c("l", "r"))
+```
+
+------------------------------------------------------------------------
+
+## Engagement Depth
+
+-   \~24 events per user\
+-   \~7.4 page views per user
+
+These metrics indicate that users are interacting multiple times during visits, suggesting active engagement within the snapshot.
+
+------------------------------------------------------------------------
+
+## Dashboard Overview {background-color="#2c3e50"}
+
+![](images/clipboard-3968234009.png)
+
+![](images/clipboard-4122758627.png)
+
+![](images/clipboard-2088909921.png)
+
+![](images/clipboard-1665642907.png)
+
+------------------------------------------------------------------------
+
+## Dashboard Engagement {background-color="#2c3e50"}
+
+![](images/clipboard-3877735749.png)
+
+------------------------------------------------------------------------
+
+## Where Is Traffic Coming From? {background-color="#1a252f"}
+
+```{r plot-traffic}
+traffic_summary |>
+  mutate(medium_clean = fct_reorder(medium_clean, page_views)) |>
+  ggplot(aes(x = medium_clean, y = page_views, fill = medium_clean)) +
+  geom_col(show.legend = FALSE, width = 0.7) +
+  geom_text(aes(label = comma(page_views)), hjust = -0.15, size = 3.5, color = "white") +
+  coord_flip() +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.2))) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(x = NULL, y = "Page Views",
+       caption = "Filtered to page_view events only") +
+  theme_minimal(base_size = 13) +
+  theme(
+    panel.grid.major.y = element_blank()
+  )
+```
+
+::: fragment
+> Organic and Direct together dominate — the MSDM site relies heavily on brand awareness and search visibility.
+:::
+
+------------------------------------------------------------------------
+
+## Who Is Visiting? {background-color="#1a252f"}
+
+```{r plot-device}
+device_summary |>
+  ggplot(aes(x = "", y = pct_events, fill = device_category)) +
+  geom_col(width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  geom_text(
+    aes(label = paste0(device_category, "\n", round(pct_events, 1), "%")),
+    position = position_stack(vjust = 0.5),
+    size = 5, fontface = "bold", color = "white"
+  ) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(fill = "Device") +
+  theme_void(base_size = 13) +
+  theme(
+    panel.grid.major.y = element_blank()
+  )
+```
+
+::: fragment
+> Desktop dominates — typical for program research. But mobile unique users warrant continued UX investment.
+:::
+
+------------------------------------------------------------------------
+
+## Attribution: Last-Touch vs Markov {background-color="#1a252f"}
+
+```{r plot-attribution}
+comparison |>
+  tidyr::pivot_longer(cols = c(Last_Touch, Markov),
+                      names_to = "Model", values_to = "value") |>
+  mutate(Model = factor(Model, levels = c("Last_Touch", "Markov"))) |>
+  ggplot(aes(x = Channel, y = value, fill = Model)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8),
+           width = 0.7, na.rm = TRUE) +
+  geom_text(
+    aes(label = ifelse(is.na(value), "", paste0(round(value, 1), "%"))),
+    position = position_dodge(width = 0.8),
+    vjust = -0.4, size = 3, color = "white", na.rm = TRUE
+  ) +
+  labs(
+    x = "Channel", y = "Attribution (%)", fill = "Model",
+    caption = "Based on attribution_dataset.csv — 1,000 users, 100 converters"
+  ) +
+  scale_fill_manual(values = c("Last_Touch" = "#4E79A7", "Markov" = "#E15759")) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.2))) +
+  theme_minimal(base_size = 13) +
+  theme(
+    panel.background = element_rect(fill = "transparent", color = NA),
+    plot.background  = element_rect(fill = "transparent", color = NA),
+    axis.text.x = element_text(angle = 30, hjust = 1)
+  )
+```
+
+## What the Models Tell Us (1/2) {background-color="#2c3e50"}
+
+| Channel     | Last-Touch | First-Touch | Markov |
+|-------------|-----------:|------------:|-------:|
+| Email       |        28% |         24% |    16% |
+| Direct      |        21% |          8% |    19% |
+| Organic     |        19% |         20% |    19% |
+| Paid Search |        16% |         20% |    17% |
+| Paid Social |         6% |         23% |    14% |
+| Referral    |        10% |          5% |    14% |
+
+------------------------------------------------------------------------
+
+## What the Models Tell Us (2/2) {background-color="#2c3e50"}
+
+| Channel     | Insight                         |
+|-------------|---------------------------------|
+| Email       | Strong closer & initiator       |
+| Direct      | Closing step, not a true driver |
+| Organic     | Stable across all models        |
+| Paid Search | Consistent contributor          |
+| Paid Social | ⚠️ Undervalued by last-touch    |
+| Referral    | Mid-funnel role undervalued     |
+
+::: fragment
+> **Paid Social: 6% last-touch → 23% first-touch → 14% Markov.** It starts journeys but gets no closing credit.
+:::
+
+------------------------------------------------------------------------
+
+## Recommendations (1/2) {background-color="#2c3e50"}
+
+::: incremental
+1.  **Invest more in Paid Social** — only 6% last-touch, but 23% first-touch and 14% Markov. It initiates journeys but gets almost no closing credit.
+
+2.  **Keep Email strong** — top in both last-touch (28%) and first-touch (24%). Best for bottom-of-funnel re-engagement.
+
+3.  **Don't over-budget Direct** — 21% last-touch but only 8% first-touch. It's the final step, not a true driver.
+:::
+
+------------------------------------------------------------------------
+
+## Recommendations (2/2) {background-color="#2c3e50"}
+
+::: incremental
+4.  **Invest in Referral partnerships** — Markov (14%) \> Last-Touch (10%). Meaningful mid-funnel role that position-based models miss.
+
+5.  **Rebalance upper vs lower funnel** — shift some spend toward Paid Social and Referral while maintaining Email efficiency.
+:::
+
+------------------------------------------------------------------------
+
+## Limitations {background-color="#2c3e50"}
+
+::::: columns
+::: {.column width="50%"}
+**Data Constraints**
+
+-   Only 8 snapshot days — trends are directional, not conclusive
+-   `user_id` largely missing — no cross-device stitching
+-   Nested GA4 fields excluded (`event_params`, `ecommerce`)
+-   No session-level metrics
+:::
+
+::: {.column width="50%"}
+**Attribution Constraints**
+
+-   Direct traffic may mask untagged channels
+-   Paid Social impressions not fully captured (walled garden)
+-   Small dataset — results may shift with more data
+-   No cost or ROI data to validate recommendations
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Next Steps {background-color="#2c3e50"}
+
+::: incremental
+-   **Strengthen UTM tagging** across all campaigns to reduce Direct traffic inflation
+-   **Expand date coverage** — 8 days is not enough for reliable trend analysis
+-   **Add cost data** — combine attribution results with spend to calculate channel ROI
+-   **Test Paid Social increase** — run an experiment to validate the Markov model's findings
+-   **Unpack `event_params`** — enables page-level analysis and deeper engagement metrics
+:::
+
+------------------------------------------------------------------------
+
+## Thank You {background-color="#2c3e50"}
+
+::::: columns
+::: {.column width="60%"}
+**Group 4**
+
+-   Min Gong
+-   Jeffrey Hsu
+-   Emily Kuo
+-   Eunice Won
+-   Ceren Unal
+
+**IBM 6530 \| May 2026**
+:::
+
+::: {.column width="40%"}
+**Links**
+
+-   📊 [Dashboard](#)
+-   📄 [Full Report](#)
+-   💻 [GitHub Repo](https://github.com/hsujeffrey/ibm6530-group4-project)
+:::
+:::::

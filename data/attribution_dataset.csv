@@ -1,0 +1,1001 @@
+users_id,channel1,channel2,channel3,channel4,channel5,channel6,channel7,channel8,channel9,channel10,channel11,channel12,channel13,channel14,channel15,channel16,channel17,channel18,channel19,channel20,channel21,channel22,channel23,channel24,channel25,channel26,channel27,channel28,channel29,channel30,channel31,channel32,channel33,channel34,channel35,channel36,channel37,channel38,channel39,channel40,channel41,channel42,channel43,channel44,channel45,user_purchase,null_purchase
+U0001,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0002,Paid Search,Organic,Paid Search,Direct,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0003,Paid Social,Paid Social,Organic,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0004,Paid Social,Paid Social,Paid Social,Referral,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0005,Referral,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0006,Direct,Paid Social,Organic,Referral,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0007,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0008,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0009,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0010,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0011,Referral,Direct,Referral,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0012,Paid Search,Referral,Organic,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0013,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0014,Paid Social,Direct,Paid Search,Referral,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0015,Direct,Paid Social,Direct,Paid Search,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0016,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0017,Paid Search,Referral,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0018,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0019,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0020,Email,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0021,Direct,Direct,Paid Social,Referral,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0022,Organic,Organic,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0023,Direct,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0024,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0025,Paid Social,Paid Social,Paid Search,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0026,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0027,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0028,Paid Search,Referral,Organic,Direct,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0029,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0030,Direct,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0031,Organic,Organic,Paid Search,Email,Email,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0032,Direct,Direct,Paid Social,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0033,Email,Email,Paid Search,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0034,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0035,Email,Paid Search,Direct,Paid Social,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0036,Paid Social,Email,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0037,Referral,Direct,Organic,Paid Search,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0038,Organic,Paid Search,Paid Social,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0039,Direct,Paid Search,Direct,Referral,Paid Search,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0040,Paid Search,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0041,Paid Search,Organic,Direct,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0042,Organic,Paid Social,Direct,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0043,Referral,Paid Search,Organic,Direct,Paid Search,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0044,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0045,Paid Social,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0046,Paid Social,Referral,Email,Direct,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0047,Paid Search,Email,Paid Social,Referral,Email,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0048,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0049,Referral,Direct,Paid Social,Referral,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0050,Paid Social,Paid Search,Email,Organic,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0051,Direct,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0052,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0053,Direct,Direct,Paid Search,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0054,Paid Search,Direct,Organic,Organic,Direct,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0055,Organic,Referral,Paid Social,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0056,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0057,Referral,Email,Direct,Organic,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0058,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0059,Paid Search,Direct,Paid Social,Referral,Paid Social,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0060,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0061,Paid Social,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0062,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0063,Paid Social,Paid Search,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0064,Paid Search,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0065,Paid Social,Organic,Direct,Direct,Organic,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0066,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0067,Direct,Organic,Organic,Organic,Direct,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0068,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0069,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0070,Paid Social,Paid Search,Direct,Referral,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0071,Direct,Direct,Email,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0072,Organic,Organic,Direct,Direct,Paid Search,Direct,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0073,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0074,Organic,Paid Social,Email,Organic,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0075,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0076,Organic,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0077,Paid Social,Organic,Direct,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0078,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0079,Email,Paid Search,Direct,Paid Search,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0080,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0081,Email,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0082,Paid Social,Email,Direct,Email,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0083,Direct,Paid Search,Referral,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0084,Organic,Organic,Direct,Organic,Paid Social,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0085,Paid Social,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0086,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0087,Paid Social,Direct,Paid Social,Direct,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0088,Referral,Organic,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0089,Organic,Direct,Referral,Paid Social,Direct,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0090,Email,Organic,Organic,Paid Social,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0091,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0092,Organic,Direct,Paid Search,Direct,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0093,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0094,Direct,Paid Search,Organic,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0095,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0096,Paid Social,Email,Paid Social,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0097,Email,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0098,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0099,Paid Social,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0100,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0101,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0102,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0103,Referral,Direct,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0104,Organic,Email,Paid Search,Paid Social,Organic,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0105,Paid Social,Organic,Paid Search,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0106,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0107,Referral,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0108,Email,Paid Social,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0109,Paid Search,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0110,Referral,Organic,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0111,Paid Search,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0112,Email,Direct,Email,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0113,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0114,Paid Social,Direct,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0115,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0116,Paid Social,Email,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0117,Referral,Direct,Direct,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0118,Organic,Organic,Organic,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0119,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0120,Organic,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0121,Paid Social,Referral,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0122,Paid Social,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0123,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0124,Organic,Paid Social,Organic,Paid Social,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0125,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0126,Paid Social,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0127,Paid Search,Paid Search,Paid Search,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0128,Email,Direct,Email,Organic,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0129,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0130,Direct,Email,Direct,Paid Search,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0131,Referral,Paid Search,Paid Social,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0132,Email,Paid Social,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0133,Organic,Direct,Direct,Paid Search,Referral,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0134,Paid Social,Organic,Paid Search,Paid Search,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0135,Organic,Direct,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0136,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0137,Email,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0138,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0139,Paid Search,Paid Social,Paid Search,Paid Search,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0140,Direct,Paid Social,Paid Search,Organic,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0141,Direct,Organic,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0142,Paid Social,Paid Search,Referral,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0143,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0144,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0145,Organic,Referral,Paid Social,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0146,Referral,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0147,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0148,Direct,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0149,Email,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0150,Paid Search,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0151,Referral,Organic,Direct,Direct,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0152,Direct,Paid Search,Paid Social,Paid Search,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0153,Paid Search,Referral,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0154,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0155,Paid Search,Referral,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0156,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0157,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0158,Organic,Direct,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0159,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0160,Email,Paid Search,Paid Search,Email,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0161,Direct,Email,Paid Social,Paid Social,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0162,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0163,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0164,Email,Referral,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0165,Email,Paid Search,Organic,Organic,Email,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0166,Organic,Paid Search,Referral,Paid Search,Referral,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0167,Direct,Organic,Direct,Email,Paid Social,Organic,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0168,Paid Social,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0169,Paid Social,Organic,Direct,Referral,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0170,Paid Search,Paid Search,Organic,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0171,Paid Search,Referral,Organic,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0172,Referral,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0173,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0174,Direct,Email,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0175,Direct,Organic,Direct,Organic,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0176,Paid Search,Email,Referral,Organic,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0177,Referral,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0178,Paid Social,Email,Paid Social,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0179,Direct,Paid Social,Organic,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0180,Paid Social,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0181,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0182,Direct,Referral,Paid Social,Email,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0183,Paid Social,Paid Social,Organic,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0184,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0185,Paid Search,Email,Paid Search,Direct,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0186,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0187,Referral,Direct,Direct,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0188,Referral,Referral,Paid Social,Referral,Email,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0189,Referral,Referral,Organic,Referral,Referral,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0190,Direct,Paid Social,Paid Search,Direct,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0191,Referral,Paid Search,Paid Social,Paid Search,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0192,Paid Social,Paid Search,Email,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0193,Paid Search,Paid Search,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0194,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0195,Paid Search,Direct,Organic,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0196,Organic,Organic,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0197,Direct,Paid Social,Referral,Paid Search,Paid Social,Direct,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0198,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0199,Direct,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0200,Paid Social,Referral,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0201,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0202,Organic,Referral,Paid Search,Paid Social,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0203,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0204,Organic,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0205,Paid Search,Referral,Paid Search,Referral,Paid Search,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0206,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0207,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0208,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0209,Paid Search,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0210,Paid Search,Direct,Direct,Organic,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0211,Paid Search,Email,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0212,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0213,Email,Direct,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0214,Paid Search,Paid Search,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0215,Organic,Organic,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0216,Direct,Direct,Organic,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0217,Organic,Referral,Direct,Referral,Direct,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0218,Direct,Direct,Paid Search,Direct,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0219,Paid Search,Email,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0220,Direct,Paid Search,Paid Search,Referral,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0221,Paid Social,Organic,Email,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0222,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0223,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0224,Paid Search,Email,Paid Social,Email,Organic,Email,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0225,Organic,Organic,Direct,Organic,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0226,Organic,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0227,Paid Search,Organic,Paid Search,Organic,Referral,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0228,Direct,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0229,Referral,Organic,Referral,Paid Search,Email,Paid Search,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0230,Direct,Direct,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0231,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0232,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0233,Organic,Direct,Paid Social,Paid Social,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0234,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0235,Paid Social,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0236,Paid Search,Direct,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0237,Organic,Direct,Direct,Organic,Direct,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0238,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0239,Paid Social,Paid Social,Referral,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0240,Email,Referral,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0241,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0242,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0243,Organic,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0244,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0245,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0246,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0247,Referral,Organic,Paid Search,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0248,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0249,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0250,Organic,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0251,Organic,Referral,Paid Social,Referral,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0252,Direct,Paid Social,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0253,Paid Search,Direct,Paid Search,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0254,Referral,Referral,Organic,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0255,Organic,Paid Search,Referral,Organic,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0256,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0257,Referral,Paid Social,Organic,Direct,Paid Search,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0258,Direct,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0259,Direct,Paid Social,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0260,Paid Social,Paid Social,Direct,Direct,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0261,Referral,Paid Social,Organic,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0262,Organic,Direct,Organic,Referral,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0263,Paid Social,Paid Search,Organic,Referral,Referral,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0264,Direct,Direct,Direct,Paid Social,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0265,Paid Social,Referral,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0266,Paid Search,Email,Email,Referral,Paid Search,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0267,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0268,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0269,Referral,Organic,Paid Search,Direct,Organic,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0270,Organic,Direct,Direct,Paid Social,Email,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0271,Organic,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0272,Direct,Direct,Referral,Email,Email,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0273,Direct,Direct,Referral,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0274,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0275,Direct,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0276,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0277,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0278,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0279,Direct,Paid Social,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0280,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0281,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0282,Paid Social,Paid Search,Paid Search,Referral,Direct,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0283,Direct,Paid Search,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0284,Paid Search,Referral,Organic,Direct,Email,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0285,Paid Social,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0286,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0287,Organic,Paid Search,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0288,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0289,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0290,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0291,Paid Search,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0292,Direct,Direct,Direct,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0293,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0294,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0295,Organic,Organic,Paid Search,Direct,Paid Social,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0296,Direct,Organic,Organic,Email,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0297,Paid Search,Paid Search,Email,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0298,Direct,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0299,Paid Search,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0300,Email,Referral,Paid Social,Paid Search,Direct,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0301,Paid Social,Paid Search,Organic,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0302,Email,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0303,Referral,Paid Social,Paid Social,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0304,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0305,Direct,Direct,Organic,Referral,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0306,Referral,Referral,Paid Search,Organic,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0307,Paid Search,Paid Search,Email,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0308,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0309,Referral,Paid Search,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0310,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0311,Direct,Paid Social,Paid Social,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0312,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0313,Paid Search,Email,Organic,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0314,Referral,Direct,Paid Search,Referral,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0315,Referral,Email,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0316,Paid Social,Paid Search,Direct,Referral,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0317,Organic,Email,Direct,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0318,Direct,Direct,Organic,Direct,Referral,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0319,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0320,Organic,Direct,Organic,Email,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0321,Paid Search,Direct,Direct,Paid Search,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0322,Paid Social,Referral,Direct,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0323,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0324,Paid Search,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0325,Referral,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0326,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0327,Referral,Paid Social,Organic,Organic,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0328,Referral,Paid Search,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0329,Referral,Paid Search,Referral,Paid Search,Referral,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0330,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0331,Paid Search,Referral,Direct,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0332,Organic,Paid Social,Paid Search,Paid Search,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0333,Paid Search,Referral,Paid Social,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0334,Paid Search,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0335,Paid Search,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0336,Referral,Direct,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0337,Paid Social,Organic,Paid Social,Organic,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0338,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0339,Referral,Paid Social,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0340,Organic,Email,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0341,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0342,Paid Search,Paid Social,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0343,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0344,Direct,Direct,Paid Social,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0345,Paid Social,Referral,Organic,Paid Search,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0346,Referral,Direct,Direct,Paid Search,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0347,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0348,Email,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0349,Paid Search,Referral,Paid Social,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0350,Paid Social,Email,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0351,Paid Search,Paid Social,Paid Search,Direct,Paid Social,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0352,Paid Search,Direct,Referral,Email,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0353,Paid Search,Direct,Organic,Email,Email,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0354,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0355,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0356,Paid Social,Paid Search,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0357,Organic,Direct,Email,Organic,Organic,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0358,Direct,Direct,Referral,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0359,Email,Organic,Organic,Organic,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0360,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0361,Email,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0362,Paid Social,Paid Social,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0363,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0364,Email,Referral,Email,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0365,Paid Search,Referral,Organic,Organic,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0366,Referral,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0367,Organic,Paid Social,Paid Search,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0368,Paid Search,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0369,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0370,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0371,Paid Social,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0372,Organic,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0373,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0374,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0375,Organic,Referral,Referral,Paid Search,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0376,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0377,Email,Paid Social,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0378,Referral,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0379,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0380,Paid Social,Referral,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0381,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0382,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0383,Direct,Paid Social,Paid Social,Organic,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0384,Paid Social,Organic,Organic,Direct,Direct,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0385,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0386,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0387,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0388,Direct,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0389,Organic,Paid Search,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0390,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0391,Direct,Referral,Organic,Paid Social,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0392,Direct,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0393,Paid Search,Organic,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0394,Referral,Organic,Email,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0395,Organic,Referral,Paid Search,Direct,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0396,Paid Search,Email,Referral,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0397,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0398,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0399,Organic,Paid Search,Direct,Email,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0400,Direct,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0401,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0402,Paid Search,Paid Social,Paid Search,Direct,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0403,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0404,Paid Search,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0405,Organic,Direct,Referral,Direct,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0406,Paid Search,Referral,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0407,Paid Social,Paid Search,Direct,Direct,Organic,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0408,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0409,Organic,Direct,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0410,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0411,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0412,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0413,Direct,Organic,Referral,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0414,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0415,Organic,Paid Search,Organic,Direct,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0416,Email,Paid Search,Referral,Paid Social,Referral,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0417,Organic,Paid Social,Paid Social,Paid Search,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0418,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0419,Referral,Referral,Organic,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0420,Referral,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0421,Organic,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0422,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0423,Paid Social,Referral,Paid Search,Direct,Paid Search,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0424,Paid Search,Paid Social,Paid Social,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0425,Direct,Direct,Email,Paid Search,Direct,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0426,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0427,Organic,Organic,Paid Social,Paid Social,Referral,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0428,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0429,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0430,Direct,Paid Social,Organic,Paid Search,Referral,Organic,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0431,Organic,Paid Social,Direct,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0432,Referral,Direct,Email,Referral,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0433,Email,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0434,Organic,Direct,Paid Search,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0435,Paid Social,Direct,Referral,Paid Social,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0436,Direct,Paid Search,Email,Paid Search,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0437,Referral,Referral,Direct,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0438,Organic,Organic,Direct,Email,Paid Social,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0439,Direct,Paid Search,Organic,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0440,Direct,Paid Search,Direct,Paid Search,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0441,Paid Search,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0442,Referral,Paid Search,Referral,Direct,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0443,Paid Social,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0444,Direct,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0445,Email,Organic,Referral,Organic,Paid Search,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0446,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0447,Paid Search,Direct,Direct,Email,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0448,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0449,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0450,Organic,Direct,Paid Social,Referral,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0451,Paid Search,Referral,Paid Social,Referral,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0452,Email,Referral,Paid Social,Direct,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0453,Referral,Paid Social,Organic,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0454,Organic,Paid Social,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0455,Organic,Referral,Direct,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0456,Email,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0457,Referral,Direct,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0458,Paid Social,Paid Social,Paid Search,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0459,Organic,Organic,Paid Social,Paid Search,Paid Search,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0460,Paid Search,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0461,Direct,Paid Search,Direct,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0462,Referral,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0463,Paid Search,Referral,Referral,Referral,Organic,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0464,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0465,Paid Search,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0466,Email,Direct,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0467,Organic,Paid Social,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0468,Paid Social,Organic,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0469,Direct,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0470,Paid Search,Paid Social,Referral,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0471,Referral,Paid Social,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0472,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0473,Direct,Paid Search,Direct,Organic,Direct,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0474,Direct,Organic,Direct,Paid Social,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0475,Email,Organic,Paid Search,Paid Social,Paid Social,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0476,Paid Search,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0477,Referral,Referral,Direct,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0478,Referral,Direct,Organic,Paid Search,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0479,Paid Search,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0480,Organic,Direct,Organic,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0481,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0482,Organic,Direct,Direct,Email,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0483,Referral,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0484,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0485,Paid Search,Paid Social,Direct,Paid Social,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0486,Organic,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0487,Paid Search,Email,Organic,Organic,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0488,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0489,Direct,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0490,Organic,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0491,Organic,Paid Social,Organic,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0492,Organic,Email,Organic,Email,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0493,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0494,Direct,Referral,Paid Social,Direct,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0495,Organic,Email,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0496,Organic,Organic,Paid Social,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0497,Organic,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0498,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0499,Organic,Organic,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0500,Paid Search,Paid Social,Paid Social,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0501,Direct,Paid Search,Paid Search,Email,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0502,Direct,Organic,Direct,Paid Search,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0503,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0504,Paid Social,Email,Direct,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0505,Paid Search,Paid Search,Email,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0506,Organic,Organic,Direct,Paid Social,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0507,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0508,Paid Social,Referral,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0509,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0510,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0511,Direct,Organic,Organic,Paid Search,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0512,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0513,Paid Social,Direct,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0514,Referral,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0515,Paid Search,Referral,Email,Referral,Referral,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0516,Paid Search,Paid Search,Paid Social,Paid Social,Email,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0517,Paid Social,Direct,Direct,Organic,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0518,Email,Organic,Email,Direct,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0519,Email,Organic,Organic,Direct,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0520,Direct,Referral,Email,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0521,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0522,Email,Referral,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0523,Email,Direct,Paid Search,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0524,Paid Social,Organic,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0525,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0526,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0527,Paid Search,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0528,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0529,Organic,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0530,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0531,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0532,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0533,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0534,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0535,Paid Search,Referral,Organic,Direct,Paid Social,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0536,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0537,Paid Search,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0538,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0539,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0540,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0541,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0542,Organic,Referral,Organic,Direct,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0543,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0544,Direct,Direct,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0545,Paid Search,Direct,Organic,Organic,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0546,Email,Referral,Paid Social,Organic,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0547,Referral,Referral,Direct,Paid Search,Direct,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0548,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0549,Paid Search,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0550,Organic,Paid Search,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0551,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0552,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0553,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0554,Direct,Paid Social,Organic,Organic,Direct,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0555,Organic,Paid Social,Paid Social,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0556,Paid Search,Paid Social,Organic,Organic,Organic,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0557,Organic,Email,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0558,Paid Search,Organic,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0559,Email,Paid Search,Organic,Organic,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0560,Email,Paid Social,Direct,Organic,Referral,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0561,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0562,Paid Social,Paid Search,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0563,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0564,Direct,Direct,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0565,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0566,Email,Paid Social,Direct,Paid Search,Email,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0567,Referral,Paid Search,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0568,Referral,Organic,Direct,Paid Social,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0569,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0570,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0571,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0572,Direct,Paid Search,Direct,Referral,Referral,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0573,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0574,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0575,Organic,Paid Social,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0576,Referral,Referral,Email,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0577,Paid Social,Paid Search,Direct,Paid Social,Paid Social,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0578,Paid Search,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0579,Paid Social,Paid Social,Referral,Direct,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0580,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0581,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0582,Referral,Direct,Organic,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0583,Paid Search,Direct,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0584,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0585,Direct,Email,Paid Social,Direct,Paid Social,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0586,Organic,Paid Search,Paid Search,Direct,Direct,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0587,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0588,Paid Search,Paid Search,Organic,Email,Organic,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0589,Paid Search,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0590,Direct,Organic,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0591,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0592,Direct,Email,Paid Social,Direct,Email,Paid Search,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0593,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0594,Organic,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0595,Paid Social,Email,Paid Search,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0596,Email,Paid Search,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0597,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0598,Paid Search,Referral,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0599,Paid Search,Organic,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0600,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0601,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0602,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0603,Direct,Paid Search,Direct,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0604,Organic,Organic,Email,Email,Referral,Email,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0605,Paid Social,Organic,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0606,Paid Social,Referral,Email,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0607,Direct,Organic,Paid Social,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0608,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0609,Paid Search,Referral,Paid Social,Email,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0610,Referral,Paid Search,Paid Social,Paid Social,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0611,Organic,Referral,Direct,Direct,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0612,Direct,Paid Search,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0613,Paid Social,Direct,Paid Search,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0614,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0615,Email,Paid Social,Paid Search,Organic,Referral,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0616,Direct,Paid Search,Organic,Organic,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0617,Email,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0618,Organic,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0619,Email,Paid Social,Organic,Paid Search,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0620,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0621,Referral,Direct,Referral,Referral,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0622,Referral,Paid Social,Direct,Referral,Paid Search,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0623,Paid Search,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0624,Organic,Organic,Paid Social,Paid Search,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0625,Paid Social,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0626,Direct,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0627,Direct,Direct,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0628,Organic,Organic,Paid Search,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0629,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0630,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0631,Referral,Referral,Paid Social,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0632,Paid Search,Referral,Paid Search,Referral,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0633,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0634,Email,Email,Paid Social,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0635,Direct,Direct,Paid Search,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0636,Organic,Organic,Paid Social,Paid Search,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0637,Paid Search,Email,Direct,Referral,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0638,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0639,Direct,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0640,Paid Search,Organic,Organic,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0641,Direct,Organic,Paid Social,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0642,Direct,Direct,Referral,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0643,Paid Social,Direct,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0644,Referral,Email,Organic,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0645,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0646,Email,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0647,Paid Search,Organic,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0648,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0649,Referral,Paid Search,Direct,Direct,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0650,Referral,Paid Search,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0651,Paid Social,Paid Social,Paid Search,Organic,Email,Referral,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0652,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0653,Direct,Paid Social,Direct,Direct,Direct,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0654,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0655,Paid Search,Referral,Paid Social,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0656,Referral,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0657,Paid Social,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0658,Paid Search,Referral,Paid Search,Referral,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0659,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0660,Paid Social,Email,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0661,Direct,Paid Search,Email,Paid Search,Organic,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0662,Referral,Paid Search,Paid Social,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0663,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0664,Organic,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0665,Direct,Referral,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0666,Paid Search,Email,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0667,Organic,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0668,Paid Search,Referral,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0669,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0670,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0671,Organic,Direct,Paid Search,Paid Search,Email,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0672,Organic,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0673,Referral,Direct,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0674,Email,Direct,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0675,Email,Direct,Organic,Paid Social,Organic,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0676,Organic,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0677,Referral,Organic,Paid Social,Direct,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0678,Email,Organic,Organic,Organic,Email,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0679,Direct,Organic,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0680,Paid Social,Organic,Paid Social,Direct,Email,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0681,Paid Social,Paid Search,Organic,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0682,Paid Search,Paid Social,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0683,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0684,Paid Search,Direct,Organic,Paid Social,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0685,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0686,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0687,Organic,Organic,Direct,Paid Search,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0688,Paid Social,Paid Search,Referral,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0689,Referral,Referral,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0690,Organic,Email,Direct,Organic,Paid Search,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0691,Paid Social,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0692,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0693,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0694,Direct,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0695,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0696,Organic,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0697,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0698,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0699,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0700,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0701,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0702,Referral,Referral,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0703,Organic,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0704,Direct,Paid Social,Organic,Paid Search,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0705,Organic,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0706,Paid Social,Direct,Paid Search,Referral,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0707,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0708,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0709,Paid Search,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0710,Organic,Paid Social,Organic,Organic,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0711,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0712,Organic,Paid Search,Paid Search,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0713,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0714,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0715,Paid Search,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0716,Paid Social,Paid Search,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0717,Organic,Direct,Referral,Email,Paid Search,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0718,Paid Social,Referral,Paid Social,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0719,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0720,Paid Social,Organic,Paid Search,Organic,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0721,Organic,Paid Social,Referral,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0722,Email,Paid Search,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0723,Email,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0724,Organic,Email,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0725,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0726,Paid Search,Direct,Organic,Email,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0727,Organic,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0728,Referral,Paid Search,Referral,Paid Search,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0729,Organic,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0730,Organic,Organic,Direct,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0731,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0732,Organic,Paid Social,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0733,Paid Search,Email,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0734,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0735,Direct,Direct,Paid Search,Organic,Paid Social,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0736,Paid Social,Organic,Direct,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0737,Organic,Paid Search,Direct,Paid Social,Referral,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0738,Direct,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0739,Referral,Organic,Referral,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0740,Referral,Direct,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0741,Paid Social,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0742,Organic,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0743,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0744,Referral,Paid Social,Direct,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0745,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0746,Paid Search,Organic,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0747,Paid Social,Email,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0748,Paid Social,Referral,Email,Organic,Email,Direct,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0749,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0750,Paid Search,Referral,Email,Direct,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0751,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0752,Paid Search,Direct,Organic,Referral,Direct,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0753,Organic,Paid Social,Referral,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0754,Organic,Referral,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0755,Email,Organic,Referral,Organic,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0756,Organic,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0757,Organic,Referral,Direct,Organic,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0758,Direct,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0759,Paid Social,Email,Email,Paid Social,Email,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0760,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0761,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0762,Email,Referral,Organic,Paid Search,Paid Search,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0763,Paid Search,Email,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0764,Paid Social,Organic,Direct,Direct,Email,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0765,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0766,Direct,Email,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0767,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0768,Paid Social,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0769,Email,Referral,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0770,Organic,Organic,Paid Social,Organic,Paid Social,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0771,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0772,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0773,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0774,Paid Social,Paid Search,Email,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0775,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0776,Paid Search,Referral,Organic,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0777,Direct,Paid Search,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0778,Paid Search,Direct,Paid Social,Organic,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0779,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0780,Paid Social,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0781,Email,Referral,Paid Search,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0782,Organic,Organic,Referral,Organic,Paid Social,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0783,Paid Social,Organic,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0784,Direct,Email,Direct,Paid Search,Referral,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0785,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0786,Direct,Paid Search,Paid Search,Organic,Email,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0787,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0788,Organic,Referral,Email,Organic,Referral,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0789,Organic,Paid Search,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0790,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0791,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0792,Paid Search,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0793,Paid Search,Organic,Paid Search,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0794,Paid Search,Email,Paid Social,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0795,Direct,Email,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0796,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0797,Email,Paid Social,Organic,Paid Social,Referral,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0798,Direct,Referral,Direct,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0799,Direct,Direct,Paid Search,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0800,Paid Social,Direct,Organic,Direct,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0801,Paid Social,Paid Search,Organic,Direct,Paid Search,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0802,Direct,Direct,Paid Social,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0803,Organic,Referral,Direct,Organic,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0804,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0805,Direct,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0806,Organic,Direct,Direct,Paid Social,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0807,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0808,Direct,Email,Paid Search,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0809,Email,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0810,Organic,Email,Referral,Paid Search,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0811,Paid Search,Paid Search,Paid Search,Direct,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0812,Organic,Paid Social,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0813,Direct,Email,Direct,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0814,Referral,Paid Search,Direct,Paid Search,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0815,Email,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0816,Organic,Organic,Paid Search,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0817,Organic,Referral,Organic,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0818,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0819,Direct,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0820,Direct,Direct,Direct,Paid Search,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0821,Organic,Paid Social,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0822,Organic,Direct,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0823,Paid Social,Referral,Paid Social,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0824,Direct,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0825,Referral,Direct,Paid Social,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0826,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0827,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0828,Organic,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0829,Organic,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0830,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0831,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0832,Paid Search,Paid Search,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0833,Organic,Referral,Organic,Email,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0834,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0835,Direct,Paid Social,Direct,Paid Search,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0836,Paid Social,Organic,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0837,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0838,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0839,Referral,Organic,Email,Organic,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0840,Direct,Organic,Paid Search,Organic,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0841,Organic,Direct,Direct,Referral,Organic,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0842,Email,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0843,Email,Organic,Direct,Paid Social,Organic,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0844,Referral,Direct,Paid Social,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0845,Direct,Direct,Direct,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0846,Direct,Paid Search,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0847,Direct,Direct,Organic,Referral,Direct,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0848,Direct,Direct,Direct,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0849,Email,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0850,Organic,Email,Direct,Organic,Paid Search,Paid Search,Direct,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0851,Organic,Organic,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0852,Paid Search,Paid Search,Referral,Direct,Paid Search,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0853,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0854,Organic,Direct,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0855,Email,Organic,Direct,Paid Search,Organic,Email,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0856,Direct,Organic,Organic,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0857,Paid Search,Paid Search,Referral,Email,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0858,Paid Social,Paid Search,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0859,Email,Referral,Paid Social,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0860,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0861,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0862,Direct,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0863,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0864,Referral,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0865,Direct,Direct,Direct,Paid Social,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0866,Direct,Organic,Paid Search,Paid Search,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0867,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0868,Paid Social,Paid Social,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0869,Paid Social,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0870,Paid Social,Direct,Paid Search,Paid Social,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0871,Organic,Referral,Direct,Paid Social,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0872,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0873,Organic,Paid Search,Paid Search,Referral,Organic,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0874,Referral,Referral,Email,Direct,Paid Social,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0875,Referral,Direct,Referral,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0876,Email,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0877,Direct,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0878,Email,Direct,Paid Search,Direct,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0879,Paid Social,Organic,Paid Social,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0880,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0881,Direct,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0882,Organic,Direct,Direct,Direct,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0883,Paid Social,Paid Search,Paid Social,Paid Social,Direct,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0884,Paid Search,Email,Paid Search,Direct,Referral,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0885,Direct,Paid Social,Direct,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0886,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0887,Paid Search,Paid Social,Paid Social,Email,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0888,Paid Social,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0889,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0890,Referral,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0891,Organic,Organic,Referral,Paid Social,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0892,Organic,Referral,Direct,Paid Social,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0893,Referral,Direct,Organic,Direct,Referral,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0894,Paid Social,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0895,Direct,Referral,Email,Referral,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0896,Direct,Paid Social,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0897,Paid Social,Organic,Organic,Paid Social,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0898,Direct,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0899,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0900,Paid Search,Organic,Referral,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0901,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0902,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0903,Referral,Referral,Direct,Referral,Referral,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0904,Direct,Organic,Direct,Organic,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0905,Organic,Paid Social,Paid Social,Direct,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0906,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0907,Email,Email,Paid Social,Direct,Paid Search,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0908,Direct,Paid Search,Direct,Paid Social,Paid Social,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0909,Referral,Direct,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0910,Direct,Direct,Paid Social,Direct,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0911,Email,Organic,Paid Social,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0912,Paid Social,Paid Search,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0913,Organic,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0914,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0915,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0916,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0917,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0918,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0919,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0920,Direct,Direct,Organic,Paid Search,Paid Search,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0921,Email,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0922,Referral,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0923,Email,Paid Search,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0924,Referral,Paid Social,Referral,Paid Social,Organic,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0925,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0926,Referral,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0927,Referral,Direct,Paid Social,Organic,Paid Social,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0928,Organic,Referral,Paid Social,Direct,Paid Search,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0929,Email,Paid Search,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0930,Organic,Paid Search,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0931,Paid Search,Organic,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0932,Paid Search,Direct,Paid Search,Direct,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0933,Referral,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0934,Referral,Organic,Paid Search,Direct,Organic,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0935,Direct,Paid Social,Organic,Paid Social,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0936,Direct,Referral,Organic,Referral,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0937,Paid Social,Paid Social,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0938,Direct,Organic,Referral,Organic,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0939,Organic,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0940,Paid Social,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0941,Paid Social,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0942,Organic,Paid Search,Referral,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0943,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0944,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0945,Email,Organic,Direct,Organic,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0946,Organic,Paid Search,Referral,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0947,Paid Search,Email,Paid Search,Direct,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0948,Paid Search,Organic,Organic,Email,Email,Paid Search,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0949,Paid Search,Organic,Direct,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0950,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0951,Organic,Direct,Paid Search,Organic,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0952,Organic,Direct,Paid Search,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0953,Direct,Paid Social,Paid Search,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0954,Referral,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0955,Paid Social,Email,Direct,Email,Organic,Organic,Paid Social,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0956,Paid Social,Referral,Direct,Direct,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0957,Paid Search,Paid Search,Referral,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0958,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0959,Referral,Email,Referral,Direct,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0960,Direct,Paid Search,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0961,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0962,Direct,Referral,Organic,Organic,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0963,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0964,Organic,Referral,Organic,Paid Social,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0965,Email,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0966,Paid Social,Email,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0967,Paid Search,Email,Organic,Email,Referral,Organic,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0968,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0969,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0970,Paid Search,Direct,Paid Social,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0971,Referral,Organic,Organic,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0972,Paid Social,Direct,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0973,Organic,Direct,Paid Social,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0974,Paid Search,Paid Search,Direct,Direct,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0975,Referral,Direct,Paid Social,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0976,Referral,Paid Search,Organic,Direct,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0977,Organic,Organic,Paid Search,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0978,Direct,Paid Search,Paid Search,Email,Paid Social,Direct,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0979,Paid Search,Email,Paid Social,Organic,Paid Search,Email,Paid Social,Email,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0980,Paid Search,Direct,Paid Search,Paid Social,Direct,Paid Social,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0981,Direct,Organic,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0982,Organic,Paid Search,Organic,Organic,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0983,Paid Social,Organic,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0984,Organic,Paid Search,Paid Social,Paid Social,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0985,Direct,Paid Search,Paid Social,Referral,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0986,Referral,Paid Search,Paid Social,Referral,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0987,Paid Search,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0988,Paid Search,Paid Social,Direct,Paid Social,Direct,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0989,Organic,Direct,Paid Social,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0990,Paid Social,Paid Search,Paid Social,Direct,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0991,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,0
+U0992,Paid Search,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0993,Paid Search,Organic,Direct,Organic,Referral,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0994,Paid Social,Paid Search,Referral,Referral,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0995,Direct,Paid Search,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0996,Direct,Email,Referral,Paid Social,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0997,Referral,Direct,Referral,Email,Organic,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0998,Referral,Paid Social,Direct,Referral,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U0999,Email,Paid Search,Paid Search,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1
+U1000,Referral,Direct,Direct,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,0,1

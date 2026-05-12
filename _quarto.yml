@@ -15,6 +15,12 @@ website:
         href: digital-marketing.qmd
       - text: "Résumé"
         href: resume.qmd
+      - text: "Website Traffic Analytics"
+        menu:
+          - text: "Webstie Traffic Project Report"
+            href: website-traffic-analytics.qmd
+          - text: "Revealjs Presentation"
+            href: IBM6530_Presentation_Group4_Odoo.qmd
 
 
 format:
