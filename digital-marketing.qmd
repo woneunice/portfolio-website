@@ -1,4 +1,16 @@
 ---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
 title: "Digital Marketing"
 ---
 

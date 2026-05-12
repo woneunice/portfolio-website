@@ -124,5 +124,33 @@
     "title": "Contact Us",
     "section": "",
     "text": "Template"
+  },
+  {
+    "objectID": "digital-marketing.html",
+    "href": "digital-marketing.html",
+    "title": "Digital Marketing",
+    "section": "",
+    "text": "Below are selected projects that reflect my experience in digital marketing strategy, campaign analysis, SEO research, and data-driven decision making. These projects combine creative marketing ideas with analytics tools to better understand customer behavior, improve engagement, and support business goals."
+  },
+  {
+    "objectID": "digital-marketing.html#odi-grips-ai-caption-strategy-project",
+    "href": "digital-marketing.html#odi-grips-ai-caption-strategy-project",
+    "title": "Digital Marketing",
+    "section": "ODI Grips AI Caption Strategy Project",
+    "text": "ODI Grips AI Caption Strategy Project\nFor this graduate research project, I analyzed how AI-generated social media captions performed under different prompting strategies. Using historical Instagram data from ODI Grips, I evaluated how structured prompts influenced caption quality, engagement potential, and brand alignment.\nThe project combined marketing strategy with analytics by comparing caption performance patterns, testing audience engagement metrics, and presenting findings through visual reports and statistical analysis.\nSkills Demonstrated:\n\nContent Strategy: Evaluated caption structure, tone, and audience engagement.\nMarketing Analytics: Analyzed Instagram performance metrics using R.\nConsumer Engagement Research: Studied how prompt structure influenced perceived quality.\nData Visualization: Built visual reports and presentation-ready findings in Quarto."
+  },
+  {
+    "objectID": "digital-marketing.html#odoo-website-analytics-attribution-analysis",
+    "href": "digital-marketing.html#odoo-website-analytics-attribution-analysis",
+    "title": "Digital Marketing",
+    "section": "Odoo Website Analytics & Attribution Analysis",
+    "text": "Odoo Website Analytics & Attribution Analysis\nAs part of a team analytics project, I worked on analyzing website traffic behavior and attribution performance using GA4, BigQuery, and R. The goal was to better understand how users interacted with the website and which channels contributed most to conversions.\nI helped develop dashboards, attribution comparisons, and executive-style presentations that translated technical findings into actionable marketing recommendations.\nSkills Demonstrated:\n\nWeb Analytics: Analyzed traffic, sessions, and conversion behavior.\nAttribution Modeling: Compared last-touch and channel contribution patterns.\nDashboard Development: Created interactive visualizations and reports.\nStrategic Insights: Connected analytics findings to marketing recommendations.\n\nBelow is an embedded demonstration of the interactive report:"
+  },
+  {
+    "objectID": "digital-marketing.html#marketing-dashboard-reporting-projects",
+    "href": "digital-marketing.html#marketing-dashboard-reporting-projects",
+    "title": "Digital Marketing",
+    "section": "Marketing Dashboard & Reporting Projects",
+    "text": "Marketing Dashboard & Reporting Projects\nThroughout my graduate coursework, I created multiple dashboards and marketing reports designed for executive audiences. These projects focused on translating complex datasets into clear business insights using R, Quarto, Tableau, and visualization tools.\nI emphasized clean reporting design, storytelling through data, and actionable recommendations rather than simply presenting numbers.\nSkills Demonstrated:\n\nMarketing Reporting: Developed stakeholder-focused reports and presentations.\nData Storytelling: Simplified technical findings into business insights.\nVisualization Design: Built clean and interactive dashboards.\nStrategic Communication: Presented findings in an executive-friendly format."
   }
 ]
