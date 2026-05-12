@@ -1,28 +1,31 @@
 /*-------------------------------------------------
-  Generic SCSS Starter
-  Replace the sample values with your own brand
+  Custom Professional Rose Theme
 --------------------------------------------------*/
 
 /*-- scss:defaults --*/
 
 // ── Brand Palette ────────────────────────────────
-$color-primary:   #3B2F36;  // deep plum charcoal
-$color-secondary: #EFE7EA;  // soft pale blush
+$color-primary:   #4B3442;  // rich mauve-plum
+$color-secondary: #F4ECEF;  // soft blush cream
 
-// Optional accent & neutral tones
-$accent-1:  #B76E79;  // rose gold pink / links
-$accent-2:  #8FA99B;  // muted sage green / success
-$neutral-0: #FFFFFF;  // white background
-$neutral-1: #FAF7F8;  // soft blush background
-$neutral-9: #1F1A1D;  // near-black text
+// Accent & neutral tones
+$accent-1:  #C08497;  // dusty rose
+$accent-2:  #9BAE9E;  // muted sage
+$accent-3:  #D8C3CC;  // soft pink-gray
+
+$neutral-0: #FFFFFF;
+$neutral-1: #FBF8F9;
+$neutral-2: #F2EBEE;
+$neutral-9: #241C21;
 
 // ── Typography ──────────────────────────────────
-$font-primary:    Arial, sans-serif;
-$font-secondary:  Georgia, serif;
-$font-body:       $font-primary;
+$font-primary: "Helvetica Neue", Arial, sans-serif;
+$font-secondary: "Georgia", serif;
+$font-body: $font-primary;
 
-// ── Derived / utility variables ─────────────────
-$color-secondary-dark: darken($color-secondary, 10%);
+// ── Derived variables ───────────────────────────
+$color-primary-light: lighten($color-primary, 15%);
+$color-secondary-dark: darken($color-secondary, 8%);
 
 /*-- scss:rules --*/
 
@@ -33,57 +36,119 @@ body {
   background-color: $neutral-1;
   margin: 0;
   padding: 0;
+  line-height: 1.7;
+}
+
+/* Main content spacing */
+main.content {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-primary;
-  font-weight: bold;
-  margin-top: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
 }
 
-h1 { color: $color-primary;   }
-h2 { color: $color-secondary-dark; }
-h3 { color: $color-primary;        }
+h1 {
+  color: $color-primary;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: $color-primary-light;
+  border-bottom: 2px solid $accent-3;
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  color: $accent-1;
+}
 
 /* Paragraphs */
 p {
-  font-size: 1em;
-  line-height: 1.5;
+  font-size: 1rem;
   color: $neutral-9;
+  margin-bottom: 1rem;
 }
 
 /* Links */
 a {
   color: $accent-1;
   text-decoration: none;
+  transition: all 0.2s ease;
 
   &:hover {
+    color: $color-primary;
     text-decoration: underline;
   }
 }
 
+/* Navbar */
+.navbar {
+  background-color: $neutral-0;
+  border-bottom: 1px solid $neutral-2;
+}
+
+.navbar-title,
+.navbar-nav .nav-link {
+  color: $color-primary !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: $accent-1 !important;
+}
+
+/* Cards / panels */
+.card, .callout {
+  border-radius: 14px;
+  border: 1px solid $neutral-2;
+  background: $neutral-0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
 /* Code blocks */
 pre code {
-  background: $neutral-9;
+  background: #2B2227;
   color: $color-secondary;
-  font-size: 1em;
-  padding: 0.9em 1.1em;
-  border-radius: 5px;
-  border: 2px solid $accent-2;
+  font-size: 0.95rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid $accent-2;
   overflow-x: auto;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: $accent-1;
+  border-color: $accent-1;
+}
+
+.btn-primary:hover {
+  background-color: darken($accent-1, 8%);
+  border-color: darken($accent-1, 8%);
 }
 
 /* Highlight utility */
 .highlight {
   background-color: $accent-1;
   color: $neutral-0;
-  padding: 0.2em 0.4em;
-  border-radius: 0.2em;
+  padding: 0.2em 0.45em;
+  border-radius: 0.3em;
 }
 
-/* Example animation (optional) */
+/* Soft fade animation */
 @keyframes progressColor {
-  0%   { background-color: $color-primary;   }
-  100% { background-color: $color-secondary; }
+  0%   { background-color: $color-primary; }
+  100% { background-color: $accent-1; }
 }
