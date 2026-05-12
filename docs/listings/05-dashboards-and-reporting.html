@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Marketing Analytics – Eunice Won</title>
+<title>Dashboards &amp; Reporting – Eunice Won</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b9fd59af00ab6ea44284e3b47e0aa9c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b9fd59af00ab6ea44284e3b47e0aa9c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,35 +68,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-62TKQS1DFZ"></script>
 
 <script type="text/javascript">
@@ -116,35 +85,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-123ABC78');</script>
 <!-- End Google Tag Manager -->
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -155,7 +95,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Eunice Won</span>
     </a>
   </div>
@@ -166,19 +106,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./marketing-analytics.html" aria-current="page"> 
+    <a class="nav-link" href="../marketing-analytics.html"> 
 <span class="menu-text">Marketing Analytics</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./digital-marketing.html"> 
+    <a class="nav-link" href="../digital-marketing.html"> 
 <span class="menu-text">Digital Marketing</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume.html"> 
+    <a class="nav-link" href="../resume.html"> 
 <span class="menu-text">Résumé</span></a>
   </li>  
 </ul>
@@ -192,15 +132,9 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#what-youll-find" id="toc-what-youll-find" class="nav-link active" data-scroll-target="#what-youll-find">What You’ll Find</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 <!-- Google Tag Manager (noscript) -->
@@ -209,8 +143,15 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Marketing Analytics</h1>
-</div>
+<h1 class="title">Dashboards &amp; Reporting</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Dashboarding</div>
+    <div class="quarto-category">Data Visualization</div>
+    <div class="quarto-category">Reporting</div>
+    <div class="quarto-category">Marketing Analytics</div>
+    <div class="quarto-category">Business Insights</div>
+  </div>
+  </div>
 
 
 
@@ -226,124 +167,47 @@ window.Quarto = {
 </header>
 
 
-<p>My work in marketing analytics connects data, digital strategy, and storytelling. Through my MS in Digital Marketing coursework and hands-on projects, I’ve worked with website analytics, campaign data, social media engagement, SEO research, attribution modeling, and dashboard reporting.</p>
-<p>A lot of my work focuses on making data easier to understand. I enjoy taking messy or complex datasets and turning them into clear insights that can help explain what is happening, why it matters, and what a team could do next.</p>
-<section id="what-youll-find" class="level2">
-<h2 class="anchored" data-anchor-id="what-youll-find">What You’ll Find</h2>
-<ul>
-<li><strong>Odoo Website Analytics:</strong> Analyzing GA4 and BigQuery data to understand website traffic, user behavior, engagement, and conversion patterns.</li>
-<li><strong>ODI Grips Social Media Analysis:</strong> Studying Instagram engagement, caption structure, hashtags, CTAs, and content types to identify patterns in content performance.</li>
-<li><strong>AI Caption Quality Research:</strong> Comparing basic prompts with historically informed prompts to evaluate how AI-generated captions can improve in brand alignment, clarity, engagement potential, and persuasiveness.</li>
-<li><strong>SEO &amp; Search Visibility:</strong> Reviewing keyword opportunities, competitor visibility, and website content to support stronger digital marketing strategy.</li>
-<li><strong>Dashboards &amp; Reporting:</strong> Building dashboards and Quarto reports using tools like R, GA4, BigQuery, Tableau, Looker Studio, and SQL.</li>
-</ul>
-<hr>
-<p>These projects reflect my interest in using analytics not just to report numbers, but to support better marketing decisions. My goal is to communicate insights in a way that feels practical, visual, and easy for others to understand.</p>
-
-
-
+<section id="overview" class="level4">
+<h4 class="anchored" data-anchor-id="overview"><strong>Overview</strong></h4>
+<p>This work focused on building dashboards and visual reports to communicate marketing and website analytics findings more clearly and effectively. Using tools such as R, Quarto, Tableau, GA4, BigQuery, and Looker Studio, the dashboards were designed to simplify complex datasets and support data-informed decision-making.</p>
 </section>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="learning-outcomes" class="level4">
+<h4 class="anchored" data-anchor-id="learning-outcomes"><strong>Learning Outcomes</strong></h4>
+<ul>
+<li>Organize and visualize marketing and website analytics data.<br>
+</li>
+<li>Build dashboards to monitor performance metrics and trends.<br>
+</li>
+<li>Translate complex data into more accessible visual insights.<br>
+</li>
+<li>Support stakeholder communication through reporting.<br>
+</li>
+<li>Develop data-informed recommendations from dashboard findings.</li>
+</ul>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="key-skills-gained" class="level4">
+<h4 class="anchored" data-anchor-id="key-skills-gained"><strong>Key Skills Gained</strong></h4>
+<ul>
+<li>Dashboard development<br>
+</li>
+<li>Data visualization<br>
+</li>
+<li>Reporting and storytelling<br>
+</li>
+<li>Data wrangling in R<br>
+</li>
+<li>Marketing analytics tools</li>
+</ul>
+</section>
+</div>
+</div>
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1778597595558" data-listing-reading-time-sort="1" data-listing-word-count-sort="132">
-<a href="./listings/04-SEO-search-visibility.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-SEO &amp; Search Visibility Analysis
-</h5>
-<div class="card-text listing-description delink">
-This project evaluated keyword opportunities, competitor visibility, and website content performance to better understand areas for SEO improvement. The analysis explored…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1778567580544" data-listing-reading-time-sort="1" data-listing-word-count-sort="149">
-<a href="./listings/01-odoo-website-analytics.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Odoo Website Analytics
-</h5>
-<div class="card-text listing-description delink">
-This project analyzed website traffic and engagement data for the MSDM Odoo website using GA4, BigQuery, and dashboard reporting tools. The analysis focused on understanding…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1778597650433" data-listing-reading-time-sort="1" data-listing-word-count-sort="138">
-<a href="./listings/05-dashboards-and-reporting.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Dashboards &amp; Reporting
-</h5>
-<div class="card-text listing-description delink">
-This work focused on building dashboards and visual reports to communicate marketing and website analytics findings more clearly and effectively. Using tools such as R…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1778597535184" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
-<a href="./listings/03-caption-quality-research.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-AI Caption Quality Research
-</h5>
-<div class="card-text listing-description delink">
-This research project examined how historically informed prompting influenced the quality of AI-generated social media captions for ODI Grips. Captions generated from basic…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1778597346863" data-listing-reading-time-sort="1" data-listing-word-count-sort="156">
-<a href="./listings/02-ODI-grips-analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ODI Grips Social Media Analysis
-</h5>
-<div class="card-text listing-description delink">
-This project analyzed ODI Grips social media engagement data to better understand how content structure, captions, hashtags, and calls-to-action may influence audience…
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -1,0 +1,41 @@
+---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
+title: "Dashboards & Reporting"
+image: "https://placehold.co/600x400?text=Dashboards+%26+Reporting"
+categories: [Dashboarding, Data Visualization, Reporting, Marketing Analytics, Business Insights]
+index: 5
+---
+
+#### **Overview**  
+This work focused on building dashboards and visual reports to communicate marketing and website analytics findings more clearly and effectively. Using tools such as R, Quarto, Tableau, GA4, BigQuery, and Looker Studio, the dashboards were designed to simplify complex datasets and support data-informed decision-making.
+
+::: {.columns}
+::: {.column width="50%"}
+#### **Learning Outcomes**  
+- Organize and visualize marketing and website analytics data.  
+- Build dashboards to monitor performance metrics and trends.  
+- Translate complex data into more accessible visual insights.  
+- Support stakeholder communication through reporting.  
+- Develop data-informed recommendations from dashboard findings.
+:::
+
+::: {.column width="50%"}
+#### **Key Skills Gained**  
+- Dashboard development  
+- Data visualization  
+- Reporting and storytelling  
+- Data wrangling in R  
+- Marketing analytics tools
+:::
+:::

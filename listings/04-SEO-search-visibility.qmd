@@ -1,0 +1,41 @@
+---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
+title: "SEO & Search Visibility Analysis"
+image: "https://placehold.co/600x400?text=SEO+%26+Search+Visibility"
+categories: [SEO, Search Visibility, Competitive Analysis, Keyword Research, Digital Strategy]
+index: 4
+---
+
+#### **Overview**  
+This project evaluated keyword opportunities, competitor visibility, and website content performance to better understand areas for SEO improvement. The analysis explored search trends, content gaps, and visibility patterns to support stronger digital marketing and content strategy decisions.
+
+::: {.columns}
+::: {.column width="50%"}
+#### **Learning Outcomes**  
+- Identify keyword opportunities through search and competitor research.  
+- Analyze website visibility and search performance trends.  
+- Evaluate competitor content and digital presence.  
+- Recognize content gaps and SEO improvement opportunities.  
+- Develop data-informed recommendations for digital strategy.
+:::
+
+::: {.column width="50%"}
+#### **Key Skills Gained**  
+- SEO analysis  
+- Keyword research  
+- Competitive benchmarking  
+- Data interpretation and reporting  
+- Digital marketing strategy
+:::
+:::

@@ -1,0 +1,41 @@
+---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
+title: "AI Caption Quality Research"
+image: "https://placehold.co/600x400?text=AI+Caption+Quality+Research"
+categories: [AI Content Analysis, Marketing Research, Social Media Analytics, Consumer Engagement, Digital Marketing]
+index: 3
+---
+
+#### **Overview**  
+This research project examined how historically informed prompting influenced the quality of AI-generated social media captions for ODI Grips. Captions generated from basic prompts and historically informed prompts were evaluated across dimensions such as brand alignment, clarity, engagement potential, persuasiveness, and originality to better understand how structured prompting may improve AI-generated marketing content.
+
+::: {.columns}
+::: {.column width="50%"}
+#### **Learning Outcomes**  
+- Compare AI-generated captions across different prompting conditions.  
+- Evaluate content quality using structured human rating methods.  
+- Analyze how historical engagement insights can inform prompt design.  
+- Interpret statistical findings related to content quality performance.  
+- Translate research findings into practical content strategy recommendations.
+:::
+
+::: {.column width="50%"}
+#### **Key Skills Gained**  
+- AI-generated content evaluation  
+- Marketing research methods  
+- Statistical analysis in R  
+- Data visualization and reporting  
+- Social media content analysis
+:::
+:::

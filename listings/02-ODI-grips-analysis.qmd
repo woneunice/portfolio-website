@@ -1,0 +1,47 @@
+---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
+title: "ODI Grips Social Media Analysis"
+image: "https://placehold.co/600x400?text=ODI+Analysis"
+categories: [
+  Social Media Analytics,
+  Engagement Analysis,
+  Content Strategy,
+  Instagram Analytics,
+  Audience Insights
+]
+index: 2
+---
+
+#### **Overview**  
+This project analyzed ODI Grips social media engagement data to better understand how content structure, captions, hashtags, and calls-to-action may influence audience interaction and engagement performance. The analysis explored trends across Instagram content to identify patterns that could support stronger content strategy and digital engagement.
+
+::: {.columns}
+::: {.column width="50%"}
+#### **Learning Outcomes**  
+- Analyze engagement trends across social media content.  
+- Examine how caption structure and hashtags relate to engagement performance.  
+- Identify audience interaction patterns through engagement metrics.  
+- Evaluate differences across content and caption types.  
+- Translate engagement findings into content strategy recommendations.
+:::
+
+::: {.column width="50%"}
+#### **Key Skills Gained**  
+- Social media analytics  
+- Engagement metric analysis  
+- Data wrangling in R  
+- Content performance evaluation  
+- Data visualization and reporting
+:::
+:::

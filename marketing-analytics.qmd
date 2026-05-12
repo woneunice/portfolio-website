@@ -20,18 +20,18 @@ listing:
     - "index desc"
 ---
 
-My work in marketing analytics focuses on understanding how data can support better marketing decisions, improve audience engagement, and uncover meaningful business insights. Through graduate coursework and hands-on projects, I’ve worked with campaign data, web analytics, SEO research, and visualization tools to translate complex datasets into clear and actionable findings.
+My work in marketing analytics connects data, digital strategy, and storytelling. Through my MS in Digital Marketing coursework and hands-on projects, I’ve worked with website analytics, campaign data, social media engagement, SEO research, attribution modeling, and dashboard reporting.
 
-I’m especially interested in the connection between analytics and strategy — not just collecting data, but understanding what it means, why it matters, and how it can improve marketing performance. Many of my projects combine technical analysis with storytelling, helping turn numbers into recommendations that are easier for teams and stakeholders to understand.
+A lot of my work focuses on making data easier to understand. I enjoy taking messy or complex datasets and turning them into clear insights that can help explain what is happening, why it matters, and what a team could do next.
 
 ## What You’ll Find
 
-- **Campaign Performance Analysis:** Analyzing engagement, traffic, and conversion metrics to evaluate marketing effectiveness.
-- **Data Visualization & Dashboards:** Building reports and dashboards using R, Quarto, Tableau, and interactive visualization tools.
-- **SEO & Web Analytics:** Exploring user behavior, website performance, and local search visibility through analytics platforms and search data.
-- **Marketing Research & Insights:** Applying statistical analysis and consumer research methods to support strategic decision making.
-- **Attribution & Channel Analysis:** Evaluating how different marketing channels contribute to customer actions and business outcomes.
+- **Odoo Website Analytics:** Analyzing GA4 and BigQuery data to understand website traffic, user behavior, engagement, and conversion patterns.
+- **ODI Grips Social Media Analysis:** Studying Instagram engagement, caption structure, hashtags, CTAs, and content types to identify patterns in content performance.
+- **AI Caption Quality Research:** Comparing basic prompts with historically informed prompts to evaluate how AI-generated captions can improve in brand alignment, clarity, engagement potential, and persuasiveness.
+- **SEO & Search Visibility:** Reviewing keyword opportunities, competitor visibility, and website content to support stronger digital marketing strategy.
+- **Dashboards & Reporting:** Building dashboards and Quarto reports using tools like R, GA4, BigQuery, Tableau, Looker Studio, and SQL.
 
 ---
 
-Throughout these projects, I’ve worked with tools such as R, BigQuery, GA4, Quarto, Tableau, and SQL to analyze data, create visual reports, and communicate insights in a way that is both practical and easy to understand.
+These projects reflect my interest in using analytics not just to report numbers, but to support better marketing decisions. My goal is to communicate insights in a way that feels practical, visual, and easy for others to understand.

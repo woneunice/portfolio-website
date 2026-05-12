@@ -1,0 +1,47 @@
+---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
+title: "Odoo Website Analytics"
+image: "https://placehold.co/600x400?text=Odoo+Website+Analytics"
+categories: [
+  Marketing Analytics,
+  Website Analytics,
+  User Behavior,
+  Dashboarding,
+  Digital Strategy
+]
+index: 1
+---
+
+#### **Overview**  
+This project analyzed website traffic and engagement data for the MSDM Odoo website using GA4, BigQuery, and dashboard reporting tools. The analysis focused on understanding user behavior, traffic acquisition sources, engagement patterns, and overall website performance to identify opportunities for improving user experience and digital visibility.
+
+::: {.columns}
+::: {.column width="50%"}
+#### **Learning Outcomes**  
+- Analyze website traffic and user engagement metrics.  
+- Identify trends in acquisition channels and user behavior.  
+- Evaluate engagement performance across website pages.  
+- Communicate analytics findings through dashboards and reports.  
+- Develop data-informed recommendations for website improvement.
+:::
+
+::: {.column width="50%"}
+#### **Key Skills Gained**  
+- GA4 and BigQuery analysis  
+- Website analytics reporting  
+- Dashboard development  
+- Data wrangling in R  
+- Data visualization and storytelling
+:::
+:::
