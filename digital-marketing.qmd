@@ -31,27 +31,6 @@ The project combined marketing strategy with analytics by comparing caption perf
 
 ------------------------------------------------------------------------
 
-## Odoo Website Analytics & Attribution Analysis
-
-As part of a team analytics project, I worked on analyzing website traffic behavior and attribution performance using GA4, BigQuery, and R. The goal was to better understand how users interacted with the website and which channels contributed most to conversions.
-
-I helped develop dashboards, attribution comparisons, and executive-style presentations that translated technical findings into actionable marketing recommendations.
-
-**Skills Demonstrated:**
-
--   **Web Analytics:** Analyzed traffic, sessions, and conversion behavior.
--   **Attribution Modeling:** Compared last-touch and channel contribution patterns.
--   **Dashboard Development:** Created interactive visualizations and reports.
--   **Strategic Insights:** Connected analytics findings to marketing recommendations.
-
-Below is an embedded demonstration of the interactive report:
-
-<iframe src="data/IBM6530_Final_Report_Group4_MSDM_Odoo.html" width="100%" height="600px" style="border: none;">
-
-</iframe>
-
-------------------------------------------------------------------------
-
 ## Marketing Dashboard & Reporting Projects
 
 Throughout my graduate coursework, I created multiple dashboards and marketing reports designed for executive audiences. These projects focused on translating complex datasets into clear business insights using R, Quarto, Tableau, and visualization tools.
@@ -64,3 +43,9 @@ I emphasized clean reporting design, storytelling through data, and actionable r
 -   **Data Storytelling:** Simplified technical findings into business insights.
 -   **Visualization Design:** Built clean and interactive dashboards.
 -   **Strategic Communication:** Presented findings in an executive-friendly format.
+
+<iframe src="https://woneunice.github.io/w10-dashboard-eunice/" width="100%" height="600px" style="border: none;">
+
+</iframe>
+
+------------------------------------------------------------------------
