@@ -12,6 +12,7 @@ date: today
 format:
   revealjs:
     theme: moon
+    css: theme.scss
     transition: slide
     slide-number: true
     controls: true
@@ -27,7 +28,7 @@ format:
     fig-height: 4.5
     logo: ""
     footer: "IBM 6530 | Group 4 | MSDM Odoo Analytics"
-    include-in-header:
+    include-before-body:
       text: |
         <div id="top-hover-zone"></div>
         <div id="top-nav">
