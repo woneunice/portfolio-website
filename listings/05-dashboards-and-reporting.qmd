@@ -12,7 +12,6 @@ fontsize: 10pt
 ---
 ---
 title: "Dashboards & Reporting"
-image: "https://placehold.co/600x400?text=Dashboards+%26+Reporting"
 categories: [Dashboarding, Data Visualization, Reporting, Marketing Analytics, Business Insights]
 index: 5
 ---
