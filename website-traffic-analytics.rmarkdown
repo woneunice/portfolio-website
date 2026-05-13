@@ -1,0 +1,800 @@
+---
+name: Eunice
+surname: Won
+position: Intake Specialist & Marketing / Legal Assistnat
+email: euniceewon@gmail.com
+output:
+  vitae::classiccv:
+    latex_engine: xelatex
+
+mainfont: Calibri
+fontsize: 10pt
+---
+---
+title: "MSDM Odoo Website Analytics — Final Report"
+subtitle: "IBM 6530 — Group 4"
+author:
+  - name: "Min Gong"
+  - name: "Jeffrey Hsu"
+  - name: "Emily Kuo"
+  - name: "Eunice Won"
+  - name: "Ceren Unal"
+date: "May 2026"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Contents"
+    theme: flatly
+    code-fold: true
+    code-summary: "Show code"
+    number-sections: true
+    self-contained: true
+    fig-width: 9
+    fig-height: 5
+execute:
+  warning: false
+  message: false
+  echo: true
+  cache: false
+---
+
+---
+
+> **Links:**
+[GitHub Repo](https://github.com/hsujeffrey/ibm6530-group4-project)
+
+---
+
+# Executive Summary
+
+This report presents a descriptive and attribution-based analysis of website activity for the MSDM Odoo website, using Google Analytics 4 (GA4) event data exported from BigQuery. The analysis covers eight snapshot dates between February 9 and April 3, 2026.
+
+Key findings:
+
+- The site recorded substantial engagement over the snapshot period, with desktop users making up the majority of traffic.
+- Direct and organic search are the dominant traffic channels by page views; however, attribution modeling reveals a more nuanced picture.
+- A Markov chain attribution model substantially re-weights credit away from last-touch channels (Direct, Email) toward upper-funnel channels (Paid Social), suggesting that last-touch attribution systematically undervalues awareness-stage marketing.
+- The most actionable recommendation is to increase investment in Paid Social, which the Markov model credits at 15.8% vs. only 5.0% under last-touch.
+
+**Important caveat:** This analysis is based on a frozen snapshot of 8 dates. Results are directional. Conversion events are not available in this GA4 extract, so attribution is modeled from page-view sequences as a proxy.
+
+---
+
+# Business Problem
+
+## Client Context
+
+The client is the MSDM (Master of Science in Data Management) program, which operates an informational and lead-generation website built on Odoo. The website serves prospective students, current applicants, and program stakeholders.
+
+The program's marketing team needs to understand:
+
+1. **Where is traffic coming from?** — Which channels and geographies are driving visits?
+2. **Who is visiting?** — Device usage, behavior, and engagement depth.
+3. **Which channels actually drive conversions?** — Beyond surface-level traffic, which channels contribute most along the full user journey?
+4. **Where should marketing budget be focused?** — Given limited resources, which channels have the highest return?
+
+## Why Standard Reporting Is Not Enough
+
+The default view in Google Analytics uses **last-touch attribution**: the final channel a user visited before converting receives 100% of the credit. This model is simple but systematically misleading for programs like MSDM where:
+
+- Users typically discover the program through social media or organic search, then return via direct or email links to convert.
+- Upper-funnel channels (Paid Social, Organic) never receive credit under last-touch even if they were the original discovery source.
+- Budget decisions made on last-touch data tend to over-invest in closing channels and under-invest in awareness channels.
+
+This report addresses that gap by combining descriptive reporting (from the GA4 snapshot) with a **Markov chain attribution model** that distributes credit across all touchpoints in the user journey.
+
+---
+
+# Data Overview
+
+## Source and Pipeline
+
+```{r setup}
+library(arrow)
+library(dplyr)
+library(ggplot2)
+library(scales)
+library(lubridate)
+library(stringr)
+library(tidyr)
+library(forcats)
+library(fs)
+library(here)
+library(readr)
+library(gt)
+library(knitr)
+library(ggrepel)
+
+knitr::opts_chunk$set(fig.width = 9, fig.height = 5)
+
+# ── Paths ──────────────────────────────────────────────────────────────────────
+DATA_DIR     <- here::here("data")
+PARQUET_DIR  <- fs::path(DATA_DIR, "msdm_snapshot", "events_flat")
+PARQUET_FILE <- fs::path(PARQUET_DIR, "events_snapshot.parquet")
+CSV_PATH     <- fs::path(DATA_DIR, "events_snapshot.csv")
+
+# ── Build parquet if needed ────────────────────────────────────────────────────
+if (!fs::file_exists(PARQUET_FILE)) {
+  fs::dir_create(PARQUET_DIR)
+  arrow::write_parquet(
+    readr::read_csv(CSV_PATH, show_col_types = FALSE),
+    PARQUET_FILE
+  )
+}
+
+# ── Load dataset ───────────────────────────────────────────────────────────────
+ds <- arrow::open_dataset(PARQUET_DIR) |> dplyr::collect()
+```
+
+**BigQuery source:** `odoo-487003 / analytics_523126945`
+
+**Pipeline:**
+
+```
+BigQuery (GA4 raw tables)
+   ↓  SQL extract (flat event schema)
+events_snapshot.csv
+   ↓  Apache Arrow / write_parquet()
+events_snapshot.parquet
+   ↓  R (arrow, dplyr, ggplot2)
+Analysis + Dashboard + Report
+```
+
+All analysis in this report runs from a local Parquet snapshot. No live BigQuery connection is required after the initial export. This ensures the pipeline is stable and reproducible.
+
+## Coverage and Key Fields
+
+```{r data-summary}
+tibble::tibble(
+  Item    = c("Date range", "Snapshot days", "BigQuery project",
+              "BigQuery dataset", "Primary key", "Key fields"),
+  Details = c(
+    "February 9 – April 3, 2026",
+    "8 days across ~7 weeks",
+    "odoo-487003",
+    "analytics_523126945",
+    "user_pseudo_id (anonymous)",
+    "event_name, traffic_medium, device_category, geo_country, event_date"
+  )
+) |>
+  knitr::kable(col.names = c("Item", "Details"))
+```
+
+## Key Definitions
+
+| Term | Definition |
+|---|---|
+| **Unique Users** | Counted by `user_pseudo_id` (anonymous; resets across devices/browsers) |
+| **Traffic Medium** | First-touch medium from `traffic_medium`; `(none)` recoded as `direct` |
+| **Page Views** | Events where `event_name == "page_view"` |
+| **Conversion** | Not available in this snapshot; page-view sequences used as proxy for attribution |
+| **Session** | Not reconstructed; no timestamp-based sessionization applied |
+
+---
+
+# Descriptive Analysis
+
+## Pre-Computed Summaries
+
+```{r summaries}
+# Traffic medium
+traffic_summary <- ds |>
+  filter(event_name == "page_view") |>
+  mutate(
+    medium_clean = case_when(
+      is.na(traffic_medium)      ~ "(not set)",
+      traffic_medium == "(none)" ~ "direct",
+      TRUE                       ~ traffic_medium
+    )
+  ) |>
+  count(medium_clean, name = "page_views") |>
+  arrange(desc(page_views))
+
+# Device
+device_summary <- ds |>
+  filter(!is.na(device_category)) |>
+  group_by(device_category) |>
+  summarise(
+    n_events       = n(),
+    n_unique_users = n_distinct(user_pseudo_id)
+  ) |>
+  arrange(desc(n_events)) |>
+  mutate(pct_events = n_events / sum(n_events) * 100)
+
+# Events by date
+events_by_date <- ds |>
+  count(event_date, name = "n_events") |>
+  arrange(event_date)
+
+# Top event types
+event_types <- ds |>
+  count(event_name, name = "count") |>
+  arrange(desc(count)) |>
+  slice_head(n = 8)
+
+# Geo
+geo_summary <- ds |>
+  filter(!is.na(geo_country), event_name == "page_view") |>
+  count(geo_country, name = "page_views") |>
+  arrange(desc(page_views)) |>
+  slice_head(n = 10)
+
+# KPIs
+total_events    <- nrow(ds)
+total_users     <- n_distinct(ds$user_pseudo_id)
+total_pv        <- ds |> filter(event_name == "page_view") |> nrow()
+events_per_user <- total_events / total_users
+pv_per_user     <- total_pv / total_users
+top_medium      <- traffic_summary$medium_clean[1]
+top_device      <- device_summary$device_category[1]
+```
+
+## KPI Summary
+
+```{r kpi-table}
+tibble::tibble(
+  Metric  = c("Total Events", "Unique Users", "Page Views",
+              "Events per User", "Page Views per User",
+              "Top Channel", "Top Device"),
+  Value   = c(
+    scales::comma(total_events),
+    scales::comma(total_users),
+    scales::comma(total_pv),
+    round(events_per_user, 1),
+    round(pv_per_user, 1),
+    str_to_title(top_medium),
+    str_to_title(top_device)
+  )
+) |>
+  knitr::kable(col.names = c("Metric", "Value"),
+               caption = "Top-line KPIs from GA4 snapshot")
+```
+
+The average of `r round(events_per_user, 1)` events per user and `r round(pv_per_user, 1)` page views per user suggests that visitors are interacting with multiple pages per session, which is consistent with an exploratory, research-mode audience typical of graduate program websites.
+
+## Traffic by Channel
+
+```{r plot-traffic, fig.cap="Page views by traffic medium. Direct traffic dominates, which may reflect either strong brand recognition or incomplete UTM tagging on campaigns."}
+traffic_summary |>
+  mutate(medium_clean = fct_reorder(medium_clean, page_views)) |>
+  ggplot(aes(x = medium_clean, y = page_views, fill = medium_clean)) +
+  geom_col(show.legend = FALSE, width = 0.7) +
+  geom_text(aes(label = comma(page_views)), hjust = -0.15, size = 3.5) +
+  coord_flip() +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.2))) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(x = NULL, y = "Page Views",
+       title = "Page Views by Traffic Medium",
+       caption = "Filtered to page_view events; (none) recoded as direct") +
+  theme_minimal(base_size = 13) +
+  theme(panel.grid.major.y = element_blank())
+```
+
+```{r table-traffic, fig.cap="Traffic medium summary with percentage share."}
+traffic_summary |>
+  mutate(pct = round(page_views / sum(page_views) * 100, 1)) |>
+  gt() |>
+  cols_label(medium_clean = "Medium", page_views = "Page Views", pct = "% Share") |>
+  fmt_number(columns = page_views, decimals = 0) |>
+  fmt_number(columns = pct, decimals = 1) |>
+  data_color(columns = page_views, palette = "Greens") |>
+  tab_options(table.width = pct(100))
+```
+
+**Interpretation:** Direct traffic accounts for the largest share of page views. However, a high proportion of Direct traffic is a common indicator of incomplete UTM tagging across campaigns — users who click untagged email or social links will appear as "direct" in GA4. This is addressed directly in the attribution section below.
+
+## Device Usage
+
+```{r plot-device, fig.cap="Device share of events (left) and unique users (right). Desktop dominates, typical for graduate program research behavior."}
+p1 <- device_summary |>
+  ggplot(aes(x = "", y = pct_events, fill = device_category)) +
+  geom_col(width = 1, color = "white") +
+  coord_polar(theta = "y") +
+  geom_text(
+    aes(label = paste0(device_category, "\n", round(pct_events, 1), "%")),
+    position = position_stack(vjust = 0.5), size = 4, fontface = "bold"
+  ) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(title = "Event Share by Device", fill = "Device") +
+  theme_void()
+
+p2 <- device_summary |>
+  mutate(device_category = fct_reorder(device_category, n_unique_users)) |>
+  ggplot(aes(x = device_category, y = n_unique_users, fill = device_category)) +
+  geom_col(show.legend = FALSE, width = 0.6) +
+  geom_text(aes(label = comma(n_unique_users)), hjust = -0.15, size = 3.5) +
+  coord_flip() +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.2))) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(x = NULL, y = "Unique Users", title = "Unique Users by Device") +
+  theme_minimal(base_size = 13) +
+  theme(panel.grid.major.y = element_blank())
+
+gridExtra::grid.arrange(p1, p2, ncol = 2)
+```
+
+Desktop dominates both event share and unique users, consistent with graduate program research behavior (users comparing programs, reading requirements, completing applications). Mobile unique users are non-trivial, however, and represent an audience that merits continued UX investment.
+
+## Top Event Types
+
+```{r plot-events, fig.cap="Top 8 event types by count. Page views and user engagement dominate."}
+event_types |>
+  mutate(event_name = fct_reorder(event_name, count)) |>
+  ggplot(aes(x = event_name, y = count, fill = event_name)) +
+  geom_col(show.legend = FALSE, width = 0.7) +
+  geom_text(aes(label = comma(count)), hjust = -0.15, size = 3.5) +
+  coord_flip() +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.15))) +
+  scale_fill_brewer(palette = "Set3") +
+  labs(x = NULL, y = "Count", title = "Top 8 Event Types") +
+  theme_minimal(base_size = 13) +
+  theme(panel.grid.major.y = element_blank())
+```
+
+## Events Over Time
+
+```{r plot-events-date, fig.cap="Event count by snapshot date. The 8-point series is directional only."}
+events_by_date |>
+  ggplot(aes(x = event_date, y = n_events)) +
+  geom_col(fill = "#4E79A7", width = 0.6) +
+  geom_text(aes(label = comma(n_events)), vjust = -0.4, size = 3) +
+  scale_y_continuous(labels = comma, expand = expansion(mult = c(0, 0.15))) +
+  labs(x = "Date", y = "Event Count",
+       title = "Events by Snapshot Date",
+       caption = "8 snapshot days; trends are directional, not conclusive") +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+## Geographic Distribution
+
+```{r table-geo}
+geo_summary |>
+  gt() |>
+  cols_label(geo_country = "Country", page_views = "Page Views") |>
+  fmt_number(columns = page_views, decimals = 0) |>
+  data_color(columns = page_views, palette = "Blues") |>
+  tab_options(table.width = pct(100)) |>
+  tab_header(title = "Top 10 Countries by Page Views")
+```
+
+---
+
+# Advanced Analysis: Multi-Touch Attribution
+
+## Motivation
+
+Last-touch attribution — the default in most analytics platforms — assigns 100% of conversion credit to the final channel before a conversion event. This is convenient but misleading for multi-step user journeys. For the MSDM website, a typical journey might look like:
+
+```
+[Paid Social ad] → [Organic search] → [Email link] → [Direct visit / convert]
+```
+
+Under last-touch, Direct receives all the credit. Paid Social and Organic receive none, even though they initiated and nurtured the journey.
+
+## Markov Chain Attribution Model
+
+A **Markov chain attribution model** treats the user journey as a sequence of channel states. It estimates each channel's contribution by computing the **removal effect**: how much would conversion probability drop if that channel were removed entirely from all journeys? Channels that appear early and often in high-converting paths receive proportionally more credit.
+
+### Attribution Results
+
+```{r attribution-data}
+library(tidyr)
+
+# ── Load attribution dataset ───────────────────────────────────────────────────
+attr_raw <- readr::read_csv(
+  here::here("data", "attribution_dataset.csv"),
+  show_col_types = FALSE
+)
+
+channel_cols <- grep("^channel", names(attr_raw), value = TRUE)
+channels_list <- c("Direct", "Email", "Organic", "Paid Search", "Paid Social", "Referral")
+
+# ── Last-Touch Attribution ─────────────────────────────────────────────────────
+converters <- attr_raw |> filter(user_purchase == 1)
+
+last_touch_attr <- converters |>
+  rowwise() |>
+  mutate(
+    last_ch = {
+      vals <- c_across(all_of(channel_cols))
+      vals <- vals[!is.na(vals)]
+      if (length(vals) > 0) tail(vals, 1) else NA_character_
+    }
+  ) |>
+  ungroup() |>
+  filter(!is.na(last_ch)) |>
+  count(last_ch, name = "credit") |>
+  mutate(pct = round(credit / sum(credit) * 100, 2)) |>
+  rename(Channel = last_ch, Last_Touch = pct) |>
+  select(Channel, Last_Touch)
+
+# ── First-Touch Attribution ────────────────────────────────────────────────────
+first_touch_attr <- converters |>
+  rowwise() |>
+  mutate(
+    first_ch = {
+      vals <- c_across(all_of(channel_cols))
+      vals <- vals[!is.na(vals)]
+      if (length(vals) > 0) vals[1] else NA_character_
+    }
+  ) |>
+  ungroup() |>
+  filter(!is.na(first_ch)) |>
+  count(first_ch, name = "credit") |>
+  mutate(pct = round(credit / sum(credit) * 100, 2)) |>
+  rename(Channel = first_ch, First_Touch = pct) |>
+  select(Channel, First_Touch)
+
+# ── Linear Attribution ─────────────────────────────────────────────────────────
+linear_credits <- converters |>
+  rowwise() |>
+  mutate(
+    path = list({
+      vals <- c_across(all_of(channel_cols))
+      vals[!is.na(vals)]
+    }),
+    n_ch = length(path)
+  ) |>
+  ungroup() |>
+  filter(n_ch > 0) |>
+  unnest(path) |>
+  group_by(users_id, path, n_ch) |>
+  summarise(.groups = "drop") |>
+  mutate(credit = 1 / n_ch) |>
+  group_by(path) |>
+  summarise(total_credit = sum(credit), .groups = "drop") |>
+  mutate(pct = round(total_credit / sum(total_credit) * 100, 2)) |>
+  rename(Channel = path, Linear = pct) |>
+  select(Channel, Linear)
+
+# ── Markov Chain Attribution (Absorbing Chain / Removal Effect) ────────────────
+# Build transition counts
+build_transitions <- function(df, channel_cols) {
+  trans <- list()
+  for (i in seq_len(nrow(df))) {
+    path <- unlist(df[i, channel_cols])
+    path <- path[!is.na(path)]
+    if (length(path) == 0) next
+    outcome <- if (df$user_purchase[i] == 1) "conversion" else "null"
+    
+    # start -> first
+    from <- "start"; to <- path[1]
+    trans[[from]][[to]] <- (trans[[from]][[to]] %||% 0) + 1
+    
+    # channel -> channel
+    if (length(path) > 1) {
+      for (j in seq_len(length(path) - 1)) {
+        from <- path[j]; to <- path[j+1]
+        trans[[from]][[to]] <- (trans[[from]][[to]] %||% 0) + 1
+      }
+    }
+    # last -> outcome
+    from <- tail(path, 1)
+    trans[[from]][[outcome]] <- (trans[[from]][[outcome]] %||% 0) + 1
+  }
+  trans
+}
+
+`%||%` <- function(a, b) if (!is.null(a)) a else b
+
+trans_counts <- build_transitions(attr_raw, channel_cols)
+
+# Convert to probabilities
+trans_prob <- lapply(trans_counts, function(x) {
+  total <- sum(unlist(x))
+  lapply(x, function(v) v / total)
+})
+
+# Build Q and R matrices for absorbing chain
+all_transient <- c(channels_list, "start")
+absorbing     <- c("conversion", "null")
+n_t <- length(all_transient)
+state_idx <- setNames(seq_along(all_transient), all_transient)
+
+Q <- matrix(0, n_t, n_t, dimnames = list(all_transient, all_transient))
+R <- matrix(0, n_t, 2,   dimnames = list(all_transient, absorbing))
+
+for (s in all_transient) {
+  probs <- trans_prob[[s]]
+  if (is.null(probs)) next
+  for (t in names(probs)) {
+    p <- probs[[t]]
+    if (t %in% all_transient) {
+      Q[s, t] <- p
+    } else if (t %in% absorbing) {
+      R[s, t] <- p
+    }
+  }
+}
+
+# Fundamental matrix and absorption probabilities
+N_mat <- solve(diag(n_t) - Q)
+B_mat <- N_mat %*% R
+
+baseline_conv <- B_mat["start", "conversion"]
+
+# Removal effect for each channel
+removal_effects <- sapply(channels_list, function(ch) {
+  Q2 <- Q; R2 <- R
+  # Redirect transitions TO ch → null
+  for (s in all_transient) {
+    if (Q2[s, ch] > 0) {
+      R2[s, "null"] <- R2[s, "null"] + Q2[s, ch]
+      Q2[s, ch] <- 0
+    }
+  }
+  # ch itself: absorb to null
+  Q2[ch, ] <- 0
+  R2[ch, ] <- c(0, 1)
+  
+  tryCatch({
+    N2 <- solve(diag(n_t) - Q2)
+    B2 <- N2 %*% R2
+    max(0, baseline_conv - B2["start", "conversion"])
+  }, error = function(e) 0)
+})
+
+markov_pct_vals <- round(removal_effects / sum(removal_effects) * 100, 2)
+
+markov_attr <- data.frame(
+  Channel = names(markov_pct_vals),
+  Markov  = as.numeric(markov_pct_vals)
+)
+
+# ── Combined comparison table ──────────────────────────────────────────────────
+comparison <- last_touch_attr |>
+  full_join(first_touch_attr, by = "Channel") |>
+  full_join(linear_credits,   by = "Channel") |>
+  full_join(markov_attr,      by = "Channel") |>
+  arrange(desc(Last_Touch))
+```
+
+> **Note on attribution dataset:** The attribution analysis uses a separate dataset (`attribution_dataset.csv`) containing 1,000 user journeys across 6 channels (Direct, Email, Organic, Paid Search, Paid Social, Referral), with `user_purchase` as the conversion indicator (10% conversion rate, n=100 converters). Four models are compared: Last-Touch, First-Touch, Linear, and Markov Chain (removal effect via absorbing Markov chain). The dataset contains journeys of 1–8 touchpoints (mean = 4.2).
+
+```{r plot-attribution, fig.cap="Four attribution models compared by channel. Each model tells a different story about where conversion credit belongs."}
+comparison_long <- comparison |>
+  tidyr::pivot_longer(
+    cols = c(Last_Touch, First_Touch, Linear, Markov),
+    names_to  = "Model",
+    values_to = "Attribution"
+  ) |>
+  mutate(Model = factor(Model, levels = c("First_Touch", "Linear", "Last_Touch", "Markov")))
+
+ggplot(comparison_long, aes(x = Channel, y = Attribution, fill = Model)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.85),
+           width = 0.8, na.rm = TRUE) +
+  geom_text(
+    aes(label = ifelse(is.na(Attribution), "", paste0(round(Attribution, 1), "%"))),
+    position = position_dodge(width = 0.85),
+    vjust = -0.4, size = 2.8, na.rm = TRUE
+  ) +
+  labs(
+    x = "Channel", y = "Attribution (%)", fill = "Model",
+    title = "Multi-Touch Attribution: Four Models Compared",
+    caption = "Based on attribution_dataset.csv — 1,000 users, 100 converters"
+  ) +
+  scale_fill_manual(values = c(
+    "First_Touch" = "#59A14F",
+    "Linear"      = "#F28E2B",
+    "Last_Touch"  = "#4E79A7",
+    "Markov"      = "#E15759"
+  )) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.15))) +
+  theme_minimal(base_size = 13) +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+```
+
+```{r plot-markov-vs-lt, fig.cap="Last-Touch vs Markov: the two most contrasting models. Channels above the diagonal are undervalued by Last-Touch."}
+comparison |>
+  filter(!is.na(Markov)) |>
+  ggplot(aes(x = Last_Touch, y = Markov, label = Channel)) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "gray60") +
+  geom_point(size = 4, color = "#E15759") +
+  ggrepel::geom_text_repel(size = 4, fontface = "bold") +
+  labs(
+    x = "Last-Touch Attribution (%)",
+    y = "Markov Attribution (%)",
+    title = "Last-Touch vs. Markov: Which Channels Are Mis-Attributed?",
+    caption = "Channels above the dashed line are undervalued by Last-Touch; below = overvalued"
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+### Model Comparison Table
+
+```{r attribution-table}
+comparison |>
+  mutate(
+    LT_vs_Markov = round(Markov - Last_Touch, 2),
+    Direction = case_when(
+      is.na(LT_vs_Markov) ~ "—",
+      LT_vs_Markov > 1    ~ paste0("▲ +", LT_vs_Markov, "%"),
+      LT_vs_Markov < -1   ~ paste0("▼ ", LT_vs_Markov, "%"),
+      TRUE                ~ "≈ Stable"
+    )
+  ) |>
+  select(Channel, Last_Touch, First_Touch, Linear, Markov, Direction) |>
+  gt() |>
+  cols_label(
+    Channel     = "Channel",
+    Last_Touch  = "Last-Touch (%)",
+    First_Touch = "First-Touch (%)",
+    Linear      = "Linear (%)",
+    Markov      = "Markov (%)",
+    Direction   = "LT vs Markov"
+  ) |>
+  fmt_missing(columns = everything(), missing_text = "—") |>
+  fmt_number(columns = c(Last_Touch, First_Touch, Linear, Markov), decimals = 1) |>
+  data_color(columns = Markov, palette = "Reds") |>
+  tab_header(title = "Attribution Model Comparison (All Four Models)") |>
+  tab_options(table.width = pct(100))
+```
+
+### Key Insights from Attribution
+
+**Email** is the most complex story. It ranks first in Last-Touch (28%) and First-Touch (24%), reflecting both high conversion closing power and strong journey initiation. However, the Markov model assigns it only 16.3% — the fourth highest — suggesting that Email's Last-Touch dominance overstates its true incremental contribution. It is a high-value channel but not as uniquely critical as Last-Touch implies.
+
+**Direct** receives 21% under Last-Touch but only 19.3% under Markov. It is relatively stable across models, suggesting it plays a genuine role in journeys — not purely as a last-step artifact, though some inflation remains.
+
+**Paid Social** is the most dramatically undervalued channel under Last-Touch (6%) vs. Markov (14.2%). The First-Touch model assigns it 23%, its highest score, confirming it is a strong journey initiator. Paid Social consistently appears early in converting paths but receives almost no last-touch credit. This is the clearest case of systematic under-investment driven by Last-Touch reporting.
+
+**Organic** and **Paid Search** are the most stable channels, varying by only ~2% across all four models. They contribute consistently at every stage of the funnel.
+
+**Referral** is undervalued by Last-Touch (10%) and First-Touch (5%) relative to its Markov share (13.9%), indicating it plays a meaningful mid-funnel role that position-based models undercount.
+
+---
+
+# Recommendations
+
+The following recommendations are grounded in the attribution analysis and descriptive data. Each includes a confidence level and relevant caveat.
+
+## 1. Increase Investment in Paid Social
+
+**Recommendation:** Increase Paid Social budget allocation, treating it explicitly as an upper-funnel awareness channel.
+
+**Evidence:** Paid Social receives only 6% under Last-Touch but 14.2% under Markov — a 2.4× increase. Its First-Touch share is 23%, the highest of any channel, confirming it is the primary journey initiator for converting users. It systematically loses credit to Email and Direct as those channels close the conversion.
+
+**Confidence:** Moderate. The attribution dataset shows a consistent pattern, but Paid Social impressions from walled-garden platforms (Meta, LinkedIn) are not fully captured in click data, so the true contribution may be even higher.
+
+**Action:** Increase Paid Social spend, add UTM parameters to all ad links, and track Paid Social as a top-of-funnel metric (reach, journey initiation) rather than a last-click conversion metric.
+
+## 2. Maintain Email as a Conversion Channel
+
+**Recommendation:** Keep Email campaigns strong for bottom-of-funnel re-engagement (application deadline reminders, event invites, follow-ups).
+
+**Evidence:** Email leads Last-Touch attribution (28%) and First-Touch (24%), and ranks 4th in Markov (16.3%). It is effective at both initiating and closing journeys — the most versatile channel in the mix.
+
+**Confidence:** High. Email's strong performance is consistent across all four attribution models.
+
+**Action:** Segment email lists by funnel stage. Use upper-funnel emails for prospects who arrived via Paid Social or Organic; use conversion-focused emails for users already engaged with the program.
+
+## 3. Re-evaluate Direct as a Standalone Channel
+
+**Recommendation:** Do not treat Direct traffic as an independent channel to invest in — it is primarily the closing step of journeys begun elsewhere.
+
+**Evidence:** Direct receives 21% under Last-Touch but only 19.3% under Markov, and its First-Touch share is just 8% — the lowest of any channel. This confirms Direct rarely initiates journeys; it mainly captures users returning to convert after prior touchpoints.
+
+**Confidence:** High. The First-Touch / Markov discrepancy is diagnostic of a closing-step channel.
+
+**Action:** Focus investment on the channels (Paid Social, Organic, Email) that generate the journeys that Direct closes. Improve UTM tagging to reduce mis-attribution of untagged campaign traffic into Direct.
+
+## 4. Invest in Referral as a Mid-Funnel Channel
+
+**Recommendation:** Treat Referral as a mid-funnel nurturing channel and explore partnerships that generate referral traffic.
+
+**Evidence:** Referral's Markov share (13.9%) is notably higher than its Last-Touch share (10%) and its First-Touch share (5%), indicating it plays a meaningful role in the middle of converting journeys — keeping users in the funnel after initial discovery.
+
+**Confidence:** Moderate. Referral is a heterogeneous category (partner sites, listings, directories) and its sources are not broken out in this dataset.
+
+**Action:** Identify the top referral sources, prioritize partnerships with high-Markov-value referrers, and ensure all referral links are UTM-tagged for channel-level attribution.
+
+## 5. Rebalance Upper vs. Lower Funnel Spend
+
+**Recommendation:** Shift some budget from lower-funnel channels (Email, Direct-associated) toward upper-funnel channels (Paid Social, Organic content, Referral partnerships).
+
+**Evidence:** The Markov model consistently re-weights credit toward channels that appear early in journeys (Paid Social: +8.2pp vs Last-Touch; Referral: +3.9pp) and away from channels that appear late (Email: −11.7pp; Direct: −1.7pp).
+
+**Confidence:** Moderate. Requires cost data (not currently available) to calculate ROI-adjusted reallocation.
+
+**Action:** Add cost data to the pipeline and re-run attribution with weighted ROI metrics before committing to specific budget shifts.
+
+## 5. Strengthen UTM Tagging
+
+**Recommendation:** Audit and enforce UTM tagging across all outbound links (email campaigns, social posts, paid ads).
+
+**Evidence:** A large proportion of Direct traffic is likely mis-attributed traffic from untagged campaigns. Improving tagging would immediately improve the accuracy of both last-touch and Markov models.
+
+**Confidence:** High. This is a data quality fix with no downside risk.
+
+**Action:** Implement a UTM naming convention standard and verify all active campaign links before next semester's recruitment cycle.
+
+---
+
+# Limitations
+
+## Data Constraints
+
+| Constraint | Impact |
+|---|---|
+| **8 snapshot days only** | Trends are directional; no seasonality, no weekly patterns |
+| **`user_id` largely missing** | Cross-device stitching not possible; one user on two devices = two pseudo-users |
+| **No conversion events** | Attribution is modeled from page-view sequences as proxy; not actual conversions |
+| **Nested GA4 fields excluded** | `event_params` and `ecommerce` arrays were flattened out; no page-level or product-level detail |
+| **No session reconstruction** | Without timestamp-based sessionization, session-level metrics (bounce rate, session duration) are unavailable |
+
+## Attribution-Specific Constraints
+
+| Constraint | Impact |
+|---|---|
+| **Walled-garden data gaps** | Paid Social impressions (Meta, LinkedIn) are not fully recorded in GA4 click data; Markov may undercount Paid Social |
+| **Small journey paths** | Markov chains require sufficient multi-touchpoint sequences; small datasets increase variance in removal effect estimates |
+| **No cost or ROI data** | Attribution percentages cannot be converted to budget recommendations without spend data |
+| **First-touch vs. last-touch vs. Markov** | No single model is "correct"; Markov is the most theoretically sound for multi-step journeys but not immune to data quality issues |
+
+## What This Report Cannot Claim
+
+This report **cannot** claim:
+
+- That Paid Social caused conversions — only that it appears in more conversion paths than last-touch suggests.
+- That the trends observed over 8 days are representative of the full academic year.
+- That the Markov attribution percentages are stable — with more data, they would likely shift.
+
+---
+
+# Reproducibility
+
+## How to Reproduce This Report
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/hsujeffrey/ibm6530-group4-project
+   cd ibm6530-group4-project
+   ```
+
+2. **Ensure data is available:**
+   Place `events_snapshot.csv` in `data/`. The Parquet file will be auto-built on first render.
+
+3. **Install R packages:**
+   ```r
+   install.packages(c(
+     "arrow", "dplyr", "ggplot2", "scales", "lubridate",
+     "stringr", "tidyr", "forcats", "fs", "here",
+     "readr", "gt", "knitr", "gridExtra", "ggrepel"
+   ))
+   ```
+
+4. **Render the report:**
+   ```bash
+   quarto render IBM6530_Final_Group4_MSDM_Odoo.qmd
+   ```
+
+## File Structure
+
+```
+ibm6530-group4-project/
+├── data/
+│   ├── events_snapshot.csv               # GA4 flat export from BigQuery
+│   ├── attribution_dataset.csv           # 1,000-user journey dataset for attribution
+│   └── msdm_snapshot/events_flat/
+│       └── events_snapshot.parquet       # Auto-generated on first render
+├── IBM6530_Final_Group4_MSDM_Odoo.qmd    # This report
+├── dashboard.qmd                         # Deliverable 1 — Dashboard
+└── presentation.qmd                      # Deliverable 3 — Revealjs Presentation
+```
+
+---
+
+# Appendix
+
+## GitHub Repository
+
+[https://github.com/hsujeffrey/ibm6530-group4-project](https://github.com/hsujeffrey/ibm6530-group4-project)
+
+## Session Info
+
+```{r session-info}
+sessionInfo()
+```
+

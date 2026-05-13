@@ -31,22 +31,23 @@ The project combined marketing strategy with analytics by comparing caption perf
 
 ------------------------------------------------------------------------
 
-## Marketing Dashboard & Reporting Projects
+## Boiling Point Digital Marketing Strategy Analysis
 
-Throughout my graduate coursework, I created multiple dashboards and marketing reports designed for executive audiences. These projects focused on translating complex datasets into clear business insights using R, Quarto, Tableau, and visualization tools.
+For this project, I analyzed Boiling Point’s digital marketing strategy and how the brand adapts to changing customer behavior within the fast-casual restaurant industry. The project explored how influencer partnerships, short-form video content, social media engagement, and promotional campaigns contribute to brand visibility and customer engagement.
 
-I emphasized clean reporting design, storytelling through data, and actionable recommendations rather than simply presenting numbers.
+The analysis also examined the shift toward digital-first marketing, emphasizing how authenticity, emotional storytelling, and creator-driven content have become increasingly important in driving engagement and customer connection.
 
 **Skills Demonstrated:**
 
--   **Marketing Reporting:** Developed stakeholder-focused reports and presentations.
--   **Data Storytelling:** Simplified technical findings into business insights.
--   **Visualization Design:** Built clean and interactive dashboards.
--   **Strategic Communication:** Presented findings in an executive-friendly format.
+-   **Digital Marketing Strategy:** Evaluated how Boiling Point uses digital channels to support customer engagement and brand growth.
+-   **Influencer Marketing Analysis:** Examined creator partnerships, promotional campaigns, and engagement effectiveness.
+-   **Consumer Engagement Research:** Analyzed how customer behavior and content preferences influence marketing performance.
+-   **Content Strategy:** Explored how authentic and visually engaging content supports social media visibility and audience interaction.
+-   **Marketing Communication:** Presented findings through structured analysis, visual examples, and strategic recommendations.
 
 <div style="width:100%; overflow:hidden; border-radius:14px;">
   <iframe 
-    src="https://woneunice.github.io/w10-dashboard-eunice/"
+    src="/data/Boiling Point Presentation.pdf"
     width="100%"
     height="900"
     style="
